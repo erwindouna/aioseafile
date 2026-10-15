@@ -65,7 +65,7 @@ Pass `token=` instead of calling `get_auth_token` to reuse a stored token. Admin
 
 ### Uploading and downloading
 
-Uploads and downloads are streamed, so large files never have to fit in memory. Use `chunk_size` to upload in several requests, for example behind a reverse proxy that limits the request size; each chunk is retried on transient errors.
+Uploads and downloads are streamed, so large files never have to fit in memory. Use `chunk_size` to upload in several requests, for example behind a reverse proxy that limits the request size; each chunk is retried on transient errors. Pass `on_progress` to be told how many bytes were uploaded so far.
 
 ```python
 async def backup(seafile: Seafile, library_id: str, stream: AsyncIterator[bytes], size: int) -> None:

@@ -24,7 +24,7 @@ from aioseafile.models.files import (
 )
 
 if TYPE_CHECKING:
-    from collections.abc import AsyncIterable, AsyncIterator
+    from collections.abc import AsyncIterable, AsyncIterator, Callable
 
 DEFAULT_DOWNLOAD_CHUNK_SIZE = 64 * 1024
 
@@ -43,6 +43,15 @@ async def _rechunk(data: bytes | AsyncIterable[bytes], chunk_size: int) -> Async
             del buffer[:chunk_size]
     if buffer:
         yield bytes(buffer)
+
+
+async def _count_progress(data: AsyncIterable[bytes], on_progress: Callable[[int], None]) -> AsyncIterator[bytes]:
+    """Pass `data` through, reporting the number of bytes handed on so far."""
+    uploaded = 0
+    async for part in data:
+        yield part
+        uploaded += len(part)
+        on_progress(uploaded)
 
 
 def _upload_form(form: dict[str, str], content: bytes | AsyncIterable[bytes], filename: str) -> FormData:
@@ -287,6 +296,7 @@ class FilesMixin(SeafileClient):
         size: int | None = None,
         replace: bool = False,
         chunk_size: int | None = None,
+        on_progress: Callable[[int], None] | None = None,
     ) -> UploadedFile:
         """Upload a file into a directory of a library.
 
@@ -302,10 +312,13 @@ class FilesMixin(SeafileClient):
                 Content-Range. Use this for large files, or when a reverse proxy
                 limits the request body size. Chunks are buffered in memory and
                 each one is retried on transient errors.
+            on_progress: Called with the number of bytes uploaded so far: after
+                each chunk of a chunked upload, while a stream is being sent in a
+                single request, and once when bytes were sent in a single request.
 
         """
         link = await self.get_upload_link(library_id, parent_dir)
-        return await self.upload_to_link(link, parent_dir, filename, data, size=size, replace=replace, chunk_size=chunk_size)
+        return await self.upload_to_link(link, parent_dir, filename, data, size=size, replace=replace, chunk_size=chunk_size, on_progress=on_progress)
 
     async def upload_to_link(  # pylint: disable=too-many-arguments
         self,
@@ -317,6 +330,7 @@ class FilesMixin(SeafileClient):
         size: int | None = None,
         replace: bool = False,
         chunk_size: int | None = None,
+        on_progress: Callable[[int], None] | None = None,
     ) -> UploadedFile:
         """Upload a file to an upload link, for example one from a library API token.
 
@@ -332,7 +346,11 @@ class FilesMixin(SeafileClient):
         if chunk_size is None or size is None or size <= chunk_size:
             if isinstance(data, bytes):
                 result = await self._post_upload(link, form, data, filename)
+                if on_progress is not None:
+                    on_progress(len(data))
             else:
+                if on_progress is not None:
+                    data = _count_progress(data, on_progress)
                 result = await self._request(
                     link,
                     method=METH_POST,
@@ -349,6 +367,8 @@ class FilesMixin(SeafileClient):
             end = start + len(chunk) - 1
             result = await self._post_upload(link, form, chunk, filename, headers | {"Content-Range": f"bytes {start}-{end}/{size}"})
             start = end + 1
+            if on_progress is not None:
+                on_progress(start)
         return UploadedFile.from_dict(result[0])
 
     async def update_file(self, library_id: str, path: str, data: bytes) -> str:
