@@ -1,0 +1,9 @@
+{
+    "notifications": [
+        {
+            "id": 1,
+            "msg": "admin-banner test",
+            "is_current": false
+        }
+    ]
+}

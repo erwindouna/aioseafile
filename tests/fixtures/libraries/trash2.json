@@ -1,0 +1,24 @@
+{
+    "items": [
+        {
+            "parent_dir": "/",
+            "obj_name": "sub",
+            "deleted_time": "2026-10-15T09:22:24+02:00",
+            "commit_id": "7c8cb6c57ddc4b941efe6ef1eb96f25a0dfd3a0e",
+            "is_dir": true,
+            "size": "",
+            "obj_id": ""
+        },
+        {
+            "parent_dir": "/",
+            "obj_name": "a.txt",
+            "deleted_time": "2026-10-15T09:22:24+02:00",
+            "commit_id": "4d755706b088a71fe4ce44abcf7740119059537a",
+            "is_dir": false,
+            "size": 6,
+            "obj_id": "4226e5b3d7da1a4575241f9501f9882aee9b5ea9"
+        }
+    ],
+    "total_count": 2,
+    "can_search": true
+}

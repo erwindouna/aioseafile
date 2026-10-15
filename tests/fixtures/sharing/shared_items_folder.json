@@ -1,0 +1,13 @@
+[
+    {
+        "share_type": "user",
+        "user_info": {
+            "name": "b3c300a8ff924480ae27938952f9f90a@auth.local",
+            "nickname": "Sharing",
+            "contact_email": "sharing@example.com",
+            "avatar_url": "http://127.0.0.1/media/avatars/default.png"
+        },
+        "permission": "r",
+        "is_admin": false
+    }
+]

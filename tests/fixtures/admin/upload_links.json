@@ -1,0 +1,15 @@
+{
+    "upload_link_list": [
+        {
+            "path": "/",
+            "token": "6add6885ca2343a99c71",
+            "creator_email": "admin@example.com",
+            "creator_name": "admin",
+            "ctime": "2026-10-15T09:22:34+02:00",
+            "view_cnt": 0,
+            "expire_date": "",
+            "is_expired": false
+        }
+    ],
+    "count": 1
+}

@@ -1,0 +1,22 @@
+{
+    "repo_id": "02c7b6ae-5500-4c4a-85c4-4b683447d6c5",
+    "repo_name": "libraries-lib",
+    "repo_type": null,
+    "owner_email": "admin@example.com",
+    "owner_name": "admin",
+    "owner_contact_email": "admin@example.com",
+    "owner_avatar": "http://127.0.0.1/media/avatars/default.png",
+    "size": 6,
+    "encrypted": false,
+    "file_count": 1,
+    "permission": "rw",
+    "no_quota": false,
+    "is_admin": true,
+    "is_virtual": false,
+    "has_been_shared_out": false,
+    "lib_need_decrypt": false,
+    "last_modified": "2026-10-15T09:22:24+02:00",
+    "status": "normal",
+    "enable_onlyoffice": false,
+    "monitored": false
+}

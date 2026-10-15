@@ -1,0 +1,17 @@
+{
+    "failed": [
+        {
+            "email": "nobody@example.com",
+            "error_msg": "User nobody@example.com not found."
+        }
+    ],
+    "success": [
+        {
+            "user_email": "user@example.com",
+            "user_name": "user",
+            "user_contact_email": "user@example.com",
+            "permission": "rw",
+            "avatar_url": "http://127.0.0.1/media/avatars/default.png"
+        }
+    ]
+}

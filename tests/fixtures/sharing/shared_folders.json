@@ -1,0 +1,14 @@
+[
+    {
+        "repo_id": "35124f5c-2850-44c6-88dd-f6478f273d0b",
+        "repo_name": "sharing-lib",
+        "path": "/photos",
+        "folder_name": "photos",
+        "share_type": "personal",
+        "share_permission": "r",
+        "share_permission_name": "",
+        "user_name": "Sharing",
+        "user_email": "b3c300a8ff924480ae27938952f9f90a@auth.local",
+        "contact_email": "sharing@example.com"
+    }
+]

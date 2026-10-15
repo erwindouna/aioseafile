@@ -1,0 +1,42 @@
+{
+    "metadata": [
+        {"key": "_id", "name": "_id", "type": "text", "data": null},
+        {"key": "_creator", "name": "_creator", "type": "text", "data": null},
+        {"key": "_ctime", "name": "_ctime", "type": "date", "data": null},
+        {"key": "_last_modifier", "name": "_last_modifier", "type": "text", "data": null},
+        {"key": "_mtime", "name": "_mtime", "type": "date", "data": null},
+        {"key": "_tag_name", "name": "_tag_name", "type": "text", "data": null},
+        {"key": "_tag_color", "name": "_tag_color", "type": "text", "data": null},
+        {
+            "key": "_tag_file_links",
+            "name": "_tag_file_links",
+            "type": "link",
+            "data": {"display_column_key": "_id", "link_id": "0002", "other_table_id": "z88R", "table_id": "0001"}
+        },
+        {
+            "key": "_tag_parent_links",
+            "name": "_tag_parent_links",
+            "type": "link",
+            "data": {"display_column_key": "_id", "is_linked_back": false, "link_id": "0003", "other_table_id": "z88R", "table_id": "z88R"}
+        },
+        {
+            "key": "_tag_sub_links",
+            "name": "_tag_sub_links",
+            "type": "link",
+            "data": {"display_column_key": "_id", "is_linked_back": true, "link_id": "0003", "other_table_id": "z88R", "table_id": "z88R"}
+        }
+    ],
+    "results": [
+        {
+            "_creator": "e40151bbbe184577b11ed818a49f97f3@auth.local",
+            "_ctime": "2025-02-13T18:27:20+08:00",
+            "_id": "OP6ak-N7Q7i96oX6I3lkFw",
+            "_last_modifier": "e40151bbbe184577b11ed818a49f97f3@auth.local",
+            "_mtime": "2025-02-13T18:27:20+08:00",
+            "_tag_color": "#FFFCB5",
+            "_tag_name": "Holiday",
+            "_tag_file_links": [{"row_id": "al8SjKN0QxGrE6vr0SHDOw", "display_value": "al8SjKN0QxGrE6vr0SHDOw"}],
+            "_tag_sub_links": [{"row_id": "dOSid9ECR26rHtgLokPXBw", "display_value": "dOSid9ECR26rHtgLokPXBw"}]
+        }
+    ]
+}

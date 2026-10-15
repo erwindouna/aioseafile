@@ -1,0 +1,16 @@
+[
+    {
+        "datetime": "2026-10-14T00:00:00+02:00",
+        "added": 0,
+        "visited": 0,
+        "deleted": 0,
+        "modified": 0
+    },
+    {
+        "datetime": "2026-10-15T00:00:00+02:00",
+        "added": 12,
+        "visited": 40,
+        "deleted": 2,
+        "modified": 5
+    }
+]

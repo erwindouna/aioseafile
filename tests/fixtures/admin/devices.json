@@ -1,0 +1,30 @@
+{
+    "page_info": {
+        "has_next_page": false,
+        "current_page": 1
+    },
+    "devices": [
+        {
+            "client_version": "0.0.1",
+            "device_id": "0000000000000000000000000000000000000001",
+            "device_name": "aioseafile-probe",
+            "last_accessed": "2026-10-15T09:11:47+02:00",
+            "last_login_ip": "172.19.0.1",
+            "user": "admin@example.com",
+            "user_name": "admin",
+            "platform": "linux",
+            "is_desktop_client": true
+        },
+        {
+            "client_version": "3.0.12",
+            "device_id": "00000000000000ab",
+            "device_name": "Pixel 8",
+            "last_accessed": "2026-10-14T18:02:11+02:00",
+            "last_login_ip": "192.168.1.20",
+            "user": "238e5377def043ab86bb1df2cfffb13d@auth.local",
+            "user_name": "User",
+            "platform": "android",
+            "is_desktop_client": false
+        }
+    ]
+}

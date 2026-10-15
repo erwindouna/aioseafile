@@ -1,0 +1,10 @@
+{
+    "repo_tags": [
+        {
+            "repo_tag_id": 2,
+            "repo_id": "48e244b2-d5df-4846-b460-02548e1e61d6",
+            "tag_name": "extras-green",
+            "tag_color": "#00FF00"
+        }
+    ]
+}

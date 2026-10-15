@@ -1,0 +1,8 @@
+[
+    {
+        "user_email": "user@example.com",
+        "user_name": "user",
+        "user_contact_email": "user@example.com",
+        "permission": "r"
+    }
+]

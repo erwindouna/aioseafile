@@ -1,0 +1,14 @@
+{
+    "id": "6ef89a2f-9a67-416f-b34a-eaaa167275f5",
+    "name": "admin-lib",
+    "owner": "admin@example.com",
+    "owner_email": "admin@example.com",
+    "owner_contact_email": "admin@example.com",
+    "size": 0,
+    "size_formatted": "0 bytes",
+    "encrypted": false,
+    "file_count": 0,
+    "status": "normal",
+    "last_modified": "2026-10-15T09:21:12+02:00",
+    "owner_name": "admin"
+}

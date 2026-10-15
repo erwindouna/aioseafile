@@ -1,0 +1,16 @@
+{
+    "disable_org_encrypted_library": 0,
+    "disable_org_user_clean_trash": 1,
+    "force_adfs_login": false,
+    "traffic_this_month": 52428800,
+    "monthly_download_traffic_limit": 0,
+    "storage_quota": -2,
+    "storage_usage": 1048576,
+    "user_default_quota": -2,
+    "member_quota": 50,
+    "member_usage": 2,
+    "active_members": 2,
+    "file_ext_white_list": "",
+    "org_id": 3,
+    "org_name": "Example Org"
+}

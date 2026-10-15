@@ -1,0 +1,18 @@
+{
+    "user_list": [
+        {
+            "email": "a1b2c3@auth.local",
+            "name": "Org Admin",
+            "contact_email": "orgadmin@example.com",
+            "quota_usage": 1048576,
+            "quota_total": -2,
+            "last_login": "2026-10-15T09:00:00+02:00",
+            "is_active": true,
+            "is_staff": true,
+            "create_time": "2026-10-01T10:00:00+02:00"
+        }
+    ],
+    "page": 1,
+    "per_page": 1,
+    "page_next": true
+}

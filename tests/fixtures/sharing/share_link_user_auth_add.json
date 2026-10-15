@@ -1,0 +1,18 @@
+{
+    "failed": [
+        {
+            "email": "nobody@example.com",
+            "name": "nobody",
+            "error_msg": "User nobody does not exist."
+        }
+    ],
+    "success": [
+        {
+            "username": "b3c300a8ff924480ae27938952f9f90a@auth.local",
+            "name": "Sharing",
+            "avatar_url": "http://127.0.0.1/media/avatars/default.png",
+            "link_token": "beeb336ef9b64cfe97ca",
+            "contact_email": "sharing@example.com"
+        }
+    ]
+}

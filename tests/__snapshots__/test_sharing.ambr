@@ -1,0 +1,1178 @@
+# serializer version: 1
+# name: test_endpoints[add_share_link_emails]
+  dict({
+    'failed': list([
+      dict({
+        'email': 'bad',
+        'error_msg': 'Email bad is invalid.',
+        'group_id': None,
+        'group_name': None,
+        'name': None,
+        'repo_id': None,
+        'token': None,
+        'user_email': None,
+      }),
+    ]),
+    'success': list([
+      'guest@example.com',
+    ]),
+  })
+# ---
+# name: test_endpoints[add_share_link_users]
+  dict({
+    'failed': list([
+      dict({
+        'email': 'nobody@example.com',
+        'error_msg': 'User nobody does not exist.',
+        'group_id': None,
+        'group_name': None,
+        'name': 'nobody',
+        'repo_id': None,
+        'token': None,
+        'user_email': None,
+      }),
+    ]),
+    'success': list([
+      dict({
+        'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+        'contact_email': 'sharing@example.com',
+        'link_token': 'beeb336ef9b64cfe97ca',
+        'name': 'Sharing',
+        'username': 'b3c300a8ff924480ae27938952f9f90a@auth.local',
+      }),
+    ]),
+  })
+# ---
+# name: test_endpoints[create_admin_shares]
+  dict({
+    'failed': list([
+      dict({
+        'email': None,
+        'error_msg': 'Email bad invalid.',
+        'group_id': None,
+        'group_name': None,
+        'name': None,
+        'repo_id': None,
+        'token': None,
+        'user_email': 'bad',
+      }),
+    ]),
+    'success': list([
+      dict({
+        'group_id': None,
+        'group_name': None,
+        'is_admin': False,
+        'path': '/',
+        'permission': 'r',
+        'repo_id': '35124f5c-2850-44c6-88dd-f6478f273d0b',
+        'share_type': <ShareType.USER: 'user'>,
+        'user_email': 'b3c300a8ff924480ae27938952f9f90a@auth.local',
+        'user_name': 'Sharing',
+      }),
+    ]),
+  })
+# ---
+# name: test_endpoints[create_group_folder_permissions]
+  dict({
+    'failed': list([
+      dict({
+        'email': None,
+        'error_msg': 'Group 99 not found.',
+        'group_id': 99,
+        'group_name': None,
+        'name': None,
+        'repo_id': None,
+        'token': None,
+        'user_email': None,
+      }),
+    ]),
+    'success': list([
+      dict({
+        'folder_name': 'photos',
+        'folder_path': '/photos',
+        'group_id': 3,
+        'group_name': 'sharing-group',
+        'permission': 'rw',
+        'repo_id': '35124f5c-2850-44c6-88dd-f6478f273d0b',
+        'user_email': None,
+        'user_name': None,
+      }),
+    ]),
+  })
+# ---
+# name: test_endpoints[create_share_link]
+  dict({
+    'can_edit': True,
+    'ctime': datetime.datetime(2026, 10, 15, 9, 22, 27, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'description': 'notes link',
+    'download_link': 'http://127.0.0.1/seafhttp/f/9ea25a8a1e3c44c2a236/',
+    'expire_date': datetime.datetime(2026, 10, 22, 9, 22, 27, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'is_dir': False,
+    'is_expired': False,
+    'link': 'http://127.0.0.1/f/9ea25a8a1e3c44c2a236/',
+    'obj_id': '0000000000000000000000000000000000000000',
+    'obj_name': 'notes.md',
+    'password': 'Sharing-pw-123',
+    'path': '/notes.md',
+    'permissions': dict({
+      'can_copy_content': True,
+      'can_download': True,
+      'can_edit': False,
+      'can_upload': False,
+    }),
+    'repo_folder_permission': None,
+    'repo_id': '35124f5c-2850-44c6-88dd-f6478f273d0b',
+    'repo_name': 'sharing-lib',
+    'show_download_link': False,
+    'token': '9ea25a8a1e3c44c2a236',
+    'user_scope': <ShareLinkScope.ALL_USERS: 'all_users'>,
+    'username': 'admin@example.com',
+    'view_cnt': 0,
+  })
+# ---
+# name: test_endpoints[create_share_link_multiple_emails]
+  dict({
+    'can_edit': False,
+    'ctime': datetime.datetime(2026, 10, 15, 9, 22, 42, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'description': '',
+    'download_link': 'http://127.0.0.1/seafhttp/f/a7022a0fb1b1406d922e/',
+    'expire_date': None,
+    'is_dir': True,
+    'is_expired': False,
+    'link': 'http://127.0.0.1/d/a7022a0fb1b1406d922e/',
+    'obj_id': 'ece300a8a11d5fd70893212dd96c348087a499a4',
+    'obj_name': '/',
+    'password': '',
+    'path': '/',
+    'permissions': dict({
+      'can_copy_content': True,
+      'can_download': True,
+      'can_edit': False,
+      'can_upload': False,
+    }),
+    'repo_folder_permission': None,
+    'repo_id': '35124f5c-2850-44c6-88dd-f6478f273d0b',
+    'repo_name': 'sharing-lib',
+    'show_download_link': True,
+    'token': 'a7022a0fb1b1406d922e',
+    'user_scope': <ShareLinkScope.ALL_USERS: 'all_users'>,
+    'username': 'admin@example.com',
+    'view_cnt': 0,
+  })
+# ---
+# name: test_endpoints[create_share_link_specific_users]
+  dict({
+    'can_edit': False,
+    'ctime': datetime.datetime(2026, 10, 15, 9, 22, 27, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'description': '',
+    'download_link': 'http://127.0.0.1/seafhttp/f/beeb336ef9b64cfe97ca/',
+    'expire_date': None,
+    'is_dir': True,
+    'is_expired': False,
+    'link': 'http://127.0.0.1/d/beeb336ef9b64cfe97ca/',
+    'obj_id': '0000000000000000000000000000000000000000',
+    'obj_name': 'photos',
+    'password': '',
+    'path': '/photos/',
+    'permissions': dict({
+      'can_copy_content': True,
+      'can_download': True,
+      'can_edit': False,
+      'can_upload': False,
+    }),
+    'repo_folder_permission': None,
+    'repo_id': '35124f5c-2850-44c6-88dd-f6478f273d0b',
+    'repo_name': 'sharing-lib',
+    'show_download_link': False,
+    'token': 'beeb336ef9b64cfe97ca',
+    'user_scope': <ShareLinkScope.SPECIFIC_USERS: 'specific_users'>,
+    'username': 'admin@example.com',
+    'view_cnt': 0,
+  })
+# ---
+# name: test_endpoints[create_share_links]
+  list([
+    dict({
+      'can_edit': False,
+      'ctime': datetime.datetime(2026, 10, 15, 9, 22, 42, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'description': None,
+      'download_link': None,
+      'expire_date': datetime.datetime(2026, 10, 18, 9, 22, 42, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'is_dir': False,
+      'is_expired': False,
+      'link': 'http://127.0.0.1/f/2f11f610ee3649439d93/',
+      'obj_id': None,
+      'obj_name': 'notes.md',
+      'password': 'Y]kreFt;',
+      'path': '/notes.md',
+      'permissions': dict({
+        'can_copy_content': True,
+        'can_download': True,
+        'can_edit': False,
+        'can_upload': False,
+      }),
+      'repo_folder_permission': None,
+      'repo_id': '35124f5c-2850-44c6-88dd-f6478f273d0b',
+      'repo_name': 'sharing-lib',
+      'show_download_link': False,
+      'token': '2f11f610ee3649439d93',
+      'user_scope': None,
+      'username': 'admin@example.com',
+      'view_cnt': 0,
+    }),
+    dict({
+      'can_edit': False,
+      'ctime': datetime.datetime(2026, 10, 15, 9, 22, 42, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'description': None,
+      'download_link': None,
+      'expire_date': datetime.datetime(2026, 10, 18, 9, 22, 42, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'is_dir': False,
+      'is_expired': False,
+      'link': 'http://127.0.0.1/f/b04269ee997e46588084/',
+      'obj_id': None,
+      'obj_name': 'notes.md',
+      'password': 'dnE.Y|#=',
+      'path': '/notes.md',
+      'permissions': dict({
+        'can_copy_content': True,
+        'can_download': True,
+        'can_edit': False,
+        'can_upload': False,
+      }),
+      'repo_folder_permission': None,
+      'repo_id': '35124f5c-2850-44c6-88dd-f6478f273d0b',
+      'repo_name': 'sharing-lib',
+      'show_download_link': False,
+      'token': 'b04269ee997e46588084',
+      'user_scope': None,
+      'username': 'admin@example.com',
+      'view_cnt': 0,
+    }),
+  ])
+# ---
+# name: test_endpoints[create_upload_link]
+  dict({
+    'ctime': datetime.datetime(2026, 10, 15, 9, 22, 54, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'description': 'drop',
+    'expire_date': datetime.datetime(2026, 10, 20, 9, 22, 54, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'is_expired': False,
+    'link': 'http://127.0.0.1/u/d/0fac727091f5427d92dd/',
+    'obj_id': '0000000000000000000000000000000000000000',
+    'obj_name': 'photos',
+    'password': 'Upload-pw-123',
+    'path': '/photos/',
+    'repo_id': '35124f5c-2850-44c6-88dd-f6478f273d0b',
+    'repo_name': 'sharing-lib',
+    'token': '0fac727091f5427d92dd',
+    'username': 'admin@example.com',
+    'view_cnt': 0,
+  })
+# ---
+# name: test_endpoints[create_user_folder_permissions]
+  dict({
+    'failed': list([
+      dict({
+        'email': None,
+        'error_msg': 'User nobody@example.com not found.',
+        'group_id': None,
+        'group_name': None,
+        'name': None,
+        'repo_id': None,
+        'token': None,
+        'user_email': 'nobody@example.com',
+      }),
+    ]),
+    'success': list([
+      dict({
+        'folder_name': 'photos',
+        'folder_path': '/photos',
+        'group_id': None,
+        'group_name': None,
+        'permission': 'r',
+        'repo_id': '35124f5c-2850-44c6-88dd-f6478f273d0b',
+        'user_email': 'b3c300a8ff924480ae27938952f9f90a@auth.local',
+        'user_name': 'Sharing',
+      }),
+    ]),
+  })
+# ---
+# name: test_endpoints[delete_admin_share]
+  None
+# ---
+# name: test_endpoints[delete_group_folder_permission]
+  None
+# ---
+# name: test_endpoints[delete_group_share]
+  None
+# ---
+# name: test_endpoints[delete_invalid_share_links]
+  None
+# ---
+# name: test_endpoints[delete_invalid_upload_links]
+  None
+# ---
+# name: test_endpoints[delete_library_share_link]
+  None
+# ---
+# name: test_endpoints[delete_library_upload_link]
+  None
+# ---
+# name: test_endpoints[delete_share_link]
+  None
+# ---
+# name: test_endpoints[delete_share_link_emails]
+  None
+# ---
+# name: test_endpoints[delete_share_link_users]
+  None
+# ---
+# name: test_endpoints[delete_share_links]
+  dict({
+    'failed': list([
+      dict({
+        'email': None,
+        'error_msg': 'Permission denied.',
+        'group_id': None,
+        'group_name': None,
+        'name': None,
+        'repo_id': None,
+        'token': '9ea25a8a1e3c44c2a236',
+        'user_email': None,
+      }),
+    ]),
+    'success': list([
+      '2f11f610ee3649439d93',
+    ]),
+  })
+# ---
+# name: test_endpoints[delete_upload_link]
+  None
+# ---
+# name: test_endpoints[delete_upload_links]
+  dict({
+    'failed': list([
+      dict({
+        'email': None,
+        'error_msg': 'Permission denied.',
+        'group_id': None,
+        'group_name': None,
+        'name': None,
+        'repo_id': None,
+        'token': '9ea25a8a1e3c44c2a236',
+        'user_email': None,
+      }),
+    ]),
+    'success': list([
+      '2f11f610ee3649439d93',
+    ]),
+  })
+# ---
+# name: test_endpoints[delete_user_folder_permission]
+  None
+# ---
+# name: test_endpoints[delete_user_share]
+  None
+# ---
+# name: test_endpoints[get_admin_share_link_dirents]
+  list([
+    dict({
+      'is_dir': False,
+      'last_modified': datetime.datetime(2026, 10, 15, 9, 25, 7, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'obj_name': 'a.txt',
+      'path': '/a.txt',
+      'size': 0,
+    }),
+  ])
+# ---
+# name: test_endpoints[get_admin_shares]
+  list([
+    dict({
+      'group_id': None,
+      'group_name': None,
+      'is_admin': False,
+      'path': '/',
+      'permission': 'rw',
+      'repo_id': '35124f5c-2850-44c6-88dd-f6478f273d0b',
+      'share_type': <ShareType.USER: 'user'>,
+      'user_email': 'b3c300a8ff924480ae27938952f9f90a@auth.local',
+      'user_name': 'Sharing',
+    }),
+  ])
+# ---
+# name: test_endpoints[get_admin_shares_group]
+  list([
+    dict({
+      'group_id': 3,
+      'group_name': 'sharing-group',
+      'is_admin': False,
+      'path': '/photos',
+      'permission': 'rw',
+      'repo_id': '35124f5c-2850-44c6-88dd-f6478f273d0b',
+      'share_type': <ShareType.GROUP: 'group'>,
+      'user_email': None,
+      'user_name': None,
+    }),
+  ])
+# ---
+# name: test_endpoints[get_admin_user_shared_folders]
+  list([
+    dict({
+      'contact_email': None,
+      'folder_name': 'photos',
+      'group_id': 3,
+      'group_name': 'sharing-group',
+      'path': '/photos',
+      'repo_id': '35124f5c-2850-44c6-88dd-f6478f273d0b',
+      'repo_name': 'sharing-lib',
+      'share_from': 'admin@example.com',
+      'share_from_user_name': 'admin',
+      'share_permission': 'rw',
+      'share_permission_name': '',
+      'share_type': 'group',
+      'user_email': None,
+      'user_name': None,
+    }),
+  ])
+# ---
+# name: test_endpoints[get_admin_user_shared_libraries]
+  list([
+    dict({
+      'contact_email': 'sharing@example.com',
+      'encrypted': False,
+      'group_id': None,
+      'group_name': None,
+      'is_admin': None,
+      'modifier_contact_email': 'admin@example.com',
+      'modifier_email': 'admin@example.com',
+      'modifier_name': 'admin',
+      'repo_id': '35124f5c-2850-44c6-88dd-f6478f273d0b',
+      'repo_name': 'sharing-lib',
+      'share_from': 'admin@example.com',
+      'share_from_user_name': 'admin',
+      'share_permission': 'rw',
+      'share_permission_name': '',
+      'share_type': 'personal',
+      'user_email': 'b3c300a8ff924480ae27938952f9f90a@auth.local',
+      'user_name': 'Sharing',
+    }),
+  ])
+# ---
+# name: test_endpoints[get_group_folder_permissions]
+  list([
+    dict({
+      'folder_name': 'photos',
+      'folder_path': '/photos',
+      'group_id': 3,
+      'group_name': 'sharing-group',
+      'permission': 'rw',
+      'repo_id': '35124f5c-2850-44c6-88dd-f6478f273d0b',
+      'user_email': None,
+      'user_name': None,
+    }),
+  ])
+# ---
+# name: test_endpoints[get_received_shares]
+  list([
+    dict({
+      'encrypted': False,
+      'group_id': 0,
+      'group_name': None,
+      'is_virtual': True,
+      'last_modified': datetime.datetime(2026, 10, 15, 7, 23, 7, tzinfo=datetime.timezone.utc),
+      'last_modifier': 'admin@example.com',
+      'origin_path': '/photos',
+      'origin_repo_id': '35124f5c-2850-44c6-88dd-f6478f273d0b',
+      'origin_repo_name': 'sharing-lib',
+      'permission': 'r',
+      'repo_id': '861c937c-30ca-4d09-bfd4-87e3be79e660',
+      'repo_name': 'photos',
+      'share_type': 'personal',
+      'size': 0,
+      'user': 'admin@example.com',
+    }),
+    dict({
+      'encrypted': False,
+      'group_id': 0,
+      'group_name': None,
+      'is_virtual': False,
+      'last_modified': datetime.datetime(2026, 10, 15, 7, 22, 10, tzinfo=datetime.timezone.utc),
+      'last_modifier': 'admin@example.com',
+      'origin_path': None,
+      'origin_repo_id': None,
+      'origin_repo_name': None,
+      'permission': 'rw',
+      'repo_id': '35124f5c-2850-44c6-88dd-f6478f273d0b',
+      'repo_name': 'sharing-lib',
+      'share_type': 'personal',
+      'size': 0,
+      'user': 'admin@example.com',
+    }),
+  ])
+# ---
+# name: test_endpoints[get_share_link]
+  dict({
+    'can_edit': True,
+    'ctime': datetime.datetime(2026, 10, 15, 9, 22, 27, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'description': 'notes link',
+    'download_link': 'http://127.0.0.1/seafhttp/f/9ea25a8a1e3c44c2a236/',
+    'expire_date': datetime.datetime(2026, 10, 22, 9, 22, 27, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'is_dir': False,
+    'is_expired': False,
+    'link': 'http://127.0.0.1/f/9ea25a8a1e3c44c2a236/',
+    'obj_id': '0000000000000000000000000000000000000000',
+    'obj_name': 'notes.md',
+    'password': 'Sharing-pw-123',
+    'path': '/notes.md',
+    'permissions': dict({
+      'can_copy_content': True,
+      'can_download': True,
+      'can_edit': False,
+      'can_upload': False,
+    }),
+    'repo_folder_permission': None,
+    'repo_id': '35124f5c-2850-44c6-88dd-f6478f273d0b',
+    'repo_name': 'sharing-lib',
+    'show_download_link': False,
+    'token': '9ea25a8a1e3c44c2a236',
+    'user_scope': <ShareLinkScope.ALL_USERS: 'all_users'>,
+    'username': 'admin@example.com',
+    'view_cnt': 0,
+  })
+# ---
+# name: test_endpoints[get_share_link_dirents]
+  list([
+    dict({
+      'file_name': None,
+      'file_path': None,
+      'folder_name': 'photos',
+      'folder_path': '/photos/',
+      'is_dir': True,
+      'last_modified': datetime.datetime(2026, 10, 15, 9, 22, 10, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'size': 0,
+    }),
+    dict({
+      'file_name': 'notes.md',
+      'file_path': '/notes.md',
+      'folder_name': None,
+      'folder_path': None,
+      'is_dir': False,
+      'last_modified': datetime.datetime(2026, 10, 15, 9, 22, 10, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'size': 0,
+    }),
+  ])
+# ---
+# name: test_endpoints[get_share_link_emails]
+  list([
+    'guest@example.com',
+  ])
+# ---
+# name: test_endpoints[get_share_link_users]
+  list([
+    dict({
+      'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+      'contact_email': 'sharing@example.com',
+      'link_token': 'beeb336ef9b64cfe97ca',
+      'name': 'Sharing',
+      'username': 'b3c300a8ff924480ae27938952f9f90a@auth.local',
+    }),
+  ])
+# ---
+# name: test_endpoints[get_shared_folders]
+  list([
+    dict({
+      'contact_email': 'sharing@example.com',
+      'folder_name': 'photos',
+      'group_id': None,
+      'group_name': None,
+      'path': '/photos',
+      'repo_id': '35124f5c-2850-44c6-88dd-f6478f273d0b',
+      'repo_name': 'sharing-lib',
+      'share_from': None,
+      'share_from_user_name': None,
+      'share_permission': 'r',
+      'share_permission_name': '',
+      'share_type': 'personal',
+      'user_email': 'b3c300a8ff924480ae27938952f9f90a@auth.local',
+      'user_name': 'Sharing',
+    }),
+  ])
+# ---
+# name: test_endpoints[get_shared_libraries]
+  list([
+    dict({
+      'contact_email': 'sharing@example.com',
+      'encrypted': False,
+      'group_id': None,
+      'group_name': None,
+      'is_admin': False,
+      'modifier_contact_email': 'admin@example.com',
+      'modifier_email': 'admin@example.com',
+      'modifier_name': 'admin',
+      'repo_id': '35124f5c-2850-44c6-88dd-f6478f273d0b',
+      'repo_name': 'sharing-lib',
+      'share_from': None,
+      'share_from_user_name': None,
+      'share_permission': 'rw',
+      'share_permission_name': '',
+      'share_type': 'personal',
+      'user_email': 'b3c300a8ff924480ae27938952f9f90a@auth.local',
+      'user_name': 'Sharing',
+    }),
+    dict({
+      'contact_email': None,
+      'encrypted': False,
+      'group_id': 3,
+      'group_name': 'sharing-group',
+      'is_admin': False,
+      'modifier_contact_email': 'admin@example.com',
+      'modifier_email': 'admin@example.com',
+      'modifier_name': 'admin',
+      'repo_id': '35124f5c-2850-44c6-88dd-f6478f273d0b',
+      'repo_name': 'sharing-lib',
+      'share_from': None,
+      'share_from_user_name': None,
+      'share_permission': 'r',
+      'share_permission_name': '',
+      'share_type': 'group',
+      'user_email': None,
+      'user_name': None,
+    }),
+  ])
+# ---
+# name: test_endpoints[get_shares]
+  list([
+    dict({
+      'group_info': None,
+      'is_admin': False,
+      'permission': 'r',
+      'share_type': <ShareType.USER: 'user'>,
+      'user_info': dict({
+        'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+        'contact_email': 'sharing@example.com',
+        'name': 'b3c300a8ff924480ae27938952f9f90a@auth.local',
+        'nickname': 'Sharing',
+      }),
+    }),
+    dict({
+      'group_info': dict({
+        'id': 3,
+        'name': 'sharing-group',
+      }),
+      'is_admin': False,
+      'permission': 'rw',
+      'share_type': <ShareType.GROUP: 'group'>,
+      'user_info': None,
+    }),
+  ])
+# ---
+# name: test_endpoints[get_shares_folder]
+  list([
+    dict({
+      'group_info': None,
+      'is_admin': False,
+      'permission': 'r',
+      'share_type': <ShareType.USER: 'user'>,
+      'user_info': dict({
+        'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+        'contact_email': 'sharing@example.com',
+        'name': 'b3c300a8ff924480ae27938952f9f90a@auth.local',
+        'nickname': 'Sharing',
+      }),
+    }),
+  ])
+# ---
+# name: test_endpoints[get_upload_link_details]
+  dict({
+    'ctime': datetime.datetime(2026, 10, 15, 9, 22, 54, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'description': 'drop',
+    'expire_date': datetime.datetime(2026, 10, 20, 9, 22, 54, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'is_expired': False,
+    'link': 'http://127.0.0.1/u/d/0fac727091f5427d92dd/',
+    'obj_id': '0000000000000000000000000000000000000000',
+    'obj_name': 'photos',
+    'password': 'Upload-pw-123',
+    'path': '/photos/',
+    'repo_id': '35124f5c-2850-44c6-88dd-f6478f273d0b',
+    'repo_name': 'sharing-lib',
+    'token': '0fac727091f5427d92dd',
+    'username': 'admin@example.com',
+    'view_cnt': 0,
+  })
+# ---
+# name: test_endpoints[get_upload_links]
+  list([
+    dict({
+      'ctime': datetime.datetime(2026, 10, 15, 9, 22, 54, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'description': '',
+      'expire_date': None,
+      'is_expired': False,
+      'link': 'http://127.0.0.1/u/d/2a6a5f74bbd84ddc9b8b/',
+      'obj_id': 'ece300a8a11d5fd70893212dd96c348087a499a4',
+      'obj_name': '/',
+      'password': '',
+      'path': '/',
+      'repo_id': '35124f5c-2850-44c6-88dd-f6478f273d0b',
+      'repo_name': 'sharing-lib',
+      'token': '2a6a5f74bbd84ddc9b8b',
+      'username': 'admin@example.com',
+      'view_cnt': 0,
+    }),
+    dict({
+      'ctime': datetime.datetime(2026, 10, 15, 9, 22, 54, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'description': 'drop',
+      'expire_date': datetime.datetime(2026, 10, 20, 9, 22, 54, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'is_expired': False,
+      'link': 'http://127.0.0.1/u/d/0fac727091f5427d92dd/',
+      'obj_id': '0000000000000000000000000000000000000000',
+      'obj_name': 'photos',
+      'password': 'Upload-pw-123',
+      'path': '/photos/',
+      'repo_id': '35124f5c-2850-44c6-88dd-f6478f273d0b',
+      'repo_name': 'sharing-lib',
+      'token': '0fac727091f5427d92dd',
+      'username': 'admin@example.com',
+      'view_cnt': 0,
+    }),
+  ])
+# ---
+# name: test_endpoints[get_user_folder_permissions]
+  list([
+    dict({
+      'folder_name': 'photos',
+      'folder_path': '/photos',
+      'group_id': None,
+      'group_name': None,
+      'permission': 'r',
+      'repo_id': '35124f5c-2850-44c6-88dd-f6478f273d0b',
+      'user_email': 'b3c300a8ff924480ae27938952f9f90a@auth.local',
+      'user_name': 'Sharing',
+    }),
+  ])
+# ---
+# name: test_endpoints[leave_share]
+  None
+# ---
+# name: test_endpoints[leave_share_group]
+  None
+# ---
+# name: test_endpoints[send_share_link]
+  dict({
+    'failed': list([
+      dict({
+        'email': 'bad',
+        'error_msg': 'email invalid.',
+        'group_id': None,
+        'group_name': None,
+        'name': None,
+        'repo_id': None,
+        'token': None,
+        'user_email': None,
+      }),
+    ]),
+    'success': list([
+      'guest@example.com',
+    ]),
+  })
+# ---
+# name: test_endpoints[send_upload_link]
+  dict({
+    'failed': list([
+      dict({
+        'email': 'bad',
+        'error_msg': 'email invalid.',
+        'group_id': None,
+        'group_name': None,
+        'name': None,
+        'repo_id': None,
+        'token': None,
+        'user_email': None,
+      }),
+    ]),
+    'success': list([
+      'guest@example.com',
+    ]),
+  })
+# ---
+# name: test_endpoints[share_libraries_to_group]
+  dict({
+    'failed': list([
+      dict({
+        'email': None,
+        'error_msg': 'Library 00000000-0000-0000-0000-000000000000 not found.',
+        'group_id': None,
+        'group_name': None,
+        'name': None,
+        'repo_id': '00000000-0000-0000-0000-000000000000',
+        'token': None,
+        'user_email': None,
+      }),
+    ]),
+    'success': list([
+      dict({
+        'group_id': 3,
+        'group_name': 'sharing-group',
+        'permission': 'r',
+        'repo_id': '35124f5c-2850-44c6-88dd-f6478f273d0b',
+        'username': None,
+      }),
+    ]),
+  })
+# ---
+# name: test_endpoints[share_libraries_to_user]
+  dict({
+    'failed': list([
+      dict({
+        'email': None,
+        'error_msg': 'Library 00000000-0000-0000-0000-000000000000 not found.',
+        'group_id': None,
+        'group_name': None,
+        'name': None,
+        'repo_id': '00000000-0000-0000-0000-000000000000',
+        'token': None,
+        'user_email': None,
+      }),
+    ]),
+    'success': list([
+      dict({
+        'group_id': 3,
+        'group_name': 'sharing-group',
+        'permission': 'r',
+        'repo_id': '35124f5c-2850-44c6-88dd-f6478f273d0b',
+        'username': None,
+      }),
+    ]),
+  })
+# ---
+# name: test_endpoints[share_to_groups]
+  dict({
+    'failed': list([
+    ]),
+    'success': list([
+      dict({
+        'group_info': dict({
+          'id': 3,
+          'name': 'sharing-group',
+        }),
+        'is_admin': False,
+        'permission': 'rw',
+        'share_type': <ShareType.GROUP: 'group'>,
+        'user_info': None,
+      }),
+    ]),
+    'virtual_repo_id': None,
+  })
+# ---
+# name: test_endpoints[share_to_users]
+  dict({
+    'failed': list([
+      dict({
+        'email': 'nobody@example.com',
+        'error_msg': 'User nobody@example.com not found.',
+        'group_id': None,
+        'group_name': None,
+        'name': None,
+        'repo_id': None,
+        'token': None,
+        'user_email': None,
+      }),
+    ]),
+    'success': list([
+      dict({
+        'group_info': None,
+        'is_admin': False,
+        'permission': 'r',
+        'share_type': <ShareType.USER: 'user'>,
+        'user_info': dict({
+          'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+          'contact_email': 'sharing@example.com',
+          'name': 'b3c300a8ff924480ae27938952f9f90a@auth.local',
+          'nickname': 'Sharing',
+        }),
+      }),
+    ]),
+    'virtual_repo_id': '861c937c-30ca-4d09-bfd4-87e3be79e660',
+  })
+# ---
+# name: test_endpoints[unshare_libraries_from_group]
+  dict({
+    'failed': list([
+    ]),
+    'success': list([
+      dict({
+        'group_id': 3,
+        'group_name': 'sharing-group',
+        'permission': None,
+        'repo_id': '35124f5c-2850-44c6-88dd-f6478f273d0b',
+        'username': None,
+      }),
+    ]),
+  })
+# ---
+# name: test_endpoints[unshare_libraries_from_user]
+  dict({
+    'failed': list([
+    ]),
+    'success': list([
+      dict({
+        'group_id': 3,
+        'group_name': 'sharing-group',
+        'permission': None,
+        'repo_id': '35124f5c-2850-44c6-88dd-f6478f273d0b',
+        'username': None,
+      }),
+    ]),
+  })
+# ---
+# name: test_endpoints[update_admin_share]
+  dict({
+    'group_id': None,
+    'group_name': None,
+    'is_admin': False,
+    'path': '/',
+    'permission': 'rw',
+    'repo_id': '35124f5c-2850-44c6-88dd-f6478f273d0b',
+    'share_type': <ShareType.USER: 'user'>,
+    'user_email': 'b3c300a8ff924480ae27938952f9f90a@auth.local',
+    'user_name': 'Sharing',
+  })
+# ---
+# name: test_endpoints[update_group_folder_permission]
+  dict({
+    'folder_name': 'photos',
+    'folder_path': '/photos',
+    'group_id': 3,
+    'group_name': 'sharing-group',
+    'permission': 'r',
+    'repo_id': '35124f5c-2850-44c6-88dd-f6478f273d0b',
+    'user_email': None,
+    'user_name': None,
+  })
+# ---
+# name: test_endpoints[update_group_share]
+  None
+# ---
+# name: test_endpoints[update_share_link]
+  dict({
+    'can_edit': True,
+    'ctime': datetime.datetime(2026, 10, 15, 9, 22, 27, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'description': 'updated',
+    'download_link': 'http://127.0.0.1/seafhttp/f/9ea25a8a1e3c44c2a236/',
+    'expire_date': datetime.datetime(2026, 12, 31, 12, 0, tzinfo=datetime.timezone(datetime.timedelta(seconds=3600))),
+    'is_dir': False,
+    'is_expired': False,
+    'link': 'http://127.0.0.1/f/9ea25a8a1e3c44c2a236/',
+    'obj_id': '0000000000000000000000000000000000000000',
+    'obj_name': 'notes.md',
+    'password': 'Sharing-pw-123',
+    'path': '/notes.md',
+    'permissions': dict({
+      'can_copy_content': False,
+      'can_download': False,
+      'can_edit': False,
+      'can_upload': False,
+    }),
+    'repo_folder_permission': None,
+    'repo_id': '35124f5c-2850-44c6-88dd-f6478f273d0b',
+    'repo_name': 'sharing-lib',
+    'show_download_link': False,
+    'token': '9ea25a8a1e3c44c2a236',
+    'user_scope': <ShareLinkScope.ALL_USERS: 'all_users'>,
+    'username': 'admin@example.com',
+    'view_cnt': 0,
+  })
+# ---
+# name: test_endpoints[update_share_link_scope]
+  dict({
+    'can_edit': True,
+    'ctime': datetime.datetime(2026, 10, 15, 9, 22, 27, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'description': 'notes link',
+    'download_link': 'http://127.0.0.1/seafhttp/f/9ea25a8a1e3c44c2a236/',
+    'expire_date': datetime.datetime(2026, 10, 22, 9, 22, 27, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'is_dir': False,
+    'is_expired': False,
+    'link': 'http://127.0.0.1/f/9ea25a8a1e3c44c2a236/',
+    'obj_id': '0000000000000000000000000000000000000000',
+    'obj_name': 'notes.md',
+    'password': 'Sharing-pw-123',
+    'path': '/notes.md',
+    'permissions': dict({
+      'can_copy_content': True,
+      'can_download': True,
+      'can_edit': False,
+      'can_upload': False,
+    }),
+    'repo_folder_permission': None,
+    'repo_id': '35124f5c-2850-44c6-88dd-f6478f273d0b',
+    'repo_name': 'sharing-lib',
+    'show_download_link': False,
+    'token': '9ea25a8a1e3c44c2a236',
+    'user_scope': <ShareLinkScope.ALL_USERS: 'all_users'>,
+    'username': 'admin@example.com',
+    'view_cnt': 0,
+  })
+# ---
+# name: test_endpoints[update_upload_link]
+  dict({
+    'ctime': datetime.datetime(2026, 10, 15, 9, 22, 54, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'description': 'drop',
+    'expire_date': datetime.datetime(2026, 12, 31, 12, 0, tzinfo=datetime.timezone(datetime.timedelta(seconds=3600))),
+    'is_expired': False,
+    'link': 'http://127.0.0.1/u/d/0fac727091f5427d92dd/',
+    'obj_id': '0000000000000000000000000000000000000000',
+    'obj_name': 'photos',
+    'password': 'Upload-pw-123',
+    'path': '/photos/',
+    'repo_id': '35124f5c-2850-44c6-88dd-f6478f273d0b',
+    'repo_name': 'sharing-lib',
+    'token': '0fac727091f5427d92dd',
+    'username': 'admin@example.com',
+    'view_cnt': 0,
+  })
+# ---
+# name: test_endpoints[update_user_folder_permission]
+  dict({
+    'folder_name': 'photos',
+    'folder_path': '/photos',
+    'group_id': None,
+    'group_name': None,
+    'permission': 'rw',
+    'repo_id': '35124f5c-2850-44c6-88dd-f6478f273d0b',
+    'user_email': 'b3c300a8ff924480ae27938952f9f90a@auth.local',
+    'user_name': 'Sharing',
+  })
+# ---
+# name: test_endpoints[update_user_share]
+  None
+# ---
+# name: test_paginated[get_library_share_links]
+  list([
+    dict({
+      'creator_avatar': 'http://127.0.0.1/media/avatars/default.png',
+      'creator_contact_email': 'admin@example.com',
+      'creator_email': 'admin@example.com',
+      'creator_name': 'admin',
+      'ctime': datetime.datetime(2026, 10, 15, 9, 22, 27, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'expire_date': datetime.datetime(2026, 12, 31, 12, 0, tzinfo=datetime.timezone(datetime.timedelta(seconds=3600))),
+      'is_dir': False,
+      'link': 'http://127.0.0.1/f/9ea25a8a1e3c44c2a236/',
+      'obj_name': 'notes.md',
+      'path': '/notes.md',
+      'repo_id': '35124f5c-2850-44c6-88dd-f6478f273d0b',
+      'repo_name': 'sharing-lib',
+      'token': '9ea25a8a1e3c44c2a236',
+      'view_cnt': 0,
+    }),
+    dict({
+      'creator_avatar': 'http://127.0.0.1/media/avatars/default.png',
+      'creator_contact_email': 'admin@example.com',
+      'creator_email': 'admin@example.com',
+      'creator_name': 'admin',
+      'ctime': datetime.datetime(2026, 10, 15, 9, 22, 27, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'expire_date': None,
+      'is_dir': True,
+      'link': 'http://127.0.0.1/d/beeb336ef9b64cfe97ca/',
+      'obj_name': 'photos',
+      'path': '/photos/',
+      'repo_id': '35124f5c-2850-44c6-88dd-f6478f273d0b',
+      'repo_name': 'sharing-lib',
+      'token': 'beeb336ef9b64cfe97ca',
+      'view_cnt': 0,
+    }),
+  ])
+# ---
+# name: test_paginated[get_library_upload_links]
+  list([
+    dict({
+      'creator_avatar': 'http://127.0.0.1/media/avatars/default.png',
+      'creator_contact_email': 'admin@example.com',
+      'creator_email': 'admin@example.com',
+      'creator_name': 'admin',
+      'ctime': datetime.datetime(2026, 10, 15, 9, 22, 54, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'expire_date': datetime.datetime(2026, 10, 20, 9, 22, 54, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'is_dir': None,
+      'link': 'http://127.0.0.1/u/d/0fac727091f5427d92dd/',
+      'obj_name': 'photos',
+      'path': '/photos/',
+      'repo_id': '35124f5c-2850-44c6-88dd-f6478f273d0b',
+      'repo_name': 'sharing-lib',
+      'token': '0fac727091f5427d92dd',
+      'view_cnt': 0,
+    }),
+    dict({
+      'creator_avatar': 'http://127.0.0.1/media/avatars/default.png',
+      'creator_contact_email': 'admin@example.com',
+      'creator_email': 'admin@example.com',
+      'creator_name': 'admin',
+      'ctime': datetime.datetime(2026, 10, 15, 9, 22, 54, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'expire_date': None,
+      'is_dir': None,
+      'link': 'http://127.0.0.1/u/d/2a6a5f74bbd84ddc9b8b/',
+      'obj_name': '/',
+      'path': '/',
+      'repo_id': '35124f5c-2850-44c6-88dd-f6478f273d0b',
+      'repo_name': 'sharing-lib',
+      'token': '2a6a5f74bbd84ddc9b8b',
+      'view_cnt': 0,
+    }),
+  ])
+# ---
+# name: test_paginated[get_share_links]
+  list([
+    dict({
+      'can_edit': False,
+      'ctime': datetime.datetime(2026, 10, 15, 9, 22, 27, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'description': '',
+      'download_link': 'http://127.0.0.1/seafhttp/f/beeb336ef9b64cfe97ca/',
+      'expire_date': None,
+      'is_dir': True,
+      'is_expired': False,
+      'link': 'http://127.0.0.1/d/beeb336ef9b64cfe97ca/',
+      'obj_id': None,
+      'obj_name': 'photos',
+      'password': '',
+      'path': '/photos/',
+      'permissions': dict({
+        'can_copy_content': True,
+        'can_download': True,
+        'can_edit': False,
+        'can_upload': False,
+      }),
+      'repo_folder_permission': 'rw',
+      'repo_id': '35124f5c-2850-44c6-88dd-f6478f273d0b',
+      'repo_name': 'sharing-lib',
+      'show_download_link': False,
+      'token': 'beeb336ef9b64cfe97ca',
+      'user_scope': <ShareLinkScope.SPECIFIC_USERS: 'specific_users'>,
+      'username': 'admin@example.com',
+      'view_cnt': 0,
+    }),
+    dict({
+      'can_edit': True,
+      'ctime': datetime.datetime(2026, 10, 15, 9, 22, 27, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'description': 'notes link',
+      'download_link': 'http://127.0.0.1/seafhttp/f/9ea25a8a1e3c44c2a236/',
+      'expire_date': datetime.datetime(2026, 10, 22, 9, 22, 27, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'is_dir': False,
+      'is_expired': False,
+      'link': 'http://127.0.0.1/f/9ea25a8a1e3c44c2a236/',
+      'obj_id': None,
+      'obj_name': 'notes.md',
+      'password': 'Sharing-pw-123',
+      'path': '/notes.md',
+      'permissions': dict({
+        'can_copy_content': True,
+        'can_download': True,
+        'can_edit': False,
+        'can_upload': False,
+      }),
+      'repo_folder_permission': 'rw',
+      'repo_id': '35124f5c-2850-44c6-88dd-f6478f273d0b',
+      'repo_name': 'sharing-lib',
+      'show_download_link': False,
+      'token': '9ea25a8a1e3c44c2a236',
+      'user_scope': <ShareLinkScope.ALL_USERS: 'all_users'>,
+      'username': 'admin@example.com',
+      'view_cnt': 0,
+    }),
+  ])
+# ---

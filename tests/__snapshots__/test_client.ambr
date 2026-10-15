@@ -1,0 +1,152 @@
+# serializer version: 1
+# name: test_admin_libraries_paginated
+  list([
+    dict({
+      'encrypted': False,
+      'file_count': 1,
+      'group_name': None,
+      'id': '6490a72d-4c26-4020-ad00-1b72fb2c88c9',
+      'last_modified': datetime.datetime(2026, 10, 15, 9, 7, 46, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'name': 'Documents',
+      'owner': 'admin@example.com',
+      'owner_contact_email': 'admin@example.com',
+      'owner_email': 'admin@example.com',
+      'owner_name': 'admin',
+      'size': 300000,
+      'status': 'normal',
+    }),
+    dict({
+      'encrypted': True,
+      'file_count': 0,
+      'group_name': None,
+      'id': 'f7ca59ed-d5bb-4a64-a968-b4d95b33b527',
+      'last_modified': datetime.datetime(2026, 10, 15, 9, 7, 34, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'name': 'Vault',
+      'owner': 'admin@example.com',
+      'owner_contact_email': 'admin@example.com',
+      'owner_email': 'admin@example.com',
+      'owner_name': 'admin',
+      'size': 0,
+      'status': 'normal',
+    }),
+  ])
+# ---
+# name: test_endpoints[account_info_quota]
+  dict({
+    'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+    'collaborate_email_interval': 0,
+    'contact_email': 'user@example.com',
+    'department': '',
+    'email': '238e5377def043ab86bb1df2cfffb13d@auth.local',
+    'enable_subscription': False,
+    'file_updates_email_interval': 0,
+    'institution': '',
+    'is_inst_admin': None,
+    'is_org_staff': None,
+    'is_staff': False,
+    'login_id': '',
+    'name': 'User',
+    'space_usage': '0.0%',
+    'total': 100000000,
+    'usage': 0,
+  })
+# ---
+# name: test_endpoints[get_account_info]
+  dict({
+    'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+    'collaborate_email_interval': 0,
+    'contact_email': '',
+    'department': '',
+    'email': 'admin@example.com',
+    'enable_subscription': False,
+    'file_updates_email_interval': 0,
+    'institution': '',
+    'is_inst_admin': None,
+    'is_org_staff': None,
+    'is_staff': True,
+    'login_id': '',
+    'name': 'admin',
+    'space_usage': '0%',
+    'total': -2,
+    'usage': 300000,
+  })
+# ---
+# name: test_endpoints[get_admin_system_info]
+  dict({
+    'active_users_count': 2,
+    'current_connected_devices_count': 0,
+    'groups_count': 0,
+    'is_pro': False,
+    'license_expiration': '',
+    'license_maxusers': 0,
+    'license_mode': '',
+    'license_to': '',
+    'multi_tenancy_enabled': False,
+    'org_count': 0,
+    'repos_count': 3,
+    'total_devices_count': 0,
+    'total_files_count': 1,
+    'total_storage': 300000,
+    'users_count': 2,
+    'with_license': False,
+  })
+# ---
+# name: test_endpoints[get_libraries]
+  list([
+    dict({
+      'encrypted': False,
+      'head_commit_id': '983edae73d8c12866073579196551cee8cccee09',
+      'id': '6490a72d-4c26-4020-ad00-1b72fb2c88c9',
+      'modified': datetime.datetime(2026, 10, 15, 7, 7, 46, tzinfo=datetime.timezone.utc),
+      'modifier_email': 'admin@example.com',
+      'modifier_name': 'admin',
+      'name': 'Documents',
+      'owner': 'admin@example.com',
+      'owner_name': 'admin',
+      'permission': 'rw',
+      'size': 300000,
+      'type': 'repo',
+      'virtual': False,
+    }),
+    dict({
+      'encrypted': True,
+      'head_commit_id': '5a9b5a8a0e6d0d6229cb4aad852f3fe9414a8453',
+      'id': 'f7ca59ed-d5bb-4a64-a968-b4d95b33b527',
+      'modified': datetime.datetime(2026, 10, 15, 7, 7, 34, tzinfo=datetime.timezone.utc),
+      'modifier_email': 'admin@example.com',
+      'modifier_name': 'admin',
+      'name': 'Vault',
+      'owner': 'admin@example.com',
+      'owner_name': 'admin',
+      'permission': 'rw',
+      'size': 0,
+      'type': 'repo',
+      'virtual': False,
+    }),
+  ])
+# ---
+# name: test_endpoints[get_server_info]
+  dict({
+    'encrypted_library_version': 2,
+    'features': list([
+      'seafile-basic',
+      'wiki',
+    ]),
+    'version': '14.0.9',
+  })
+# ---
+# name: test_library
+  dict({
+    'encrypted': False,
+    'file_count': 1,
+    'head_commit_id': '983edae73d8c12866073579196551cee8cccee09',
+    'id': '6490a72d-4c26-4020-ad00-1b72fb2c88c9',
+    'modified': datetime.datetime(2026, 10, 15, 7, 7, 46, tzinfo=datetime.timezone.utc),
+    'modifier_email': 'admin@example.com',
+    'modifier_name': 'admin',
+    'name': 'Documents',
+    'owner': 'self',
+    'permission': 'rw',
+    'size': 300000,
+  })
+# ---

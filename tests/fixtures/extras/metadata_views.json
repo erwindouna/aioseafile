@@ -1,0 +1,31 @@
+{
+    "views": [
+        {
+            "_id": "uh51",
+            "table_id": "0001",
+            "name": "All files",
+            "filters": [],
+            "sorts": [{"column_key": "_file_mtime", "sort_type": "down"}],
+            "groupbys": [],
+            "filter_conjunction": "And",
+            "hidden_columns": [],
+            "type": "table",
+            "basic_filters": [{"column_key": "_is_dir", "filter_predicate": "is", "filter_term": "file"}]
+        },
+        {
+            "_id": "80u7",
+            "table_id": "0001",
+            "name": "Photos",
+            "filters": [],
+            "sorts": [],
+            "groupbys": [],
+            "filter_conjunction": "And",
+            "hidden_columns": [],
+            "type": "gallery"
+        }
+    ],
+    "navigation": [
+        {"_id": "uh51", "type": "view"},
+        {"_id": "FOLDER_abcd", "type": "folder", "name": "Media", "children": [{"_id": "80u7", "type": "view"}]}
+    ]
+}

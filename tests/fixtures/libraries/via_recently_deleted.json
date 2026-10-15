@@ -1,0 +1,28 @@
+{
+    "files": [
+        {
+            "obj_name": "a.txt",
+            "path": "/"
+        },
+        {
+            "obj_name": "new.md",
+            "path": "/docs2"
+        },
+        {
+            "obj_name": "renamed.md",
+            "path": "/docs2"
+        },
+        {
+            "obj_name": "renamed.md",
+            "path": "/"
+        },
+        {
+            "obj_name": "renamed.md",
+            "path": "/docs2"
+        },
+        {
+            "obj_name": "renamed.md",
+            "path": "/docs2/other"
+        }
+    ]
+}

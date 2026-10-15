@@ -1,0 +1,21 @@
+{
+    "login_log_list": [
+        {
+            "login_time": "2026-10-15T09:11:47+02:00",
+            "login_ip": "172.19.0.1",
+            "log_success": true,
+            "name": "admin",
+            "email": "admin@example.com",
+            "contact_email": "admin@example.com"
+        },
+        {
+            "login_time": "2026-10-15T09:10:02+02:00",
+            "login_ip": "172.19.0.1",
+            "log_success": false,
+            "name": "admin",
+            "email": "admin@example.com",
+            "contact_email": "admin@example.com"
+        }
+    ],
+    "total_count": 2
+}

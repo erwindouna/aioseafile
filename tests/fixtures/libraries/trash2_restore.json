@@ -1,0 +1,9 @@
+{
+    "failed": [],
+    "success": [
+        {
+            "path": "/sub",
+            "is_dir": true
+        }
+    ]
+}

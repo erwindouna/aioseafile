@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "token": "3f2a9c1b7e",
+        "inviter": "d6074febe21348149e70779dea1a6ef0@auth.local",
+        "accepter": "guest@example.com",
+        "type": "guest",
+        "invite_time": "2026-10-15T09:30:00+02:00",
+        "accept_time": "",
+        "expire_time": "2026-10-30T09:30:00+02:00"
+    },
+    {
+        "id": 2,
+        "token": "8b7c6d5e4f",
+        "inviter": "d6074febe21348149e70779dea1a6ef0@auth.local",
+        "accepter": "guest2@example.com",
+        "type": "guest",
+        "invite_time": "2026-10-15T09:30:00+02:00",
+        "accept_time": "2026-10-16T10:00:00+02:00",
+        "expire_time": "2026-10-30T09:30:00+02:00"
+    }
+]

@@ -1,0 +1,35 @@
+{
+    "share_link_list": [
+        {
+            "obj_name": "/",
+            "token": "129e091b06f9449484a1",
+            "creator_email": "admin@example.com",
+            "creator_name": "admin",
+            "ctime": "2026-10-15T09:22:34+02:00",
+            "view_cnt": 0,
+            "expire_date": "",
+            "is_expired": false
+        },
+        {
+            "obj_name": "notes.md",
+            "token": "9ea25a8a1e3c44c2a236",
+            "creator_email": "admin@example.com",
+            "creator_name": "admin",
+            "ctime": "2026-10-15T09:22:27+02:00",
+            "view_cnt": 0,
+            "expire_date": "2026-10-22T09:22:27+02:00",
+            "is_expired": false
+        },
+        {
+            "obj_name": "photos",
+            "token": "beeb336ef9b64cfe97ca",
+            "creator_email": "admin@example.com",
+            "creator_name": "admin",
+            "ctime": "2026-10-15T09:22:27+02:00",
+            "view_cnt": 0,
+            "expire_date": "",
+            "is_expired": false
+        }
+    ],
+    "count": 3
+}

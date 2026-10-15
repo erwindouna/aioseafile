@@ -1,0 +1,29 @@
+{
+    "dirent_list": [
+        {
+            "type": "dir",
+            "parent_dir": "/",
+            "id": "0000000000000000000000000000000000000000",
+            "name": "docs2",
+            "mtime": "2026-10-15T09:22:59+02:00"
+        },
+        {
+            "type": "dir",
+            "parent_dir": "/",
+            "id": "0000000000000000000000000000000000000000",
+            "name": "other",
+            "mtime": "2026-10-15T09:22:59+02:00"
+        },
+        {
+            "type": "file",
+            "modifier_email": null,
+            "size": 6,
+            "parent_dir": "/",
+            "id": "4226e5b3d7da1a4575241f9501f9882aee9b5ea9",
+            "name": "b.txt",
+            "mtime": "2026-10-15T09:22:24+02:00",
+            "modifier_contact_email": "",
+            "modifier_name": ""
+        }
+    ]
+}

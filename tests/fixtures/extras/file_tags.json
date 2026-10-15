@@ -1,0 +1,10 @@
+{
+    "file_tags": [
+        {
+            "file_tag_id": 1,
+            "repo_tag_id": 1,
+            "tag_name": "extras-blue",
+            "tag_color": "#0000FF"
+        }
+    ]
+}

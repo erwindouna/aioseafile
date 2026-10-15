@@ -1,0 +1,38 @@
+{
+    "user_perm": "rw",
+    "dir_id": "569141bd1498fdc4739706c3897cbe9b6633ab8b",
+    "repo_name": "libraries-lib",
+    "dirent_list": [
+        {
+            "type": "dir",
+            "id": "0000000000000000000000000000000000000000",
+            "name": "docs2",
+            "mtime": "2026-10-15T09:22:59+02:00",
+            "permission": "rw",
+            "parent_dir": "/",
+            "starred": false
+        },
+        {
+            "type": "dir",
+            "id": "0000000000000000000000000000000000000000",
+            "name": "other",
+            "mtime": "2026-10-15T09:22:59+02:00",
+            "permission": "rw",
+            "parent_dir": "/",
+            "starred": false
+        },
+        {
+            "type": "file",
+            "id": "4226e5b3d7da1a4575241f9501f9882aee9b5ea9",
+            "name": "b.txt",
+            "mtime": "2026-10-15T09:22:24+02:00",
+            "permission": "rw",
+            "parent_dir": "/",
+            "size": 6,
+            "modifier_email": "admin@example.com",
+            "modifier_name": "admin",
+            "modifier_contact_email": "admin@example.com",
+            "starred": false
+        }
+    ]
+}

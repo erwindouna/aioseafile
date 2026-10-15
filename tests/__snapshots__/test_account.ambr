@@ -1,0 +1,522 @@
+# serializer version: 1
+# name: test_create_invitations
+  dict({
+    'failed': list([
+      dict({
+        'email': 'not-an-email',
+        'error_msg': 'Email not-an-email invalid.',
+      }),
+    ]),
+    'success': list([
+      dict({
+        'accept_time': None,
+        'accepter': 'guest@example.com',
+        'expire_time': datetime.datetime(2026, 10, 30, 9, 30, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+        'id': 1,
+        'invite_time': datetime.datetime(2026, 10, 15, 9, 30, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+        'inviter': 'd6074febe21348149e70779dea1a6ef0@auth.local',
+        'token': '3f2a9c1b7e',
+        'type': <InvitationType.GUEST: 'guest'>,
+      }),
+    ]),
+  })
+# ---
+# name: test_reads[get_activities]
+  list([
+    dict({
+      'author_contact_email': 'admin@example.com',
+      'author_email': 'admin@example.com',
+      'author_name': 'admin',
+      'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+      'commit_id': '105b6884e1561f691042201d4496e4e19460fee1',
+      'count': 1,
+      'days': None,
+      'details': list([
+        dict({
+          'obj_id': '8cf9160d2728a2fd801e9ef99d0a97ddd1d0140e',
+          'old_path': '/other',
+          'path': '/docs2/other',
+          'repo_name': 'libraries-lib',
+          'size': -1,
+        }),
+      ]),
+      'login_id': '',
+      'name': 'other',
+      'obj_type': 'dir',
+      'old_name': None,
+      'old_path': '/other',
+      'old_repo_name': None,
+      'op_type': 'move',
+      'path': '/docs2/other',
+      'repo_id': '02c7b6ae-5500-4c4a-85c4-4b683447d6c5',
+      'repo_name': 'libraries-lib',
+      'time': datetime.datetime(2026, 10, 15, 9, 22, 59, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    }),
+    dict({
+      'author_contact_email': '',
+      'author_email': '',
+      'author_name': '',
+      'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+      'commit_id': '889bce164a31d5c199f7884301b1637b2b88e640',
+      'count': 6,
+      'days': None,
+      'details': list([
+        dict({
+          'obj_id': '0000000000000000000000000000000000000000',
+          'old_path': None,
+          'path': '/docs2/new.md',
+          'repo_name': 'libraries-lib',
+          'size': 0,
+        }),
+        dict({
+          'obj_id': '0000000000000000000000000000000000000000',
+          'old_path': None,
+          'path': '/docs2/renamed.md',
+          'repo_name': 'libraries-lib',
+          'size': 0,
+        }),
+      ]),
+      'login_id': '',
+      'name': 'new.md',
+      'obj_type': 'file',
+      'old_name': None,
+      'old_path': None,
+      'old_repo_name': None,
+      'op_type': 'batch_create',
+      'path': '/docs2/new.md',
+      'repo_id': '02c7b6ae-5500-4c4a-85c4-4b683447d6c5',
+      'repo_name': 'libraries-lib',
+      'time': datetime.datetime(2026, 10, 15, 9, 22, 59, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    }),
+    dict({
+      'author_contact_email': 'admin@example.com',
+      'author_email': 'admin@example.com',
+      'author_name': 'admin',
+      'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+      'commit_id': None,
+      'count': 1,
+      'days': None,
+      'details': list([
+        dict({
+          'obj_id': None,
+          'old_path': None,
+          'path': '/',
+          'repo_name': 'groups-share-lib',
+          'size': None,
+        }),
+      ]),
+      'login_id': '',
+      'name': '',
+      'obj_type': 'repo',
+      'old_name': None,
+      'old_path': None,
+      'old_repo_name': None,
+      'op_type': 'create',
+      'path': '/',
+      'repo_id': 'db645667-ae6d-46d5-99de-21b6c1953fab',
+      'repo_name': 'groups-share-lib',
+      'time': datetime.datetime(2026, 10, 15, 9, 22, 41, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    }),
+  ])
+# ---
+# name: test_reads[get_activities_default]
+  list([
+    dict({
+      'author_contact_email': 'admin@example.com',
+      'author_email': 'admin@example.com',
+      'author_name': 'admin',
+      'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+      'commit_id': '105b6884e1561f691042201d4496e4e19460fee1',
+      'count': 1,
+      'days': None,
+      'details': list([
+        dict({
+          'obj_id': '8cf9160d2728a2fd801e9ef99d0a97ddd1d0140e',
+          'old_path': '/other',
+          'path': '/docs2/other',
+          'repo_name': 'libraries-lib',
+          'size': -1,
+        }),
+      ]),
+      'login_id': '',
+      'name': 'other',
+      'obj_type': 'dir',
+      'old_name': None,
+      'old_path': '/other',
+      'old_repo_name': None,
+      'op_type': 'move',
+      'path': '/docs2/other',
+      'repo_id': '02c7b6ae-5500-4c4a-85c4-4b683447d6c5',
+      'repo_name': 'libraries-lib',
+      'time': datetime.datetime(2026, 10, 15, 9, 22, 59, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    }),
+    dict({
+      'author_contact_email': '',
+      'author_email': '',
+      'author_name': '',
+      'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+      'commit_id': '889bce164a31d5c199f7884301b1637b2b88e640',
+      'count': 6,
+      'days': None,
+      'details': list([
+        dict({
+          'obj_id': '0000000000000000000000000000000000000000',
+          'old_path': None,
+          'path': '/docs2/new.md',
+          'repo_name': 'libraries-lib',
+          'size': 0,
+        }),
+        dict({
+          'obj_id': '0000000000000000000000000000000000000000',
+          'old_path': None,
+          'path': '/docs2/renamed.md',
+          'repo_name': 'libraries-lib',
+          'size': 0,
+        }),
+      ]),
+      'login_id': '',
+      'name': 'new.md',
+      'obj_type': 'file',
+      'old_name': None,
+      'old_path': None,
+      'old_repo_name': None,
+      'op_type': 'batch_create',
+      'path': '/docs2/new.md',
+      'repo_id': '02c7b6ae-5500-4c4a-85c4-4b683447d6c5',
+      'repo_name': 'libraries-lib',
+      'time': datetime.datetime(2026, 10, 15, 9, 22, 59, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    }),
+    dict({
+      'author_contact_email': 'admin@example.com',
+      'author_email': 'admin@example.com',
+      'author_name': 'admin',
+      'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+      'commit_id': None,
+      'count': 1,
+      'days': None,
+      'details': list([
+        dict({
+          'obj_id': None,
+          'old_path': None,
+          'path': '/',
+          'repo_name': 'groups-share-lib',
+          'size': None,
+        }),
+      ]),
+      'login_id': '',
+      'name': '',
+      'obj_type': 'repo',
+      'old_name': None,
+      'old_path': None,
+      'old_repo_name': None,
+      'op_type': 'create',
+      'path': '/',
+      'repo_id': 'db645667-ae6d-46d5-99de-21b6c1953fab',
+      'repo_name': 'groups-share-lib',
+      'time': datetime.datetime(2026, 10, 15, 9, 22, 41, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    }),
+  ])
+# ---
+# name: test_reads[get_all_notifications]
+  dict({
+    'discussion': dict({
+      'count': 0,
+      'notifications': list([
+      ]),
+      'unseen_count': 0,
+    }),
+    'general': dict({
+      'count': 1,
+      'notifications': list([
+        dict({
+          'detail': dict({
+            'group_id': 2,
+            'group_name': 'account-group',
+            'group_staff_avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+            'group_staff_contact_email': 'account2@example.com',
+            'group_staff_email': 'eb403b2423bb46afa92d62586573d7f4@auth.local',
+            'group_staff_name': 'account-user2',
+          }),
+          'id': 5,
+          'seen': False,
+          'time': datetime.datetime(2026, 10, 15, 9, 22, 6, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+          'type': 'add_user_to_group',
+        }),
+      ]),
+      'unseen_count': 1,
+    }),
+    'total_unseen_count': 1,
+  })
+# ---
+# name: test_reads[get_devices]
+  list([
+    dict({
+      'client_version': '0.0.1',
+      'device_id': 'f74fd60f5415e6f3db882c01c069f9313867bd72',
+      'device_name': 'aioseafile-probe',
+      'is_desktop_client': True,
+      'last_accessed': datetime.datetime(2026, 10, 15, 9, 11, 47, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'last_login_ip': '172.19.0.1',
+      'platform': 'linux',
+      'platform_version': 'probe',
+      'user': 'admin@example.com',
+      'wiped_at': None,
+    }),
+    dict({
+      'client_version': '3.0.6',
+      'device_id': 'a1b2c3d4e5f60718',
+      'device_name': 'Pixel 9',
+      'is_desktop_client': False,
+      'last_accessed': datetime.datetime(2026, 10, 14, 18, 3, 12, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'last_login_ip': '192.168.2.20',
+      'platform': 'android',
+      'platform_version': '15',
+      'user': 'admin@example.com',
+      'wiped_at': None,
+    }),
+  ])
+# ---
+# name: test_reads[get_invitation]
+  dict({
+    'accept_time': None,
+    'accepter': 'guest@example.com',
+    'expire_time': datetime.datetime(2026, 10, 30, 9, 30, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'id': 1,
+    'invite_time': datetime.datetime(2026, 10, 15, 9, 30, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'inviter': 'd6074febe21348149e70779dea1a6ef0@auth.local',
+    'token': '3f2a9c1b7e',
+    'type': <InvitationType.GUEST: 'guest'>,
+  })
+# ---
+# name: test_reads[get_invitations]
+  list([
+    dict({
+      'accept_time': None,
+      'accepter': 'guest@example.com',
+      'expire_time': datetime.datetime(2026, 10, 30, 9, 30, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'id': 1,
+      'invite_time': datetime.datetime(2026, 10, 15, 9, 30, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'inviter': 'd6074febe21348149e70779dea1a6ef0@auth.local',
+      'token': '3f2a9c1b7e',
+      'type': <InvitationType.GUEST: 'guest'>,
+    }),
+    dict({
+      'accept_time': datetime.datetime(2026, 10, 16, 10, 0, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'accepter': 'guest2@example.com',
+      'expire_time': datetime.datetime(2026, 10, 30, 9, 30, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'id': 2,
+      'invite_time': datetime.datetime(2026, 10, 15, 9, 30, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'inviter': 'd6074febe21348149e70779dea1a6ef0@auth.local',
+      'token': '8b7c6d5e4f',
+      'type': <InvitationType.GUEST: 'guest'>,
+    }),
+  ])
+# ---
+# name: test_reads[get_notifications]
+  dict({
+    'count': 1,
+    'notifications': list([
+      dict({
+        'detail': dict({
+          'group_id': 2,
+          'group_name': 'account-group',
+          'group_staff_avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+          'group_staff_contact_email': 'account2@example.com',
+          'group_staff_email': 'eb403b2423bb46afa92d62586573d7f4@auth.local',
+          'group_staff_name': 'account-user2',
+        }),
+        'id': 5,
+        'seen': False,
+        'time': datetime.datetime(2026, 10, 15, 9, 22, 6, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+        'type': 'add_user_to_group',
+      }),
+    ]),
+    'unseen_count': 1,
+  })
+# ---
+# name: test_reads[get_sdoc_notifications]
+  dict({
+    'count': 1,
+    'notifications': list([
+      dict({
+        'detail': dict({
+          'group_id': 2,
+          'group_name': 'account-group',
+          'group_staff_avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+          'group_staff_contact_email': 'account2@example.com',
+          'group_staff_email': 'eb403b2423bb46afa92d62586573d7f4@auth.local',
+          'group_staff_name': 'account-user2',
+        }),
+        'id': 5,
+        'seen': False,
+        'time': datetime.datetime(2026, 10, 15, 9, 22, 6, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+        'type': 'add_user_to_group',
+      }),
+    ]),
+    'unseen_count': 1,
+  })
+# ---
+# name: test_reads[get_unseen_system_notifications]
+  list([
+    dict({
+      'contact_email': 'account@example.com',
+      'created_at': datetime.datetime(2026, 10, 15, 9, 22, 1, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'id': 1,
+      'msg': 'account bucket test message',
+      'msg_format': 'account bucket test message',
+      'name': 'account-user-renamed',
+      'org_name': '',
+      'seen': False,
+      'username': 'd6074febe21348149e70779dea1a6ef0@auth.local',
+    }),
+  ])
+# ---
+# name: test_reads[get_user_avatar_custom]
+  dict({
+    'is_default': False,
+    'uploaded': datetime.datetime(2026, 10, 15, 7, 22, 40, tzinfo=datetime.timezone.utc),
+    'url': 'http://127.0.0.1/media/avatars/7/a/7a9ad758da16c6100002d4a1856b6e/resized/64/32d3ca5e23f4ccf1e4c8660c40e75f33.png',
+  })
+# ---
+# name: test_reads[get_user_avatar_default]
+  dict({
+    'is_default': True,
+    'uploaded': None,
+    'url': 'http://127.0.0.1/media/avatars/default.png',
+  })
+# ---
+# name: test_reads[get_user_profile]
+  dict({
+    'contact_email': 'account@example.com',
+    'email': 'd6074febe21348149e70779dea1a6ef0@auth.local',
+    'list_in_address_book': False,
+    'login_id': None,
+    'name': 'account-user-renamed',
+    'telephone': '',
+  })
+# ---
+# name: test_reads[search_users]
+  list([
+    dict({
+      'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+      'contact_email': 'account@example.com',
+      'email': 'd6074febe21348149e70779dea1a6ef0@auth.local',
+      'login_id': None,
+      'name': 'account-user-renamed',
+    }),
+    dict({
+      'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+      'contact_email': 'account2@example.com',
+      'email': 'eb403b2423bb46afa92d62586573d7f4@auth.local',
+      'login_id': None,
+      'name': 'account-user2',
+    }),
+  ])
+# ---
+# name: test_writes[change_password]
+  None
+# ---
+# name: test_writes[client_login]
+  '00000000000000000000000000000000'
+# ---
+# name: test_writes[client_login_2fa]
+  None
+# ---
+# name: test_writes[create_invitation]
+  dict({
+    'accept_time': None,
+    'accepter': 'guest@example.com',
+    'expire_time': datetime.datetime(2026, 10, 30, 9, 30, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'id': 1,
+    'invite_time': datetime.datetime(2026, 10, 15, 9, 30, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'inviter': 'd6074febe21348149e70779dea1a6ef0@auth.local',
+    'token': '3f2a9c1b7e',
+    'type': <InvitationType.GUEST: 'guest'>,
+  })
+# ---
+# name: test_writes[delete_invitation]
+  None
+# ---
+# name: test_writes[delete_notifications]
+  None
+# ---
+# name: test_writes[delete_sdoc_notifications]
+  None
+# ---
+# name: test_writes[mark_all_notifications_seen]
+  None
+# ---
+# name: test_writes[mark_notification_seen]
+  None
+# ---
+# name: test_writes[mark_notifications_seen]
+  None
+# ---
+# name: test_writes[mark_sdoc_notification_seen]
+  None
+# ---
+# name: test_writes[mark_sdoc_notifications_seen]
+  None
+# ---
+# name: test_writes[mark_system_notification_seen]
+  dict({
+    'contact_email': 'account@example.com',
+    'created_at': datetime.datetime(2026, 10, 15, 9, 22, 1, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'id': 1,
+    'msg': 'account bucket test message',
+    'msg_format': 'account bucket test message',
+    'name': 'account-user-renamed',
+    'org_name': '',
+    'seen': True,
+    'username': 'd6074febe21348149e70779dea1a6ef0@auth.local',
+  })
+# ---
+# name: test_writes[revoke_invitation]
+  None
+# ---
+# name: test_writes[unlink_device]
+  None
+# ---
+# name: test_writes[update_account_info]
+  dict({
+    'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+    'collaborate_email_interval': 0,
+    'contact_email': 'account@example.com',
+    'department': '',
+    'email': 'd6074febe21348149e70779dea1a6ef0@auth.local',
+    'enable_subscription': False,
+    'file_updates_email_interval': 3600,
+    'institution': '',
+    'is_inst_admin': None,
+    'is_org_staff': None,
+    'is_staff': False,
+    'login_id': '',
+    'name': 'account-user-renamed',
+    'space_usage': '0%',
+    'total': -2,
+    'usage': 0,
+  })
+# ---
+# name: test_writes[update_user_profile]
+  dict({
+    'contact_email': 'account@example.com',
+    'email': 'd6074febe21348149e70779dea1a6ef0@auth.local',
+    'list_in_address_book': False,
+    'login_id': None,
+    'name': 'account-user-renamed',
+    'telephone': '',
+  })
+# ---
+# name: test_writes[update_user_profile_contact_email]
+  dict({
+    'contact_email': 'account@example.com',
+    'email': 'd6074febe21348149e70779dea1a6ef0@auth.local',
+    'list_in_address_book': False,
+    'login_id': None,
+    'name': 'account-user-renamed',
+    'telephone': '',
+  })
+# ---
+# name: test_writes[wipe_device]
+  None
+# ---

@@ -1,0 +1,18 @@
+{
+    "email": "77880dad4fce473ebe441ea29f9c01de@auth.local",
+    "name": "Admin Test",
+    "contact_email": "admin-test@example.com",
+    "login_id": "",
+    "is_staff": false,
+    "is_active": true,
+    "quota_usage": 0,
+    "quota_total": 100000000,
+    "create_time": "2026-10-15T09:20:50+02:00",
+    "has_default_device": false,
+    "is_force_2fa": false,
+    "role": "default",
+    "avatar_url": "http://127.0.0.1/media/avatars/default.png",
+    "last_login": "",
+    "last_access_time": "",
+    "social_auth": []
+}

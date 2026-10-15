@@ -1,0 +1,24 @@
+{
+    "user_list": [
+        {
+            "avatar_url": "http://127.0.0.1/media/avatars/default.png",
+            "email": "77880dad4fce473ebe441ea29f9c01de@auth.local",
+            "name": "Admin Test 2",
+            "contact_email": "admin-test@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "source": "db",
+            "quota_usage": 0,
+            "quota_total": 200000000,
+            "create_time": "2026-10-15T09:20:50+02:00",
+            "last_login": "",
+            "last_access_time": "",
+            "role": "default",
+            "social_auth": []
+        }
+    ],
+    "page_info": {
+        "has_next_page": "",
+        "current_page": ""
+    }
+}

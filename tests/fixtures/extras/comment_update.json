@@ -1,0 +1,16 @@
+{
+    "id": 1,
+    "repo_id": "d33dc18c-151f-4de9-93cf-1fa0f7134450",
+    "parent_path": "/wiki-pages/2f2a9921-a55d-4730-abde-ffb6daf6c9e8",
+    "item_name": "extras-page.sdoc",
+    "comment": "extras-comment",
+    "created_at": "2026-10-15T09:23:01+02:00",
+    "updated_at": "2026-10-15T09:23:01+02:00",
+    "resolved": true,
+    "detail": "{\"element_id\":\"a\"}",
+    "replies": [],
+    "user_name": "admin",
+    "user_email": "admin@example.com",
+    "user_contact_email": "admin@example.com",
+    "avatar_url": "http://127.0.0.1/media/avatars/default.png"
+}

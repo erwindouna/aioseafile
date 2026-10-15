@@ -1,0 +1,44 @@
+{
+    "dirent_list": [
+        {
+            "type": "dir",
+            "parent_dir": "/a/",
+            "id": "f7cc4b8517a1f0534476db27113c4a7206a265d1",
+            "name": "b",
+            "mtime": 1792048881,
+            "permission": "rw"
+        },
+        {
+            "type": "dir",
+            "parent_dir": "/a/b",
+            "id": "0000000000000000000000000000000000000000",
+            "name": "c",
+            "mtime": 1792048881,
+            "permission": "rw"
+        },
+        {
+            "type": "file",
+            "modifier_email": "admin@example.com",
+            "size": 0,
+            "parent_dir": "/a/b",
+            "id": "0000000000000000000000000000000000000000",
+            "name": "m.txt",
+            "mtime": 1792048881,
+            "permission": "rw",
+            "modifier_contact_email": "admin@example.com",
+            "modifier_name": "admin"
+        },
+        {
+            "type": "file",
+            "modifier_email": "admin@example.com",
+            "size": 0,
+            "parent_dir": "/a/",
+            "id": "0000000000000000000000000000000000000000",
+            "name": "m.txt",
+            "mtime": 1792048881,
+            "permission": "rw",
+            "modifier_contact_email": "admin@example.com",
+            "modifier_name": "admin"
+        }
+    ]
+}

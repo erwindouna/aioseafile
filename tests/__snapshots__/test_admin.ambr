@@ -1,0 +1,1022 @@
+# serializer version: 1
+# name: test_groups_paginated
+  list([
+    dict({
+      'created_at': datetime.datetime(2026, 10, 15, 9, 22, 42, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'id': 4,
+      'name': 'admin-group',
+      'owner': 'admin@example.com',
+      'owner_name': 'admin',
+      'parent_group_id': 0,
+      'quota': 0,
+    }),
+    dict({
+      'created_at': datetime.datetime(2026, 10, 15, 9, 22, 10, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'id': 3,
+      'name': 'sharing-group',
+      'owner': 'admin@example.com',
+      'owner_name': 'admin',
+      'parent_group_id': 0,
+      'quota': 0,
+    }),
+    dict({
+      'created_at': datetime.datetime(2026, 10, 15, 9, 21, 51, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'id': 2,
+      'name': 'account-group',
+      'owner': 'eb403b2423bb46afa92d62586573d7f4@auth.local',
+      'owner_name': 'account-user2',
+      'parent_group_id': 0,
+      'quota': 0,
+    }),
+    dict({
+      'created_at': datetime.datetime(2026, 10, 15, 9, 21, 49, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'id': 1,
+      'name': 'groups-team-renamed',
+      'owner': 'admin@example.com',
+      'owner_name': 'admin',
+      'parent_group_id': 0,
+      'quota': 0,
+    }),
+  ])
+# ---
+# name: test_reads[active_users]
+  list([
+    dict({
+      'count': 0,
+      'timestamp': datetime.datetime(2026, 10, 14, 0, 0, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    }),
+    dict({
+      'count': 3,
+      'timestamp': datetime.datetime(2026, 10, 15, 0, 0, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    }),
+  ])
+# ---
+# name: test_reads[device_errors]
+  list([
+    dict({
+      'client_version': '9.0.10',
+      'device_ip': '192.168.1.10',
+      'device_name': 'laptop',
+      'email': 'admin@example.com',
+      'error_msg': 'Permission denied on server',
+      'error_time': datetime.datetime(2026, 10, 15, 8, 0, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'library_id': '6490a72d-4c26-4020-ad00-1b72fb2c88c9',
+      'library_name': 'Documents',
+      'name': 'admin',
+    }),
+    dict({
+      'client_version': None,
+      'device_ip': '192.168.1.11',
+      'device_name': None,
+      'email': 'admin@example.com',
+      'error_msg': 'Quota is full',
+      'error_time': None,
+      'library_id': '6490a72d-4c26-4020-ad00-1b72fb2c88c9',
+      'library_name': 'Documents',
+      'name': 'admin',
+    }),
+  ])
+# ---
+# name: test_reads[devices]
+  list([
+    dict({
+      'client_version': '0.0.1',
+      'device_id': '0000000000000000000000000000000000000001',
+      'device_name': 'aioseafile-probe',
+      'is_desktop_client': True,
+      'last_accessed': datetime.datetime(2026, 10, 15, 9, 11, 47, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'last_login_ip': '172.19.0.1',
+      'platform': 'linux',
+      'user': 'admin@example.com',
+      'user_name': 'admin',
+    }),
+    dict({
+      'client_version': '3.0.12',
+      'device_id': '00000000000000ab',
+      'device_name': 'Pixel 8',
+      'is_desktop_client': False,
+      'last_accessed': datetime.datetime(2026, 10, 14, 18, 2, 11, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'last_login_ip': '192.168.1.20',
+      'platform': 'android',
+      'user': '238e5377def043ab86bb1df2cfffb13d@auth.local',
+      'user_name': 'User',
+    }),
+  ])
+# ---
+# name: test_reads[file_access_logs]
+  list([
+    dict({
+      'contact_email': 'admin@example.com',
+      'device': None,
+      'email': 'admin@example.com',
+      'event_type': 'web',
+      'file_or_dir_name': 'blob.bin',
+      'ip': '172.19.0.1',
+      'library_id': '6490a72d-4c26-4020-ad00-1b72fb2c88c9',
+      'library_name': 'Documents',
+      'name': 'admin',
+      'time': datetime.datetime(2026, 10, 15, 9, 12, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    }),
+    dict({
+      'contact_email': 'admin@example.com',
+      'device': 'aioseafile-probe',
+      'email': 'admin@example.com',
+      'event_type': 'API',
+      'file_or_dir_name': 'backups',
+      'ip': '172.19.0.1',
+      'library_id': '6490a72d-4c26-4020-ad00-1b72fb2c88c9',
+      'library_name': 'Documents',
+      'name': 'admin',
+      'time': datetime.datetime(2026, 10, 15, 9, 13, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    }),
+  ])
+# ---
+# name: test_reads[file_operations]
+  list([
+    dict({
+      'added': 0,
+      'deleted': 0,
+      'modified': 0,
+      'timestamp': datetime.datetime(2026, 10, 14, 0, 0, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'visited': 0,
+    }),
+    dict({
+      'added': 12,
+      'deleted': 2,
+      'modified': 5,
+      'timestamp': datetime.datetime(2026, 10, 15, 0, 0, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'visited': 40,
+    }),
+  ])
+# ---
+# name: test_reads[file_update_logs]
+  list([
+    dict({
+      'commit_id': '3f1d2c4b5a69788796a5b4c3d2e1f0a9b8c7d6e5',
+      'contact_email': 'admin@example.com',
+      'email': 'admin@example.com',
+      'file_operation': 'Added "blob.bin".',
+      'library_encrypted': False,
+      'library_id': '6490a72d-4c26-4020-ad00-1b72fb2c88c9',
+      'library_name': 'Documents',
+      'name': 'admin',
+      'time': datetime.datetime(2026, 10, 15, 9, 12, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    }),
+  ])
+# ---
+# name: test_reads[libraries_order_by]
+  list([
+    dict({
+      'encrypted': False,
+      'file_count': 2,
+      'group_name': None,
+      'id': '02c7b6ae-5500-4c4a-85c4-4b683447d6c5',
+      'last_modified': datetime.datetime(2026, 10, 15, 9, 22, 59, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'name': 'libraries-lib',
+      'owner': 'admin@example.com',
+      'owner_contact_email': 'admin@example.com',
+      'owner_email': 'admin@example.com',
+      'owner_name': 'admin',
+      'size': 6,
+      'status': 'normal',
+    }),
+    dict({
+      'encrypted': False,
+      'file_count': 2,
+      'group_name': None,
+      'id': 'd33dc18c-151f-4de9-93cf-1fa0f7134450',
+      'last_modified': datetime.datetime(2026, 10, 15, 9, 22, 52, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'name': 'extras-wiki2',
+      'owner': 'admin@example.com',
+      'owner_contact_email': 'admin@example.com',
+      'owner_email': 'admin@example.com',
+      'owner_name': 'admin',
+      'size': 273,
+      'status': 'normal',
+    }),
+    dict({
+      'encrypted': True,
+      'file_count': 0,
+      'group_name': None,
+      'id': 'c192d8fe-480e-4803-a199-e2650f994935',
+      'last_modified': datetime.datetime(2026, 10, 15, 9, 22, 44, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'name': 'libraries-enc',
+      'owner': 'admin@example.com',
+      'owner_contact_email': 'admin@example.com',
+      'owner_email': 'admin@example.com',
+      'owner_name': 'admin',
+      'size': 0,
+      'status': 'normal',
+    }),
+  ])
+# ---
+# name: test_reads[library]
+  dict({
+    'encrypted': False,
+    'file_count': 0,
+    'group_name': None,
+    'id': '6ef89a2f-9a67-416f-b34a-eaaa167275f5',
+    'last_modified': datetime.datetime(2026, 10, 15, 9, 21, 12, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'name': 'admin-lib',
+    'owner': 'admin@example.com',
+    'owner_contact_email': 'admin@example.com',
+    'owner_email': 'admin@example.com',
+    'owner_name': 'admin',
+    'size': 0,
+    'status': 'normal',
+  })
+# ---
+# name: test_reads[library_history]
+  dict({
+    'commits': list([
+      dict({
+        'client_version': None,
+        'commit_id': '3f1d2c4b5a69788796a5b4c3d2e1f0a9b8c7d6e5',
+        'contact_email': 'admin@example.com',
+        'description': 'Added "notes.md".',
+        'device_name': None,
+        'email': 'admin@example.com',
+        'name': 'admin',
+        'second_parent_id': None,
+        'time': datetime.datetime(2026, 10, 15, 9, 21, 19, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      }),
+      dict({
+        'client_version': '9.0.10',
+        'commit_id': 'a1b2c3d4e5f60718293a4b5c6d7e8f9012345678',
+        'contact_email': '',
+        'description': 'Created library',
+        'device_name': 'laptop',
+        'email': '',
+        'name': '',
+        'second_parent_id': None,
+        'time': datetime.datetime(2026, 10, 15, 9, 21, 12, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      }),
+    ]),
+    'more': True,
+  })
+# ---
+# name: test_reads[login_logs]
+  list([
+    dict({
+      'contact_email': 'admin@example.com',
+      'email': 'admin@example.com',
+      'login_ip': '172.19.0.1',
+      'login_success': True,
+      'login_time': datetime.datetime(2026, 10, 15, 9, 11, 47, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'name': 'admin',
+    }),
+    dict({
+      'contact_email': 'admin@example.com',
+      'email': 'admin@example.com',
+      'login_ip': '172.19.0.1',
+      'login_success': False,
+      'login_time': datetime.datetime(2026, 10, 15, 9, 10, 2, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'name': 'admin',
+    }),
+  ])
+# ---
+# name: test_reads[notifications]
+  list([
+    dict({
+      'detail': dict({
+        'group_id': 1,
+        'group_name': 'groups-team-renamed',
+        'path': '/',
+        'repo_id': 'db645667-ae6d-46d5-99de-21b6c1953fab',
+        'repo_name': 'groups-share-lib',
+        'share_from_user_avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+        'share_from_user_contact_email': 'admin@example.com',
+        'share_from_user_email': 'admin@example.com',
+        'share_from_user_name': 'admin',
+      }),
+      'id': 6,
+      'time': datetime.datetime(2026, 10, 15, 9, 22, 41, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'type': 'repo_share_to_group',
+    }),
+    dict({
+      'detail': dict({
+        'group_id': 1,
+        'group_name': 'groups-team-renamed',
+        'path': '/',
+        'repo_id': 'db645667-ae6d-46d5-99de-21b6c1953fab',
+        'repo_name': 'groups-share-lib',
+        'share_from_user_avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+        'share_from_user_contact_email': 'admin@example.com',
+        'share_from_user_email': 'admin@example.com',
+        'share_from_user_name': 'admin',
+      }),
+      'id': 7,
+      'time': datetime.datetime(2026, 10, 15, 9, 22, 41, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'type': 'repo_share_to_group',
+    }),
+  ])
+# ---
+# name: test_reads[permission_audit]
+  list([
+    dict({
+      'etype': 'add-repo-perm',
+      'file_path': '/',
+      'from_email': 'admin@example.com',
+      'from_name': 'admin',
+      'library_id': '6490a72d-4c26-4020-ad00-1b72fb2c88c9',
+      'library_name': 'Documents',
+      'permission': 'rw',
+      'time': datetime.datetime(2026, 10, 15, 9, 12, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'to': 'user@example.com',
+    }),
+  ])
+# ---
+# name: test_reads[search_groups]
+  list([
+    dict({
+      'created_at': datetime.datetime(2026, 10, 15, 9, 22, 42, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'id': 4,
+      'name': 'admin-group',
+      'owner': 'admin@example.com',
+      'owner_name': 'admin',
+      'parent_group_id': 0,
+      'quota': 0,
+    }),
+    dict({
+      'created_at': datetime.datetime(2026, 10, 15, 9, 22, 10, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'id': 3,
+      'name': 'sharing-group',
+      'owner': 'admin@example.com',
+      'owner_name': 'admin',
+      'parent_group_id': 0,
+      'quota': 0,
+    }),
+    dict({
+      'created_at': datetime.datetime(2026, 10, 15, 9, 21, 51, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'id': 2,
+      'name': 'account-group',
+      'owner': 'eb403b2423bb46afa92d62586573d7f4@auth.local',
+      'owner_name': 'account-user2',
+      'parent_group_id': 0,
+      'quota': 0,
+    }),
+    dict({
+      'created_at': datetime.datetime(2026, 10, 15, 9, 21, 49, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'id': 1,
+      'name': 'groups-team-renamed',
+      'owner': 'admin@example.com',
+      'owner_name': 'admin',
+      'parent_group_id': 0,
+      'quota': 0,
+    }),
+  ])
+# ---
+# name: test_reads[search_libraries]
+  list([
+    dict({
+      'encrypted': False,
+      'file_count': 0,
+      'group_name': None,
+      'id': '572c147d-bf59-40e2-84a7-8d5619703e88',
+      'last_modified': datetime.datetime(2026, 10, 15, 9, 27, 36, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'name': 'groups-live-lib',
+      'owner': 'admin@example.com',
+      'owner_contact_email': 'admin@example.com',
+      'owner_email': 'admin@example.com',
+      'owner_name': 'admin',
+      'size': 0,
+      'status': 'normal',
+    }),
+    dict({
+      'encrypted': False,
+      'file_count': 0,
+      'group_name': None,
+      'id': '35124f5c-2850-44c6-88dd-f6478f273d0b',
+      'last_modified': datetime.datetime(2026, 10, 15, 9, 25, 7, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'name': 'sharing-lib',
+      'owner': 'admin@example.com',
+      'owner_contact_email': 'admin@example.com',
+      'owner_email': 'admin@example.com',
+      'owner_name': 'admin',
+      'size': 0,
+      'status': 'normal',
+    }),
+  ])
+# ---
+# name: test_reads[search_users]
+  list([
+    dict({
+      'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+      'contact_email': 'admin-test@example.com',
+      'create_time': datetime.datetime(2026, 10, 15, 9, 20, 50, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'download_rate_limit': None,
+      'email': '77880dad4fce473ebe441ea29f9c01de@auth.local',
+      'has_default_device': None,
+      'institution': None,
+      'is_active': True,
+      'is_force_2fa': None,
+      'is_staff': False,
+      'last_access_time': None,
+      'last_login': None,
+      'login_id': None,
+      'name': 'Admin Test 2',
+      'org_id': None,
+      'org_name': None,
+      'quota_total': 200000000,
+      'quota_usage': 0,
+      'role': 'default',
+      'social_auth': list([
+      ]),
+      'source': 'db',
+      'upload_rate_limit': None,
+    }),
+  ])
+# ---
+# name: test_reads[share_link]
+  dict({
+    'created': datetime.datetime(2026, 10, 15, 9, 22, 34, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'creator_contact_email': 'admin@example.com',
+    'creator_email': 'admin@example.com',
+    'creator_name': 'admin',
+    'expire_date': None,
+    'is_dir': True,
+    'is_expired': False,
+    'library_id': 'fa6d5ec6-ceea-419e-ab84-36833c49d5ab',
+    'library_name': 'admin-lib',
+    'link': 'http://127.0.0.1/d/129e091b06f9449484a1/',
+    'obj_name': '/',
+    'path': '/',
+    'permissions': dict({
+      'can_copy_content': True,
+      'can_download': True,
+      'can_edit': False,
+      'can_upload': False,
+    }),
+    'size': None,
+    'token': '129e091b06f9449484a1',
+    'view_count': 0,
+  })
+# ---
+# name: test_reads[share_permission_logs]
+  list([
+    dict({
+      'date': datetime.datetime(2026, 10, 15, 9, 12, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'etype': 'add-repo-perm',
+      'folder': '/',
+      'from_user_contact_email': 'admin@example.com',
+      'from_user_email': 'admin@example.com',
+      'from_user_name': 'admin',
+      'library_id': '6490a72d-4c26-4020-ad00-1b72fb2c88c9',
+      'library_name': 'Documents',
+      'permission': 'rw',
+      'share_type': <AdminShareType.USER: 'user'>,
+      'to_group_id': None,
+      'to_group_name': None,
+      'to_user_contact_email': 'user@example.com',
+      'to_user_email': '238e5377def043ab86bb1df2cfffb13d@auth.local',
+      'to_user_name': 'User',
+    }),
+    dict({
+      'date': datetime.datetime(2026, 10, 15, 9, 13, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'etype': 'modify-repo-perm',
+      'folder': 'backups',
+      'from_user_contact_email': 'admin@example.com',
+      'from_user_email': 'admin@example.com',
+      'from_user_name': 'admin',
+      'library_id': '6490a72d-4c26-4020-ad00-1b72fb2c88c9',
+      'library_name': 'Documents',
+      'permission': 'r',
+      'share_type': <AdminShareType.GROUP: 'group'>,
+      'to_group_id': 3,
+      'to_group_name': 'sharing-group',
+      'to_user_contact_email': None,
+      'to_user_email': None,
+      'to_user_name': None,
+    }),
+  ])
+# ---
+# name: test_reads[system_info]
+  dict({
+    'active_users_count': 9,
+    'current_connected_devices_count': 1,
+    'groups_count': 3,
+    'is_pro': False,
+    'license_expiration': '',
+    'license_maxusers': 0,
+    'license_mode': '',
+    'license_to': '',
+    'multi_tenancy_enabled': False,
+    'org_count': 0,
+    'repos_count': 13,
+    'total_devices_count': 1,
+    'total_files_count': 10,
+    'total_storage': 4300279,
+    'users_count': 9,
+    'with_license': False,
+  })
+# ---
+# name: test_reads[system_metrics]
+  list([
+    dict({
+      'data_points': list([
+        dict({
+          'labels': dict({
+            'collected_at': '2026-10-15T09:22:51.430732',
+            'component': 'go_fileserver',
+            'node': 'default',
+          }),
+          'value': 0.0,
+        }),
+      ]),
+      'description': 'The number of currently running http requests.',
+      'metric_type': 'gauge',
+      'name': 'go_fileserver_in_flight_request_total',
+    }),
+  ])
+# ---
+# name: test_reads[system_notifications]
+  list([
+    dict({
+      'id': 1,
+      'is_current': False,
+      'msg': 'admin-banner test',
+    }),
+  ])
+# ---
+# name: test_reads[system_traffic]
+  list([
+    dict({
+      'link_file_download': 0,
+      'link_file_upload': 0,
+      'sync_file_download': 0,
+      'sync_file_upload': 0,
+      'timestamp': datetime.datetime(2026, 10, 14, 0, 0, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'web_file_download': 0,
+      'web_file_upload': 0,
+    }),
+    dict({
+      'link_file_download': 2048,
+      'link_file_upload': 0,
+      'sync_file_download': 0,
+      'sync_file_upload': 1024,
+      'timestamp': datetime.datetime(2026, 10, 15, 0, 0, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'web_file_download': 4300000,
+      'web_file_upload': 15900000,
+    }),
+  ])
+# ---
+# name: test_reads[total_storage]
+  list([
+    dict({
+      'timestamp': datetime.datetime(2026, 10, 14, 0, 0, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'total_storage': 4300279,
+    }),
+    dict({
+      'timestamp': datetime.datetime(2026, 10, 15, 0, 0, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'total_storage': 20200280,
+    }),
+  ])
+# ---
+# name: test_reads[trash_libraries]
+  list([
+    dict({
+      'delete_time': datetime.datetime(2026, 10, 15, 9, 21, 30, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'group_name': None,
+      'id': '6ef89a2f-9a67-416f-b34a-eaaa167275f5',
+      'name': 'admin-lib2',
+      'owner': '77880dad4fce473ebe441ea29f9c01de@auth.local',
+      'owner_name': 'Admin Test 2',
+    }),
+  ])
+# ---
+# name: test_reads[trash_libraries_owner]
+  list([
+    dict({
+      'delete_time': datetime.datetime(2026, 10, 15, 9, 21, 30, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'group_name': None,
+      'id': '6ef89a2f-9a67-416f-b34a-eaaa167275f5',
+      'name': 'admin-lib2',
+      'owner': '77880dad4fce473ebe441ea29f9c01de@auth.local',
+      'owner_name': 'Admin Test 2',
+    }),
+  ])
+# ---
+# name: test_reads[upload_link]
+  dict({
+    'created': datetime.datetime(2026, 10, 15, 9, 22, 34, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'creator_contact_email': 'admin@example.com',
+    'creator_email': 'admin@example.com',
+    'creator_name': 'admin',
+    'expire_date': None,
+    'is_expired': None,
+    'library_id': 'fa6d5ec6-ceea-419e-ab84-36833c49d5ab',
+    'library_name': 'admin-lib',
+    'link': 'http://127.0.0.1/u/d/6add6885ca2343a99c71/',
+    'obj_name': '/',
+    'path': '/',
+    'token': '6add6885ca2343a99c71',
+    'view_count': 0,
+  })
+# ---
+# name: test_reads[upload_links]
+  list([
+    dict({
+      'created': datetime.datetime(2026, 10, 15, 9, 22, 34, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'creator_contact_email': None,
+      'creator_email': 'admin@example.com',
+      'creator_name': 'admin',
+      'expire_date': None,
+      'is_expired': False,
+      'library_id': None,
+      'library_name': None,
+      'link': None,
+      'obj_name': None,
+      'path': '/',
+      'token': '6add6885ca2343a99c71',
+      'view_count': 0,
+    }),
+  ])
+# ---
+# name: test_reads[user]
+  dict({
+    'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+    'contact_email': 'admin-test@example.com',
+    'create_time': datetime.datetime(2026, 10, 15, 9, 20, 50, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'download_rate_limit': None,
+    'email': '77880dad4fce473ebe441ea29f9c01de@auth.local',
+    'has_default_device': False,
+    'institution': None,
+    'is_active': True,
+    'is_force_2fa': False,
+    'is_staff': False,
+    'last_access_time': None,
+    'last_login': None,
+    'login_id': None,
+    'name': 'Admin Test',
+    'org_id': None,
+    'org_name': None,
+    'quota_total': 100000000,
+    'quota_usage': 0,
+    'role': 'default',
+    'social_auth': list([
+    ]),
+    'source': None,
+    'upload_rate_limit': None,
+  })
+# ---
+# name: test_reads[user_notifications]
+  list([
+    dict({
+      'contact_email': 'admin-test@example.com',
+      'created_at': datetime.datetime(2026, 10, 15, 9, 22, 55, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'id': 2,
+      'msg': 'admin announcement',
+      'msg_format': 'admin announcement',
+      'name': 'Admin Test 2',
+      'org_name': '',
+      'seen': False,
+      'username': '77880dad4fce473ebe441ea29f9c01de@auth.local',
+    }),
+    dict({
+      'contact_email': 'account@example.com',
+      'created_at': datetime.datetime(2026, 10, 15, 9, 22, 1, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'id': 1,
+      'msg': 'account bucket test message',
+      'msg_format': 'account bucket test message',
+      'name': 'account-user-renamed',
+      'org_name': '',
+      'seen': True,
+      'username': 'd6074febe21348149e70779dea1a6ef0@auth.local',
+    }),
+  ])
+# ---
+# name: test_share_links_paginated
+  list([
+    dict({
+      'created': datetime.datetime(2026, 10, 15, 9, 22, 34, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'creator_contact_email': None,
+      'creator_email': 'admin@example.com',
+      'creator_name': 'admin',
+      'expire_date': None,
+      'is_dir': None,
+      'is_expired': False,
+      'library_id': None,
+      'library_name': None,
+      'link': None,
+      'obj_name': '/',
+      'path': None,
+      'permissions': None,
+      'size': None,
+      'token': '129e091b06f9449484a1',
+      'view_count': 0,
+    }),
+    dict({
+      'created': datetime.datetime(2026, 10, 15, 9, 22, 27, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'creator_contact_email': None,
+      'creator_email': 'admin@example.com',
+      'creator_name': 'admin',
+      'expire_date': datetime.datetime(2026, 10, 22, 9, 22, 27, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'is_dir': None,
+      'is_expired': False,
+      'library_id': None,
+      'library_name': None,
+      'link': None,
+      'obj_name': 'notes.md',
+      'path': None,
+      'permissions': None,
+      'size': None,
+      'token': '9ea25a8a1e3c44c2a236',
+      'view_count': 0,
+    }),
+    dict({
+      'created': datetime.datetime(2026, 10, 15, 9, 22, 27, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'creator_contact_email': None,
+      'creator_email': 'admin@example.com',
+      'creator_name': 'admin',
+      'expire_date': None,
+      'is_dir': None,
+      'is_expired': False,
+      'library_id': None,
+      'library_name': None,
+      'link': None,
+      'obj_name': 'photos',
+      'path': None,
+      'permissions': None,
+      'size': None,
+      'token': 'beeb336ef9b64cfe97ca',
+      'view_count': 0,
+    }),
+  ])
+# ---
+# name: test_user_traffic_paginated
+  list([
+    dict({
+      'email': 'admin@example.com',
+      'link_file_download': 512,
+      'link_file_upload': 0,
+      'name': 'admin',
+      'sync_file_download': 2048,
+      'sync_file_upload': 1024,
+      'web_file_download': 4300000,
+      'web_file_upload': 15900000,
+    }),
+    dict({
+      'email': '238e5377def043ab86bb1df2cfffb13d@auth.local',
+      'link_file_download': 0,
+      'link_file_upload': 0,
+      'name': 'User',
+      'sync_file_download': 0,
+      'sync_file_upload': 0,
+      'web_file_download': 0,
+      'web_file_upload': 100,
+    }),
+  ])
+# ---
+# name: test_users_paginated
+  list([
+    dict({
+      'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+      'contact_email': 'admin@example.com',
+      'create_time': datetime.datetime(2026, 10, 15, 9, 7, 20, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'download_rate_limit': None,
+      'email': 'admin@example.com',
+      'has_default_device': None,
+      'institution': None,
+      'is_active': True,
+      'is_force_2fa': None,
+      'is_staff': True,
+      'last_access_time': datetime.datetime(2026, 10, 15, 9, 11, 47, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'last_login': None,
+      'login_id': None,
+      'name': 'admin',
+      'org_id': None,
+      'org_name': None,
+      'quota_total': -2,
+      'quota_usage': 4300279,
+      'role': 'default',
+      'social_auth': list([
+      ]),
+      'source': None,
+      'upload_rate_limit': None,
+    }),
+    dict({
+      'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+      'contact_email': 'user@example.com',
+      'create_time': datetime.datetime(2026, 10, 15, 9, 7, 46, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'download_rate_limit': None,
+      'email': '238e5377def043ab86bb1df2cfffb13d@auth.local',
+      'has_default_device': None,
+      'institution': None,
+      'is_active': True,
+      'is_force_2fa': None,
+      'is_staff': False,
+      'last_access_time': None,
+      'last_login': None,
+      'login_id': None,
+      'name': 'User',
+      'org_id': None,
+      'org_name': None,
+      'quota_total': 100000000,
+      'quota_usage': 0,
+      'role': 'default',
+      'social_auth': list([
+      ]),
+      'source': None,
+      'upload_rate_limit': None,
+    }),
+    dict({
+      'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+      'contact_email': 'admin-test@example.com',
+      'create_time': datetime.datetime(2026, 10, 15, 9, 20, 50, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'download_rate_limit': None,
+      'email': '77880dad4fce473ebe441ea29f9c01de@auth.local',
+      'has_default_device': None,
+      'institution': None,
+      'is_active': True,
+      'is_force_2fa': None,
+      'is_staff': False,
+      'last_access_time': None,
+      'last_login': None,
+      'login_id': None,
+      'name': 'Admin Test 2',
+      'org_id': None,
+      'org_name': None,
+      'quota_total': 200000000,
+      'quota_usage': 0,
+      'role': 'default',
+      'social_auth': list([
+      ]),
+      'source': None,
+      'upload_rate_limit': None,
+    }),
+  ])
+# ---
+# name: test_writes[clean_trash]
+  None
+# ---
+# name: test_writes[clean_trash_owner]
+  None
+# ---
+# name: test_writes[create_group]
+  dict({
+    'created_at': datetime.datetime(2026, 10, 15, 9, 22, 42, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'id': 4,
+    'name': 'admin-group2',
+    'owner': '77880dad4fce473ebe441ea29f9c01de@auth.local',
+    'owner_name': 'Admin Test 2',
+    'parent_group_id': 0,
+    'quota': 0,
+  })
+# ---
+# name: test_writes[create_library]
+  dict({
+    'encrypted': False,
+    'file_count': 0,
+    'group_name': None,
+    'id': '6ef89a2f-9a67-416f-b34a-eaaa167275f5',
+    'last_modified': datetime.datetime(2026, 10, 15, 9, 21, 12, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'name': 'admin-lib',
+    'owner': 'admin@example.com',
+    'owner_contact_email': 'admin@example.com',
+    'owner_email': 'admin@example.com',
+    'owner_name': 'admin',
+    'size': 0,
+    'status': 'normal',
+  })
+# ---
+# name: test_writes[create_system_notification]
+  dict({
+    'id': 1,
+    'is_current': False,
+    'msg': 'admin-banner test',
+  })
+# ---
+# name: test_writes[create_user]
+  dict({
+    'avatar_url': None,
+    'contact_email': 'admin-test@example.com',
+    'create_time': datetime.datetime(2026, 10, 15, 9, 20, 50, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'download_rate_limit': None,
+    'email': '77880dad4fce473ebe441ea29f9c01de@auth.local',
+    'has_default_device': False,
+    'institution': None,
+    'is_active': True,
+    'is_force_2fa': False,
+    'is_staff': False,
+    'last_access_time': None,
+    'last_login': None,
+    'login_id': None,
+    'name': 'Admin Test',
+    'org_id': None,
+    'org_name': None,
+    'quota_total': 100000000,
+    'quota_usage': 0,
+    'role': 'default',
+    'social_auth': list([
+    ]),
+    'source': None,
+    'upload_rate_limit': None,
+  })
+# ---
+# name: test_writes[create_user_notification]
+  dict({
+    'contact_email': 'admin-test@example.com',
+    'created_at': datetime.datetime(2026, 10, 15, 9, 22, 55, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'id': 2,
+    'msg': 'admin announcement',
+    'msg_format': 'admin announcement',
+    'name': 'Admin Test 2',
+    'org_name': '',
+    'seen': False,
+    'username': '77880dad4fce473ebe441ea29f9c01de@auth.local',
+  })
+# ---
+# name: test_writes[delete_device]
+  None
+# ---
+# name: test_writes[delete_device_errors]
+  None
+# ---
+# name: test_writes[delete_group]
+  None
+# ---
+# name: test_writes[delete_library]
+  None
+# ---
+# name: test_writes[delete_share_link]
+  None
+# ---
+# name: test_writes[delete_system_notification]
+  None
+# ---
+# name: test_writes[delete_trash_library]
+  None
+# ---
+# name: test_writes[delete_upload_link]
+  None
+# ---
+# name: test_writes[delete_user]
+  None
+# ---
+# name: test_writes[delete_user_notification]
+  None
+# ---
+# name: test_writes[restore_trash_library]
+  None
+# ---
+# name: test_writes[set_current_system_notification]
+  dict({
+    'id': 1,
+    'is_current': True,
+    'msg': 'admin-banner test',
+  })
+# ---
+# name: test_writes[update_group]
+  dict({
+    'created_at': datetime.datetime(2026, 10, 15, 9, 22, 42, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'id': 4,
+    'name': 'admin-group2',
+    'owner': '77880dad4fce473ebe441ea29f9c01de@auth.local',
+    'owner_name': 'Admin Test 2',
+    'parent_group_id': 0,
+    'quota': 0,
+  })
+# ---
+# name: test_writes[update_library]
+  dict({
+    'encrypted': False,
+    'file_count': 0,
+    'group_name': None,
+    'id': '6ef89a2f-9a67-416f-b34a-eaaa167275f5',
+    'last_modified': datetime.datetime(2026, 10, 15, 9, 21, 19, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'name': 'admin-lib2',
+    'owner': '77880dad4fce473ebe441ea29f9c01de@auth.local',
+    'owner_contact_email': 'admin-test@example.com',
+    'owner_email': '77880dad4fce473ebe441ea29f9c01de@auth.local',
+    'owner_name': 'Admin Test 2',
+    'size': 0,
+    'status': 'read-only',
+  })
+# ---
+# name: test_writes[update_user]
+  dict({
+    'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+    'contact_email': 'admin-test@example.com',
+    'create_time': datetime.datetime(2026, 10, 15, 9, 20, 50, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'download_rate_limit': None,
+    'email': '77880dad4fce473ebe441ea29f9c01de@auth.local',
+    'has_default_device': False,
+    'institution': None,
+    'is_active': True,
+    'is_force_2fa': False,
+    'is_staff': False,
+    'last_access_time': None,
+    'last_login': None,
+    'login_id': None,
+    'name': 'Admin Test',
+    'org_id': None,
+    'org_name': None,
+    'quota_total': 100000000,
+    'quota_usage': 0,
+    'role': 'default',
+    'social_auth': list([
+    ]),
+    'source': None,
+    'upload_rate_limit': None,
+  })
+# ---

@@ -1,0 +1,11 @@
+{
+    "repo_api_tokens": [
+        {
+            "repo_id": "02c7b6ae-5500-4c4a-85c4-4b683447d6c5",
+            "app_name": "libraries-app",
+            "generated_by": "admin@example.com",
+            "permission": "rw",
+            "api_token": "0123456789abcdef0123456789abcdef01234567"
+        }
+    ]
+}

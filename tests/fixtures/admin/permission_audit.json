@@ -1,0 +1,13 @@
+[
+    {
+        "etype": "add-repo-perm",
+        "repo_id": "6490a72d-4c26-4020-ad00-1b72fb2c88c9",
+        "repo_name": "Documents",
+        "permission": "rw",
+        "time": "2026-10-15T09:12:00+02:00",
+        "file_path": "/",
+        "from_name": "admin",
+        "from_email": "admin@example.com",
+        "to": "user@example.com"
+    }
+]

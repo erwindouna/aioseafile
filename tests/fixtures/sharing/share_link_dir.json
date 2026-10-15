@@ -1,0 +1,27 @@
+{
+    "username": "admin@example.com",
+    "repo_id": "35124f5c-2850-44c6-88dd-f6478f273d0b",
+    "repo_name": "sharing-lib",
+    "path": "/photos/",
+    "obj_name": "photos",
+    "obj_id": "0000000000000000000000000000000000000000",
+    "is_dir": true,
+    "token": "beeb336ef9b64cfe97ca",
+    "link": "http://127.0.0.1/d/beeb336ef9b64cfe97ca/",
+    "download_link": "http://127.0.0.1/seafhttp/f/beeb336ef9b64cfe97ca/",
+    "show_download_link": false,
+    "view_cnt": 0,
+    "ctime": "2026-10-15T09:22:27+02:00",
+    "expire_date": "",
+    "is_expired": false,
+    "permissions": {
+        "can_edit": false,
+        "can_download": true,
+        "can_upload": false,
+        "can_copy_content": true
+    },
+    "password": "",
+    "user_scope": "specific_users",
+    "description": "",
+    "can_edit": false
+}

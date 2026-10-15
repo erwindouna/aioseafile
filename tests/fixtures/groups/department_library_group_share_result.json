@@ -1,0 +1,15 @@
+{
+    "failed": [
+        {
+            "group_id": "99999",
+            "error_msg": "Group 99999 not found"
+        }
+    ],
+    "success": [
+        {
+            "group_id": 1,
+            "group_name": "groups-team",
+            "permission": "rw"
+        }
+    ]
+}

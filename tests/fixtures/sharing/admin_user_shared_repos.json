@@ -1,0 +1,18 @@
+[
+    {
+        "repo_id": "35124f5c-2850-44c6-88dd-f6478f273d0b",
+        "repo_name": "sharing-lib",
+        "encrypted": false,
+        "share_type": "personal",
+        "share_permission": "rw",
+        "share_permission_name": "",
+        "modifier_email": "admin@example.com",
+        "modifier_name": "admin",
+        "modifier_contact_email": "admin@example.com",
+        "share_from": "admin@example.com",
+        "share_from_user_name": "admin",
+        "user_name": "Sharing",
+        "user_email": "b3c300a8ff924480ae27938952f9f90a@auth.local",
+        "contact_email": "sharing@example.com"
+    }
+]

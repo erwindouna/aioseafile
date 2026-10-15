@@ -1,0 +1,13 @@
+{
+    "failed": [
+        {
+            "token": "9ea25a8a1e3c44c2a236",
+            "error_msg": "Permission denied."
+        }
+    ],
+    "success": [
+        {
+            "token": "2f11f610ee3649439d93"
+        }
+    ]
+}

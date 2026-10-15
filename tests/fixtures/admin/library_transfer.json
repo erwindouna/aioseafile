@@ -1,0 +1,14 @@
+{
+    "id": "6ef89a2f-9a67-416f-b34a-eaaa167275f5",
+    "name": "admin-lib2",
+    "owner": "77880dad4fce473ebe441ea29f9c01de@auth.local",
+    "owner_email": "77880dad4fce473ebe441ea29f9c01de@auth.local",
+    "owner_contact_email": "admin-test@example.com",
+    "size": 0,
+    "size_formatted": "0 bytes",
+    "encrypted": false,
+    "file_count": 0,
+    "status": "read-only",
+    "last_modified": "2026-10-15T09:21:19+02:00",
+    "owner_name": "Admin Test 2"
+}

@@ -1,0 +1,22 @@
+{
+    "creator_email": "admin@example.com",
+    "creator_name": "admin",
+    "creator_contact_email": "admin@example.com",
+    "repo_id": "fa6d5ec6-ceea-419e-ab84-36833c49d5ab",
+    "repo_name": "admin-lib",
+    "path": "/",
+    "obj_name": "/",
+    "is_dir": true,
+    "token": "129e091b06f9449484a1",
+    "link": "http://127.0.0.1/d/129e091b06f9449484a1/",
+    "view_cnt": 0,
+    "ctime": "2026-10-15T09:22:34+02:00",
+    "expire_date": "",
+    "is_expired": false,
+    "permissions": {
+        "can_edit": false,
+        "can_download": true,
+        "can_upload": false,
+        "can_copy_content": true
+    }
+}

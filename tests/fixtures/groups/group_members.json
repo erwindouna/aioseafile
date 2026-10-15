@@ -1,0 +1,32 @@
+[
+    {
+        "group_id": 1,
+        "name": "Groups Two",
+        "email": "590bfa62d6154025b48466f05f0700fa@auth.local",
+        "contact_email": "groups2@example.com",
+        "login_id": "",
+        "avatar_url": "http://127.0.0.1/media/avatars/default.png",
+        "is_admin": false,
+        "role": "Member"
+    },
+    {
+        "group_id": 1,
+        "name": "Groups User",
+        "email": "4897149ea526449c94491315b118c13e@auth.local",
+        "contact_email": "groups@example.com",
+        "login_id": "",
+        "avatar_url": "http://127.0.0.1/media/avatars/default.png",
+        "is_admin": true,
+        "role": "Admin"
+    },
+    {
+        "group_id": 1,
+        "name": "admin",
+        "email": "admin@example.com",
+        "contact_email": "admin@example.com",
+        "login_id": "",
+        "avatar_url": "http://127.0.0.1/media/avatars/default.png",
+        "is_admin": true,
+        "role": "Owner"
+    }
+]

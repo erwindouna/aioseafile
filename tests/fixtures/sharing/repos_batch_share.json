@@ -1,0 +1,16 @@
+{
+    "failed": [
+        {
+            "repo_id": "00000000-0000-0000-0000-000000000000",
+            "error_msg": "Library 00000000-0000-0000-0000-000000000000 not found."
+        }
+    ],
+    "success": [
+        {
+            "repo_id": "35124f5c-2850-44c6-88dd-f6478f273d0b",
+            "group_id": 3,
+            "group_name": "sharing-group",
+            "permission": "r"
+        }
+    ]
+}

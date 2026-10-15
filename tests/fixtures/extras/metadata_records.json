@@ -1,0 +1,22 @@
+{
+    "metadata": [
+        {"key": "_id", "name": "_id", "type": "text", "data": null},
+        {"key": "_parent_dir", "name": "_parent_dir", "type": "text", "data": null},
+        {"key": "_name", "name": "_name", "type": "text", "data": null},
+        {"key": "_is_dir", "name": "_is_dir", "type": "checkbox", "data": null},
+        {"key": "_size", "name": "_size", "type": "number", "data": null},
+        {"key": "_file_mtime", "name": "_file_mtime", "type": "date", "data": null},
+        {"key": "afdsxax", "name": "Rating", "type": "rate", "data": {"max": 5}}
+    ],
+    "results": [
+        {
+            "_id": "al8SjKN0QxGrE6vr0SHDOw",
+            "_parent_dir": "/",
+            "_name": "file",
+            "_is_dir": false,
+            "_size": 3952270,
+            "_file_mtime": "2025-02-14T11:21:33+08:00",
+            "afdsxax": 4
+        }
+    ]
+}

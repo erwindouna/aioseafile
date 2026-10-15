@@ -1,0 +1,19 @@
+{
+    "dirent_list": [
+        {
+            "size": 0,
+            "last_modified": "2026-10-15T09:22:10+02:00",
+            "is_dir": true,
+            "folder_path": "/photos/",
+            "folder_name": "photos"
+        },
+        {
+            "size": 0,
+            "last_modified": "2026-10-15T09:22:10+02:00",
+            "is_dir": false,
+            "file_path": "/notes.md",
+            "file_name": "notes.md"
+        }
+    ],
+    "dir_path": "/"
+}

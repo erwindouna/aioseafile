@@ -1,0 +1,14 @@
+[
+    {
+        "repo_id": "6465d502-cdab-40bc-9a76-9751bbca8657",
+        "owner_email": "cd5c4b94509142178a6b48f1b8de11b3@auth.local",
+        "owner_name": "libraries",
+        "owner_contact_email": "libraries@example.com",
+        "repo_name": "libraries-web2",
+        "org_id": null,
+        "head_commit_id": "d9c4b17057fe74cb5a297761d39f1ead87769687",
+        "encrypted": false,
+        "del_time": "2026-10-15T09:23:28+02:00",
+        "size": 0
+    }
+]

@@ -1,0 +1,420 @@
+# serializer version: 1
+# name: test_get_endpoints[get_copy_move_progress]
+  dict({
+    'canceled': False,
+    'done': True,
+    'failed': False,
+    'successful': True,
+    'total': 2,
+  })
+# ---
+# name: test_get_endpoints[get_directory]
+  dict({
+    'dir_id': '3382eefd61f82d4eb97dc6288804cc2aad0e044d',
+    'entries': list([
+      dict({
+        'id': 'b5c37843cadfbf0fefa532bf435254497bb53109',
+        'is_locked': None,
+        'modified': datetime.datetime(2026, 10, 15, 7, 24, 51, tzinfo=datetime.timezone.utc),
+        'modifier_email': 'admin@example.com',
+        'modifier_name': 'admin',
+        'name': 'chunked ü.tar',
+        'parent_dir': '/backups/ha/',
+        'permission': 'rw',
+        'size': 5300000,
+        'starred': False,
+        'type': <DirentType.FILE: 'file'>,
+      }),
+      dict({
+        'id': '391f58e1d4132f78731caa6964204ca2011768e7',
+        'is_locked': None,
+        'modified': datetime.datetime(2026, 10, 15, 7, 24, 51, tzinfo=datetime.timezone.utc),
+        'modifier_email': 'admin@example.com',
+        'modifier_name': 'admin',
+        'name': 'single (1).tar',
+        'parent_dir': '/backups/ha/',
+        'permission': 'rw',
+        'size': 1,
+        'starred': False,
+        'type': <DirentType.FILE: 'file'>,
+      }),
+      dict({
+        'id': 'b5c37843cadfbf0fefa532bf435254497bb53109',
+        'is_locked': None,
+        'modified': datetime.datetime(2026, 10, 15, 7, 24, 51, tzinfo=datetime.timezone.utc),
+        'modifier_email': 'admin@example.com',
+        'modifier_name': 'admin',
+        'name': 'single.tar',
+        'parent_dir': '/backups/ha/',
+        'permission': 'rw',
+        'size': 5300000,
+        'starred': False,
+        'type': <DirentType.FILE: 'file'>,
+      }),
+    ]),
+    'user_perm': 'rw',
+  })
+# ---
+# name: test_get_endpoints[get_directory_detail]
+  dict({
+    'modified': datetime.datetime(2026, 10, 15, 9, 24, 52, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'name': 'backups',
+    'path': '/backups/',
+    'permission': 'rw',
+    'repo_id': '7bdfdaf6-a4ea-4784-9146-87ce91700202',
+  })
+# ---
+# name: test_get_endpoints[get_directory_files]
+  dict({
+    'dir_id': '3382eefd61f82d4eb97dc6288804cc2aad0e044d',
+    'entries': list([
+      dict({
+        'id': 'b5c37843cadfbf0fefa532bf435254497bb53109',
+        'is_locked': None,
+        'modified': datetime.datetime(2026, 10, 15, 7, 24, 51, tzinfo=datetime.timezone.utc),
+        'modifier_email': 'admin@example.com',
+        'modifier_name': 'admin',
+        'name': 'chunked ü.tar',
+        'parent_dir': '/backups/ha/',
+        'permission': 'rw',
+        'size': 5300000,
+        'starred': False,
+        'type': <DirentType.FILE: 'file'>,
+      }),
+      dict({
+        'id': '391f58e1d4132f78731caa6964204ca2011768e7',
+        'is_locked': None,
+        'modified': datetime.datetime(2026, 10, 15, 7, 24, 51, tzinfo=datetime.timezone.utc),
+        'modifier_email': 'admin@example.com',
+        'modifier_name': 'admin',
+        'name': 'single (1).tar',
+        'parent_dir': '/backups/ha/',
+        'permission': 'rw',
+        'size': 1,
+        'starred': False,
+        'type': <DirentType.FILE: 'file'>,
+      }),
+      dict({
+        'id': 'b5c37843cadfbf0fefa532bf435254497bb53109',
+        'is_locked': None,
+        'modified': datetime.datetime(2026, 10, 15, 7, 24, 51, tzinfo=datetime.timezone.utc),
+        'modifier_email': 'admin@example.com',
+        'modifier_name': 'admin',
+        'name': 'single.tar',
+        'parent_dir': '/backups/ha/',
+        'permission': 'rw',
+        'size': 5300000,
+        'starred': False,
+        'type': <DirentType.FILE: 'file'>,
+      }),
+    ]),
+    'user_perm': 'rw',
+  })
+# ---
+# name: test_get_endpoints[get_directory_recursive]
+  dict({
+    'dir_id': None,
+    'entries': list([
+      dict({
+        'id': 'f7cc4b8517a1f0534476db27113c4a7206a265d1',
+        'is_locked': None,
+        'modified': datetime.datetime(2026, 10, 15, 7, 21, 21, tzinfo=datetime.timezone.utc),
+        'modifier_email': None,
+        'modifier_name': None,
+        'name': 'b',
+        'parent_dir': '/a/',
+        'permission': 'rw',
+        'size': None,
+        'starred': False,
+        'type': <DirentType.DIR: 'dir'>,
+      }),
+      dict({
+        'id': '0000000000000000000000000000000000000000',
+        'is_locked': None,
+        'modified': datetime.datetime(2026, 10, 15, 7, 21, 21, tzinfo=datetime.timezone.utc),
+        'modifier_email': None,
+        'modifier_name': None,
+        'name': 'c',
+        'parent_dir': '/a/b',
+        'permission': 'rw',
+        'size': None,
+        'starred': False,
+        'type': <DirentType.DIR: 'dir'>,
+      }),
+      dict({
+        'id': '0000000000000000000000000000000000000000',
+        'is_locked': None,
+        'modified': datetime.datetime(2026, 10, 15, 7, 21, 21, tzinfo=datetime.timezone.utc),
+        'modifier_email': 'admin@example.com',
+        'modifier_name': 'admin',
+        'name': 'm.txt',
+        'parent_dir': '/a/b',
+        'permission': 'rw',
+        'size': 0,
+        'starred': False,
+        'type': <DirentType.FILE: 'file'>,
+      }),
+      dict({
+        'id': '0000000000000000000000000000000000000000',
+        'is_locked': None,
+        'modified': datetime.datetime(2026, 10, 15, 7, 21, 21, tzinfo=datetime.timezone.utc),
+        'modifier_email': 'admin@example.com',
+        'modifier_name': 'admin',
+        'name': 'm.txt',
+        'parent_dir': '/a/',
+        'permission': 'rw',
+        'size': 0,
+        'starred': False,
+        'type': <DirentType.FILE: 'file'>,
+      }),
+    ]),
+    'user_perm': None,
+  })
+# ---
+# name: test_get_endpoints[get_file_detail]
+  dict({
+    'can_edit': False,
+    'comment_total': 0,
+    'id': 'b5c37843cadfbf0fefa532bf435254497bb53109',
+    'last_modifier_email': 'admin@example.com',
+    'last_modifier_name': 'admin',
+    'modified': datetime.datetime(2026, 10, 15, 7, 24, 51, tzinfo=datetime.timezone.utc),
+    'name': 'single.tar',
+    'permission': 'rw',
+    'size': 5300000,
+    'starred': False,
+    'type': 'file',
+  })
+# ---
+# name: test_get_endpoints[get_file_history]
+  dict({
+    'next_start_commit': 'a2aa433fa563272f5440620a02ba99aa9b55f314',
+    'revisions': list([
+    ]),
+  })
+# ---
+# name: test_get_endpoints[get_file_history_next_page]
+  dict({
+    'next_start_commit': 'a2aa433fa563272f5440620a02ba99aa9b55f314',
+    'revisions': list([
+    ]),
+  })
+# ---
+# name: test_get_endpoints[get_file_info]
+  dict({
+    'can_edit': False,
+    'can_preview': False,
+    'id': 'b5c37843cadfbf0fefa532bf435254497bb53109',
+    'is_locked': False,
+    'modified': datetime.datetime(2026, 10, 15, 9, 24, 51, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'name': 'single.tar',
+    'parent_dir': '/backups/ha',
+    'repo_id': '7bdfdaf6-a4ea-4784-9146-87ce91700202',
+    'size': 5300000,
+    'type': <DirentType.FILE: 'file'>,
+  })
+# ---
+# name: test_get_endpoints[get_smart_link]
+  dict({
+    'name': 'backups',
+    'smart_link': 'http://127.0.0.1/smart-link/2276f15e-8207-4f4c-a411-172299fd051c/',
+    'smart_link_token': '2276f15e-8207-4f4c-a411-172299fd051c',
+  })
+# ---
+# name: test_get_endpoints[get_starred_items]
+  list([
+    dict({
+      'deleted': False,
+      'is_dir': True,
+      'modified': datetime.datetime(2026, 10, 15, 9, 24, 52, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'name': 'backups',
+      'path': '/backups/',
+      'repo_encrypted': False,
+      'repo_id': '7bdfdaf6-a4ea-4784-9146-87ce91700202',
+      'repo_name': 'files-lib',
+      'user_email': 'admin@example.com',
+      'user_name': 'admin',
+    }),
+    dict({
+      'deleted': False,
+      'is_dir': False,
+      'modified': datetime.datetime(2026, 10, 15, 9, 21, 21, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'name': 'm.txt',
+      'path': '/a/b/m.txt',
+      'repo_encrypted': False,
+      'repo_id': '7bdfdaf6-a4ea-4784-9146-87ce91700202',
+      'repo_name': 'files-lib',
+      'user_email': 'admin@example.com',
+      'user_name': 'admin',
+    }),
+  ])
+# ---
+# name: test_get_endpoints[get_zip_progress]
+  dict({
+    'canceled': 0,
+    'failed': 0,
+    'failed_reason': '',
+    'total': 3,
+    'zipped': 3,
+  })
+# ---
+# name: test_upload_file_bytes
+  dict({
+    'id': 'b5c37843cadfbf0fefa532bf435254497bb53109',
+    'name': 'backup.tar',
+    'size': 5300000,
+  })
+# ---
+# name: test_write_endpoints[cancel_copy_move]
+  None
+# ---
+# name: test_write_endpoints[copy_file]
+  dict({
+    'can_edit': False,
+    'can_preview': False,
+    'id': 'b5c37843cadfbf0fefa532bf435254497bb53109',
+    'is_locked': False,
+    'modified': datetime.datetime(2026, 10, 15, 9, 24, 51, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'name': 'single.tar',
+    'parent_dir': '/backups/ha',
+    'repo_id': '7bdfdaf6-a4ea-4784-9146-87ce91700202',
+    'size': 5300000,
+    'type': <DirentType.FILE: 'file'>,
+  })
+# ---
+# name: test_write_endpoints[create_directory]
+  None
+# ---
+# name: test_write_endpoints[create_directory_without_parents]
+  None
+# ---
+# name: test_write_endpoints[create_file]
+  dict({
+    'can_edit': False,
+    'can_preview': False,
+    'id': 'b5c37843cadfbf0fefa532bf435254497bb53109',
+    'is_locked': False,
+    'modified': datetime.datetime(2026, 10, 15, 9, 24, 51, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'name': 'single.tar',
+    'parent_dir': '/backups/ha',
+    'repo_id': '7bdfdaf6-a4ea-4784-9146-87ce91700202',
+    'size': 5300000,
+    'type': <DirentType.FILE: 'file'>,
+  })
+# ---
+# name: test_write_endpoints[delete_directory]
+  None
+# ---
+# name: test_write_endpoints[delete_file]
+  None
+# ---
+# name: test_write_endpoints[lock_file]
+  dict({
+    'can_edit': False,
+    'can_preview': False,
+    'id': 'b5c37843cadfbf0fefa532bf435254497bb53109',
+    'is_locked': False,
+    'modified': datetime.datetime(2026, 10, 15, 9, 24, 51, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'name': 'single.tar',
+    'parent_dir': '/backups/ha',
+    'repo_id': '7bdfdaf6-a4ea-4784-9146-87ce91700202',
+    'size': 5300000,
+    'type': <DirentType.FILE: 'file'>,
+  })
+# ---
+# name: test_write_endpoints[move_directory_merge]
+  None
+# ---
+# name: test_write_endpoints[move_file]
+  dict({
+    'can_edit': False,
+    'can_preview': False,
+    'id': 'b5c37843cadfbf0fefa532bf435254497bb53109',
+    'is_locked': False,
+    'modified': datetime.datetime(2026, 10, 15, 9, 24, 51, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'name': 'single.tar',
+    'parent_dir': '/backups/ha',
+    'repo_id': '7bdfdaf6-a4ea-4784-9146-87ce91700202',
+    'size': 5300000,
+    'type': <DirentType.FILE: 'file'>,
+  })
+# ---
+# name: test_write_endpoints[refresh_file_lock]
+  dict({
+    'can_edit': False,
+    'can_preview': False,
+    'id': 'b5c37843cadfbf0fefa532bf435254497bb53109',
+    'is_locked': False,
+    'modified': datetime.datetime(2026, 10, 15, 9, 24, 51, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'name': 'single.tar',
+    'parent_dir': '/backups/ha',
+    'repo_id': '7bdfdaf6-a4ea-4784-9146-87ce91700202',
+    'size': 5300000,
+    'type': <DirentType.FILE: 'file'>,
+  })
+# ---
+# name: test_write_endpoints[rename_directory]
+  dict({
+    'can_edit': None,
+    'can_preview': None,
+    'id': '0000000000000000000000000000000000000000',
+    'is_locked': None,
+    'modified': datetime.datetime(2026, 10, 15, 9, 21, 22, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'name': 'y2',
+    'parent_dir': '/',
+    'repo_id': '7bdfdaf6-a4ea-4784-9146-87ce91700202',
+    'size': None,
+    'type': <DirentType.DIR: 'dir'>,
+  })
+# ---
+# name: test_write_endpoints[rename_file]
+  dict({
+    'can_edit': False,
+    'can_preview': False,
+    'id': 'b5c37843cadfbf0fefa532bf435254497bb53109',
+    'is_locked': False,
+    'modified': datetime.datetime(2026, 10, 15, 9, 24, 51, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'name': 'single.tar',
+    'parent_dir': '/backups/ha',
+    'repo_id': '7bdfdaf6-a4ea-4784-9146-87ce91700202',
+    'size': 5300000,
+    'type': <DirentType.FILE: 'file'>,
+  })
+# ---
+# name: test_write_endpoints[revert_directory]
+  None
+# ---
+# name: test_write_endpoints[revert_file]
+  None
+# ---
+# name: test_write_endpoints[star_item]
+  dict({
+    'deleted': False,
+    'is_dir': True,
+    'modified': datetime.datetime(2026, 10, 15, 9, 24, 52, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'name': 'backups',
+    'path': '/backups/',
+    'repo_encrypted': False,
+    'repo_id': '7bdfdaf6-a4ea-4784-9146-87ce91700202',
+    'repo_name': 'files-lib',
+    'user_email': 'admin@example.com',
+    'user_name': 'admin',
+  })
+# ---
+# name: test_write_endpoints[unlock_file]
+  dict({
+    'can_edit': False,
+    'can_preview': False,
+    'id': 'b5c37843cadfbf0fefa532bf435254497bb53109',
+    'is_locked': False,
+    'modified': datetime.datetime(2026, 10, 15, 9, 24, 51, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'name': 'single.tar',
+    'parent_dir': '/backups/ha',
+    'repo_id': '7bdfdaf6-a4ea-4784-9146-87ce91700202',
+    'size': 5300000,
+    'type': <DirentType.FILE: 'file'>,
+  })
+# ---
+# name: test_write_endpoints[unstar_item]
+  None
+# ---

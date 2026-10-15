@@ -1,0 +1,10 @@
+[
+    {
+        "repo_id": "35124f5c-2850-44c6-88dd-f6478f273d0b",
+        "group_id": 3,
+        "group_name": "sharing-group",
+        "folder_path": "/photos",
+        "folder_name": "photos",
+        "permission": "rw"
+    }
+]

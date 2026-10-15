@@ -1,0 +1,37 @@
+{
+    "count": 6,
+    "notification_list": [
+        {
+            "id": 6,
+            "type": "repo_share_to_group",
+            "time": "2026-10-15T09:22:41+02:00",
+            "detail": {
+                "repo_id": "db645667-ae6d-46d5-99de-21b6c1953fab",
+                "group_id": 1,
+                "path": "/",
+                "share_from_user_name": "admin",
+                "share_from_user_email": "admin@example.com",
+                "share_from_user_contact_email": "admin@example.com",
+                "share_from_user_avatar_url": "http://127.0.0.1/media/avatars/default.png",
+                "repo_name": "groups-share-lib",
+                "group_name": "groups-team-renamed"
+            }
+        },
+        {
+            "id": 7,
+            "type": "repo_share_to_group",
+            "time": "2026-10-15T09:22:41+02:00",
+            "detail": {
+                "repo_id": "db645667-ae6d-46d5-99de-21b6c1953fab",
+                "group_id": 1,
+                "path": "/",
+                "share_from_user_name": "admin",
+                "share_from_user_email": "admin@example.com",
+                "share_from_user_contact_email": "admin@example.com",
+                "share_from_user_avatar_url": "http://127.0.0.1/media/avatars/default.png",
+                "repo_name": "groups-share-lib",
+                "group_name": "groups-team-renamed"
+            }
+        }
+    ]
+}

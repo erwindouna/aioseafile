@@ -1,0 +1,29 @@
+{
+    "file_access_log_list": [
+        {
+            "email": "admin@example.com",
+            "name": "admin",
+            "contact_email": "admin@example.com",
+            "ip": "172.19.0.1",
+            "event_type": "web",
+            "device": "",
+            "time": "2026-10-15T09:12:00+02:00",
+            "repo_id": "6490a72d-4c26-4020-ad00-1b72fb2c88c9",
+            "repo_name": "Documents",
+            "file_or_dir_name": "blob.bin"
+        },
+        {
+            "email": "admin@example.com",
+            "name": "admin",
+            "contact_email": "admin@example.com",
+            "ip": "172.19.0.1",
+            "event_type": "API",
+            "device": "aioseafile-probe",
+            "time": "2026-10-15T09:13:00+02:00",
+            "repo_id": "6490a72d-4c26-4020-ad00-1b72fb2c88c9",
+            "repo_name": "Documents",
+            "file_or_dir_name": "backups"
+        }
+    ],
+    "has_next_page": false
+}

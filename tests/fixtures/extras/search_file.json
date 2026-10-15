@@ -1,0 +1,16 @@
+{
+    "data": [
+        {
+            "path": "/extras-dir",
+            "size": 0,
+            "mtime": "2026-10-15T09:23:27+02:00",
+            "type": "folder"
+        },
+        {
+            "path": "/extras.txt",
+            "size": 0,
+            "mtime": "2026-10-15T09:23:27+02:00",
+            "type": "file"
+        }
+    ]
+}

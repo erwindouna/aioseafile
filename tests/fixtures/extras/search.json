@@ -1,0 +1,37 @@
+{
+    "has_more": false,
+    "total": 2,
+    "results": [
+        {
+            "repo_owner_name": "admin",
+            "repo_id": "2628a63b-cfad-41f5-a748-392ec9287686",
+            "name": "3a",
+            "repo_encrypted": false,
+            "repo_owner_contact_email": "admin@admin.com",
+            "repo_owner_email": "admin@admin.com",
+            "last_modified": 1520836447,
+            "content_highlight": "",
+            "fullpath": "/testtest/3a",
+            "repo_name": "dev",
+            "is_dir": false,
+            "size": 0,
+            "repo_type": "",
+            "thumbnail_url": ""
+        },
+        {
+            "repo_owner_name": "admin",
+            "repo_id": "2628a63b-cfad-41f5-a748-392ec9287686",
+            "name": "testtest",
+            "repo_encrypted": false,
+            "repo_owner_contact_email": "admin@admin.com",
+            "repo_owner_email": "admin@admin.com",
+            "last_modified": 1520836462,
+            "content_highlight": "",
+            "fullpath": "/testtest",
+            "repo_name": "dev",
+            "is_dir": true,
+            "size": 0,
+            "permission": "rw"
+        }
+    ]
+}

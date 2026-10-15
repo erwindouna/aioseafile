@@ -1,0 +1,25 @@
+{
+    "user_monthly_traffic_list": [
+        {
+            "email": "admin@example.com",
+            "name": "admin",
+            "sync_file_upload": 1024,
+            "sync_file_download": 2048,
+            "web_file_upload": 15900000,
+            "web_file_download": 4300000,
+            "link_file_upload": 0,
+            "link_file_download": 512
+        },
+        {
+            "email": "238e5377def043ab86bb1df2cfffb13d@auth.local",
+            "name": "User",
+            "sync_file_upload": 0,
+            "sync_file_download": 0,
+            "web_file_upload": 100,
+            "web_file_download": 0,
+            "link_file_upload": 0,
+            "link_file_download": 0
+        }
+    ],
+    "has_next_page": false
+}

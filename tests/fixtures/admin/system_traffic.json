@@ -1,0 +1,20 @@
+[
+    {
+        "datetime": "2026-10-14T00:00:00+02:00",
+        "web-file-upload": 0,
+        "web-file-download": 0,
+        "sync-file-download": 0,
+        "sync-file-upload": 0,
+        "link-file-upload": 0,
+        "link-file-download": 0
+    },
+    {
+        "datetime": "2026-10-15T00:00:00+02:00",
+        "web-file-upload": 15900000,
+        "web-file-download": 4300000,
+        "sync-file-download": 0,
+        "sync-file-upload": 1024,
+        "link-file-upload": 0,
+        "link-file-download": 2048
+    }
+]

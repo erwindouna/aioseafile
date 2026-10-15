@@ -1,0 +1,5 @@
+{
+    "navigation": [
+        {"_id": "FOLDER_abcd", "type": "folder", "name": "Media", "children": [{"_id": "80u7", "type": "view"}, {"_id": "uh51", "type": "view"}]}
+    ]
+}

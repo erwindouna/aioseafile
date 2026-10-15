@@ -1,0 +1,21 @@
+{
+    "failed": [
+        {
+            "email": "nobody@example.com",
+            "email_name": "nobody",
+            "error_msg": "User nobody not found."
+        }
+    ],
+    "success": [
+        {
+            "group_id": 1,
+            "name": "Groups Two",
+            "email": "590bfa62d6154025b48466f05f0700fa@auth.local",
+            "contact_email": "groups2@example.com",
+            "login_id": "",
+            "avatar_url": "http://127.0.0.1/media/avatars/default.png",
+            "is_admin": false,
+            "role": "Member"
+        }
+    ]
+}

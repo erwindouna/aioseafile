@@ -1,0 +1,27 @@
+{
+    "data": [
+        {
+            "email": "admin@example.com",
+            "name": "admin",
+            "contact_email": "admin@example.com",
+            "time": "2026-10-15T09:21:19+02:00",
+            "commit_id": "3f1d2c4b5a69788796a5b4c3d2e1f0a9b8c7d6e5",
+            "description": "Added \"notes.md\".",
+            "client_version": null,
+            "device_name": null,
+            "second_parent_id": null
+        },
+        {
+            "email": "",
+            "name": "",
+            "contact_email": "",
+            "time": "2026-10-15T09:21:12+02:00",
+            "commit_id": "a1b2c3d4e5f60718293a4b5c6d7e8f9012345678",
+            "description": "Created library",
+            "client_version": "9.0.10",
+            "device_name": "laptop",
+            "second_parent_id": null
+        }
+    ],
+    "more": true
+}

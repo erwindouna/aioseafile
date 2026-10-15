@@ -1,0 +1,28 @@
+{
+    "wiki": {
+        "id": "d33dc18c-151f-4de9-93cf-1fa0f7134450",
+        "owner": "admin@example.com",
+        "name": "extras-wiki2",
+        "updated_at": "2026-10-15T09:22:52+02:00",
+        "repo_id": "d33dc18c-151f-4de9-93cf-1fa0f7134450",
+        "wiki_config": {
+            "version": 1,
+            "navigation": [
+                {
+                    "id": "eqTM",
+                    "type": "page"
+                }
+            ],
+            "pages": [
+                {
+                    "id": "eqTM",
+                    "name": "extras-renamed",
+                    "path": "/wiki-pages/2f2a9921-a55d-4730-abde-ffb6daf6c9e8/extras-page.sdoc",
+                    "icon": "x",
+                    "docUuid": "2f2a9921-a55d-4730-abde-ffb6daf6c9e8",
+                    "locked": false
+                }
+            ]
+        }
+    }
+}

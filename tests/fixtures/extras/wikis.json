@@ -1,0 +1,21 @@
+{
+    "wikis": [
+        {
+            "id": "d33dc18c-151f-4de9-93cf-1fa0f7134450",
+            "owner": "admin@example.com",
+            "name": "extras-wiki",
+            "updated_at": "2026-10-15T09:22:30+02:00",
+            "repo_id": "d33dc18c-151f-4de9-93cf-1fa0f7134450",
+            "type": "mine",
+            "permission": "rw",
+            "owner_nickname": "admin",
+            "public_url_suffix": "",
+            "public_url": "",
+            "is_published": false,
+            "enable_server_render": false,
+            "color": "#FF0000",
+            "icon": ""
+        }
+    ],
+    "group_wikis": []
+}

@@ -1,0 +1,13 @@
+{
+    "view": {
+        "_id": "80u7",
+        "table_id": "0001",
+        "name": "v1",
+        "filters": [],
+        "sorts": [],
+        "groupbys": [],
+        "filter_conjunction": "And",
+        "hidden_columns": [],
+        "type": "table"
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "name": "",
+    "owner": "admin@example.com",
+    "repos": [
+        {
+            "id": "572c147d-bf59-40e2-84a7-8d5619703e88",
+            "name": "groups-live-lib",
+            "owner": "admin@example.com",
+            "owner_email": "admin@example.com",
+            "owner_contact_email": "admin@example.com",
+            "size": 0,
+            "size_formatted": "0 bytes",
+            "encrypted": false,
+            "file_count": 0,
+            "status": "normal",
+            "last_modified": "2026-10-15T09:27:36+02:00",
+            "owner_name": "admin"
+        },
+        {
+            "id": "35124f5c-2850-44c6-88dd-f6478f273d0b",
+            "name": "sharing-lib",
+            "owner": "admin@example.com",
+            "owner_email": "admin@example.com",
+            "owner_contact_email": "admin@example.com",
+            "size": 0,
+            "size_formatted": "0 bytes",
+            "encrypted": false,
+            "file_count": 0,
+            "status": "normal",
+            "last_modified": "2026-10-15T09:25:07+02:00",
+            "owner_name": "admin"
+        }
+    ]
+}

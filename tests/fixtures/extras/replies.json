@@ -1,0 +1,19 @@
+{
+    "replies": [
+        {
+            "id": 1,
+            "author": "admin@example.com",
+            "reply": "extras-reply",
+            "type": "reply",
+            "comment_id": 1,
+            "doc_uuid": "2f2a9921-a55d-4730-abde-ffb6daf6c9e8",
+            "created_at": "2026-10-15T09:23:01+02:00",
+            "updated_at": "2026-10-15T09:23:01+02:00",
+            "user_name": "admin",
+            "user_email": "admin@example.com",
+            "user_contact_email": "admin@example.com",
+            "avatar_url": "http://127.0.0.1/media/avatars/default.png"
+        }
+    ],
+    "total_count": 1
+}

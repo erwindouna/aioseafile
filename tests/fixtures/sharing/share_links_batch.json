@@ -1,0 +1,40 @@
+[
+    {
+        "username": "admin@example.com",
+        "repo_id": "35124f5c-2850-44c6-88dd-f6478f273d0b",
+        "repo_name": "sharing-lib",
+        "path": "/notes.md",
+        "obj_name": "notes.md",
+        "is_dir": false,
+        "token": "2f11f610ee3649439d93",
+        "link": "http://127.0.0.1/f/2f11f610ee3649439d93/",
+        "ctime": "2026-10-15T09:22:42+02:00",
+        "expire_date": "2026-10-18T09:22:42+02:00",
+        "permissions": {
+            "can_edit": false,
+            "can_download": true,
+            "can_upload": false,
+            "can_copy_content": true
+        },
+        "password": "Y]kreFt;"
+    },
+    {
+        "username": "admin@example.com",
+        "repo_id": "35124f5c-2850-44c6-88dd-f6478f273d0b",
+        "repo_name": "sharing-lib",
+        "path": "/notes.md",
+        "obj_name": "notes.md",
+        "is_dir": false,
+        "token": "b04269ee997e46588084",
+        "link": "http://127.0.0.1/f/b04269ee997e46588084/",
+        "ctime": "2026-10-15T09:22:42+02:00",
+        "expire_date": "2026-10-18T09:22:42+02:00",
+        "permissions": {
+            "can_edit": false,
+            "can_download": true,
+            "can_upload": false,
+            "can_copy_content": true
+        },
+        "password": "dnE.Y|#="
+    }
+]

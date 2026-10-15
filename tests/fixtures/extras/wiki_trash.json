@@ -1,0 +1,16 @@
+{
+    "items": [
+        {
+            "id": 1,
+            "repo_id": "d33dc18c-151f-4de9-93cf-1fa0f7134450",
+            "doc_uuid": "75b8026d-ded2-48cf-9f66-e09a8598d07f",
+            "page_id": "wkK7",
+            "parent_page_id": null,
+            "subpages": "{\"id\": \"wkK7\", \"type\": \"page\"}",
+            "name": "extras-page2",
+            "delete_time": "2026-10-15T09:22:39",
+            "size": 0
+        }
+    ],
+    "total_count": 1
+}

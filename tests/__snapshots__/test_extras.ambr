@@ -1,0 +1,1329 @@
+# serializer version: 1
+# name: test_endpoints[add_file_tag]
+  dict({
+    'file_tag_id': 1,
+    'repo_tag_id': 1,
+    'tag_color': None,
+    'tag_name': None,
+  })
+# ---
+# name: test_endpoints[add_metadata_tag_links]
+  None
+# ---
+# name: test_endpoints[clean_wiki_trash]
+  None
+# ---
+# name: test_endpoints[convert_wiki]
+  'abc'
+# ---
+# name: test_endpoints[convert_wiki_group]
+  'abc'
+# ---
+# name: test_endpoints[create_file_comment]
+  dict({
+    'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+    'comment': 'extras-comment',
+    'created_at': datetime.datetime(2026, 10, 15, 9, 23, 1, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'detail': '{"element_id":"a"}',
+    'id': 1,
+    'item_name': 'extras-page.sdoc',
+    'parent_path': '/wiki-pages/2f2a9921-a55d-4730-abde-ffb6daf6c9e8',
+    'replies': list([
+    ]),
+    'repo_id': 'd33dc18c-151f-4de9-93cf-1fa0f7134450',
+    'resolved': False,
+    'updated_at': datetime.datetime(2026, 10, 15, 9, 23, 1, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'user_contact_email': 'admin@example.com',
+    'user_email': 'admin@example.com',
+    'user_name': 'admin',
+  })
+# ---
+# name: test_endpoints[create_file_comment_no_detail]
+  dict({
+    'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+    'comment': 'extras-comment',
+    'created_at': datetime.datetime(2026, 10, 15, 9, 23, 1, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'detail': '{"element_id":"a"}',
+    'id': 1,
+    'item_name': 'extras-page.sdoc',
+    'parent_path': '/wiki-pages/2f2a9921-a55d-4730-abde-ffb6daf6c9e8',
+    'replies': list([
+    ]),
+    'repo_id': 'd33dc18c-151f-4de9-93cf-1fa0f7134450',
+    'resolved': False,
+    'updated_at': datetime.datetime(2026, 10, 15, 9, 23, 1, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'user_contact_email': 'admin@example.com',
+    'user_email': 'admin@example.com',
+    'user_name': 'admin',
+  })
+# ---
+# name: test_endpoints[create_file_comment_reply]
+  dict({
+    'author': 'admin@example.com',
+    'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+    'comment_id': 1,
+    'created_at': datetime.datetime(2026, 10, 15, 9, 23, 1, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'doc_uuid': '2f2a9921-a55d-4730-abde-ffb6daf6c9e8',
+    'id': 1,
+    'reply': 'extras-reply',
+    'type': 'reply',
+    'updated_at': datetime.datetime(2026, 10, 15, 9, 23, 1, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'user_contact_email': 'admin@example.com',
+    'user_email': 'admin@example.com',
+    'user_name': 'admin',
+  })
+# ---
+# name: test_endpoints[create_group_wiki]
+  dict({
+    'color': '#FF0000',
+    'enable_server_render': None,
+    'group_admins': None,
+    'group_id': None,
+    'group_name': None,
+    'icon': '',
+    'id': 'd33dc18c-151f-4de9-93cf-1fa0f7134450',
+    'is_published': None,
+    'name': 'extras-wiki',
+    'owner': 'admin@example.com',
+    'owner_nickname': 'admin',
+    'permission': None,
+    'public_url': None,
+    'public_url_suffix': None,
+    'repo_id': 'd33dc18c-151f-4de9-93cf-1fa0f7134450',
+    'type': None,
+    'updated_at': datetime.datetime(2026, 10, 15, 9, 22, 30, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+  })
+# ---
+# name: test_endpoints[create_metadata_column]
+  dict({
+    'data': '',
+    'key': 'afdsxax',
+    'name': 'column_name',
+    'type': 'text',
+  })
+# ---
+# name: test_endpoints[create_metadata_column_options]
+  dict({
+    'data': '',
+    'key': 'afdsxax',
+    'name': 'column_name',
+    'type': 'text',
+  })
+# ---
+# name: test_endpoints[create_metadata_tags]
+  list([
+    dict({
+      'color': '#F4667C',
+      'created': datetime.datetime(2025, 2, 14, 10, 40, 52, tzinfo=datetime.timezone(datetime.timedelta(seconds=28800))),
+      'creator': 'e40151bbbe184577b11ed818a49f97f3@auth.local',
+      'file_links': list([
+      ]),
+      'id': 'dOSid9ECR26rHtgLokPXBw',
+      'last_modifier': 'e40151bbbe184577b11ed818a49f97f3@auth.local',
+      'modified': datetime.datetime(2025, 2, 14, 10, 40, 52, tzinfo=datetime.timezone(datetime.timedelta(seconds=28800))),
+      'name': 'Tag1',
+      'parent_links': list([
+      ]),
+      'sub_links': list([
+      ]),
+    }),
+  ])
+# ---
+# name: test_endpoints[create_metadata_view]
+  dict({
+    'basic_filters': list([
+    ]),
+    'filter_conjunction': 'And',
+    'filters': list([
+    ]),
+    'groupbys': list([
+    ]),
+    'hidden_columns': list([
+    ]),
+    'id': '80u7',
+    'name': 'v1',
+    'sorts': list([
+    ]),
+    'table_id': '0001',
+    'type': 'table',
+  })
+# ---
+# name: test_endpoints[create_metadata_view_in_folder]
+  dict({
+    'basic_filters': list([
+    ]),
+    'filter_conjunction': 'And',
+    'filters': list([
+    ]),
+    'groupbys': list([
+    ]),
+    'hidden_columns': list([
+    ]),
+    'id': '80u7',
+    'name': 'v1',
+    'sorts': list([
+    ]),
+    'table_id': '0001',
+    'type': 'table',
+  })
+# ---
+# name: test_endpoints[create_repo_tag]
+  dict({
+    'files_count': None,
+    'repo_id': '48e244b2-d5df-4846-b460-02548e1e61d6',
+    'repo_tag_id': 1,
+    'tag_color': '#FF0000',
+    'tag_name': 'extras-red',
+  })
+# ---
+# name: test_endpoints[create_repo_tags]
+  list([
+    dict({
+      'files_count': None,
+      'repo_id': '48e244b2-d5df-4846-b460-02548e1e61d6',
+      'repo_tag_id': 2,
+      'tag_color': '#00FF00',
+      'tag_name': 'extras-green',
+    }),
+  ])
+# ---
+# name: test_endpoints[create_wiki]
+  dict({
+    'color': '#FF0000',
+    'enable_server_render': None,
+    'group_admins': None,
+    'group_id': None,
+    'group_name': None,
+    'icon': '',
+    'id': 'd33dc18c-151f-4de9-93cf-1fa0f7134450',
+    'is_published': None,
+    'name': 'extras-wiki',
+    'owner': 'admin@example.com',
+    'owner_nickname': 'admin',
+    'permission': None,
+    'public_url': None,
+    'public_url_suffix': None,
+    'repo_id': 'd33dc18c-151f-4de9-93cf-1fa0f7134450',
+    'type': None,
+    'updated_at': datetime.datetime(2026, 10, 15, 9, 22, 30, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+  })
+# ---
+# name: test_endpoints[create_wiki_page]
+  dict({
+    'doc_uuid': '2f2a9921-a55d-4730-abde-ffb6daf6c9e8',
+    'locked': False,
+    'modified': None,
+    'obj_name': 'extras-page.sdoc',
+    'page_id': 'eqTM',
+    'page_name': 'extras-page',
+    'parent_dir': '/wiki-pages/2f2a9921-a55d-4730-abde-ffb6daf6c9e8',
+    'repo_id': 'd33dc18c-151f-4de9-93cf-1fa0f7134450',
+  })
+# ---
+# name: test_endpoints[create_wiki_subpage]
+  dict({
+    'doc_uuid': '2f2a9921-a55d-4730-abde-ffb6daf6c9e8',
+    'locked': False,
+    'modified': None,
+    'obj_name': 'extras-page.sdoc',
+    'page_id': 'eqTM',
+    'page_name': 'extras-page',
+    'parent_dir': '/wiki-pages/2f2a9921-a55d-4730-abde-ffb6daf6c9e8',
+    'repo_id': 'd33dc18c-151f-4de9-93cf-1fa0f7134450',
+  })
+# ---
+# name: test_endpoints[delete_file_comment]
+  None
+# ---
+# name: test_endpoints[delete_file_comment_reply]
+  None
+# ---
+# name: test_endpoints[delete_file_tag]
+  None
+# ---
+# name: test_endpoints[delete_metadata_column]
+  None
+# ---
+# name: test_endpoints[delete_metadata_tag_links]
+  None
+# ---
+# name: test_endpoints[delete_metadata_tags]
+  None
+# ---
+# name: test_endpoints[delete_metadata_view]
+  None
+# ---
+# name: test_endpoints[delete_metadata_view_in_folder]
+  None
+# ---
+# name: test_endpoints[delete_repo_tag]
+  None
+# ---
+# name: test_endpoints[delete_wiki]
+  None
+# ---
+# name: test_endpoints[delete_wiki_page]
+  None
+# ---
+# name: test_endpoints[disable_metadata]
+  None
+# ---
+# name: test_endpoints[disable_metadata_tags]
+  None
+# ---
+# name: test_endpoints[duplicate_metadata_view]
+  dict({
+    'basic_filters': list([
+    ]),
+    'filter_conjunction': 'And',
+    'filters': list([
+    ]),
+    'groupbys': list([
+    ]),
+    'hidden_columns': list([
+    ]),
+    'id': '80u7',
+    'name': 'v1',
+    'sorts': list([
+    ]),
+    'table_id': '0001',
+    'type': 'table',
+  })
+# ---
+# name: test_endpoints[duplicate_metadata_view_in_folder]
+  dict({
+    'basic_filters': list([
+    ]),
+    'filter_conjunction': 'And',
+    'filters': list([
+    ]),
+    'groupbys': list([
+    ]),
+    'hidden_columns': list([
+    ]),
+    'id': '80u7',
+    'name': 'v1',
+    'sorts': list([
+    ]),
+    'table_id': '0001',
+    'type': 'table',
+  })
+# ---
+# name: test_endpoints[enable_metadata]
+  'abc'
+# ---
+# name: test_endpoints[enable_metadata_tags]
+  None
+# ---
+# name: test_endpoints[get_file_comment]
+  dict({
+    'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+    'comment': 'extras-comment',
+    'created_at': datetime.datetime(2026, 10, 15, 9, 23, 1, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'detail': '{"element_id":"a"}',
+    'id': 1,
+    'item_name': 'extras-page.sdoc',
+    'parent_path': '/wiki-pages/2f2a9921-a55d-4730-abde-ffb6daf6c9e8',
+    'replies': list([
+    ]),
+    'repo_id': 'd33dc18c-151f-4de9-93cf-1fa0f7134450',
+    'resolved': False,
+    'updated_at': datetime.datetime(2026, 10, 15, 9, 23, 1, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'user_contact_email': 'admin@example.com',
+    'user_email': 'admin@example.com',
+    'user_name': 'admin',
+  })
+# ---
+# name: test_endpoints[get_file_comment_reply]
+  dict({
+    'author': 'admin@example.com',
+    'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+    'comment_id': 1,
+    'created_at': datetime.datetime(2026, 10, 15, 9, 23, 1, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'doc_uuid': '2f2a9921-a55d-4730-abde-ffb6daf6c9e8',
+    'id': 1,
+    'reply': 'extras-reply',
+    'type': 'reply',
+    'updated_at': datetime.datetime(2026, 10, 15, 9, 23, 1, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'user_contact_email': 'admin@example.com',
+    'user_email': 'admin@example.com',
+    'user_name': 'admin',
+  })
+# ---
+# name: test_endpoints[get_file_tags]
+  list([
+    dict({
+      'file_tag_id': 1,
+      'repo_tag_id': 1,
+      'tag_color': '#0000FF',
+      'tag_name': 'extras-blue',
+    }),
+  ])
+# ---
+# name: test_endpoints[get_metadata_record]
+  dict({
+    'metadata': list([
+      dict({
+        'data': None,
+        'key': '_id',
+        'name': '_id',
+        'type': 'text',
+      }),
+      dict({
+        'data': None,
+        'key': '_parent_dir',
+        'name': '_parent_dir',
+        'type': 'text',
+      }),
+      dict({
+        'data': None,
+        'key': '_name',
+        'name': '_name',
+        'type': 'text',
+      }),
+      dict({
+        'data': None,
+        'key': '_is_dir',
+        'name': '_is_dir',
+        'type': 'checkbox',
+      }),
+      dict({
+        'data': None,
+        'key': '_size',
+        'name': '_size',
+        'type': 'number',
+      }),
+      dict({
+        'data': None,
+        'key': '_file_mtime',
+        'name': '_file_mtime',
+        'type': 'date',
+      }),
+      dict({
+        'data': dict({
+          'max': 5,
+        }),
+        'key': 'afdsxax',
+        'name': 'Rating',
+        'type': 'rate',
+      }),
+    ]),
+    'results': list([
+      dict({
+        '_file_mtime': '2025-02-14T11:21:33+08:00',
+        '_id': 'al8SjKN0QxGrE6vr0SHDOw',
+        '_is_dir': False,
+        '_name': 'file',
+        '_parent_dir': '/',
+        '_size': 3952270,
+        'afdsxax': 4,
+      }),
+    ]),
+  })
+# ---
+# name: test_endpoints[get_metadata_records]
+  dict({
+    'metadata': list([
+      dict({
+        'data': None,
+        'key': '_id',
+        'name': '_id',
+        'type': 'text',
+      }),
+      dict({
+        'data': None,
+        'key': '_parent_dir',
+        'name': '_parent_dir',
+        'type': 'text',
+      }),
+      dict({
+        'data': None,
+        'key': '_name',
+        'name': '_name',
+        'type': 'text',
+      }),
+      dict({
+        'data': None,
+        'key': '_is_dir',
+        'name': '_is_dir',
+        'type': 'checkbox',
+      }),
+      dict({
+        'data': None,
+        'key': '_size',
+        'name': '_size',
+        'type': 'number',
+      }),
+      dict({
+        'data': None,
+        'key': '_file_mtime',
+        'name': '_file_mtime',
+        'type': 'date',
+      }),
+      dict({
+        'data': dict({
+          'max': 5,
+        }),
+        'key': 'afdsxax',
+        'name': 'Rating',
+        'type': 'rate',
+      }),
+    ]),
+    'results': list([
+      dict({
+        '_file_mtime': '2025-02-14T11:21:33+08:00',
+        '_id': 'al8SjKN0QxGrE6vr0SHDOw',
+        '_is_dir': False,
+        '_name': 'file',
+        '_parent_dir': '/',
+        '_size': 3952270,
+        'afdsxax': 4,
+      }),
+    ]),
+  })
+# ---
+# name: test_endpoints[get_metadata_status]
+  dict({
+    'details_settings': '{}',
+    'enabled': True,
+    'face_recognition_enabled': False,
+    'global_hidden_columns': list([
+    ]),
+    'ocr_enabled': None,
+    'show_view': True,
+    'summary_enabled': False,
+    'tags_enabled': True,
+    'tags_lang': None,
+  })
+# ---
+# name: test_endpoints[get_metadata_status_13]
+  dict({
+    'details_settings': '{}',
+    'enabled': False,
+    'face_recognition_enabled': None,
+    'global_hidden_columns': None,
+    'ocr_enabled': False,
+    'show_view': None,
+    'summary_enabled': None,
+    'tags_enabled': False,
+    'tags_lang': '',
+  })
+# ---
+# name: test_endpoints[get_metadata_tag_files]
+  list([
+    dict({
+      'id': 'al8SjKN0QxGrE6vr0SHDOw',
+      'modified': datetime.datetime(2025, 2, 14, 11, 21, 33, tzinfo=datetime.timezone(datetime.timedelta(seconds=28800))),
+      'name': 'file',
+      'parent_dir': '/',
+      'size': 3952270,
+      'tags': list([
+        dict({
+          'display_value': 'tag',
+          'row_id': 'KvfhV8GpQPWEskVxBtwePA',
+        }),
+      ]),
+    }),
+  ])
+# ---
+# name: test_endpoints[get_metadata_tags_files]
+  list([
+    dict({
+      'id': 'al8SjKN0QxGrE6vr0SHDOw',
+      'modified': datetime.datetime(2025, 2, 14, 11, 21, 33, tzinfo=datetime.timezone(datetime.timedelta(seconds=28800))),
+      'name': 'file',
+      'parent_dir': '/',
+      'size': 3952270,
+      'tags': list([
+        dict({
+          'display_value': 'tag',
+          'row_id': 'KvfhV8GpQPWEskVxBtwePA',
+        }),
+      ]),
+    }),
+  ])
+# ---
+# name: test_endpoints[get_metadata_tags_files_none]
+  list([
+  ])
+# ---
+# name: test_endpoints[get_metadata_view]
+  dict({
+    'basic_filters': list([
+    ]),
+    'filter_conjunction': 'And',
+    'filters': list([
+    ]),
+    'groupbys': list([
+    ]),
+    'hidden_columns': list([
+    ]),
+    'id': '80u7',
+    'name': 'v1',
+    'sorts': list([
+    ]),
+    'table_id': '0001',
+    'type': 'table',
+  })
+# ---
+# name: test_endpoints[get_metadata_views]
+  dict({
+    'navigation': list([
+      dict({
+        'children': list([
+        ]),
+        'id': 'uh51',
+        'name': None,
+        'type': 'view',
+      }),
+      dict({
+        'children': list([
+          dict({
+            'children': list([
+            ]),
+            'id': '80u7',
+            'name': None,
+            'type': 'view',
+          }),
+        ]),
+        'id': 'FOLDER_abcd',
+        'name': 'Media',
+        'type': 'folder',
+      }),
+    ]),
+    'views': list([
+      dict({
+        'basic_filters': list([
+          dict({
+            'column_key': '_is_dir',
+            'filter_predicate': 'is',
+            'filter_term': 'file',
+          }),
+        ]),
+        'filter_conjunction': 'And',
+        'filters': list([
+        ]),
+        'groupbys': list([
+        ]),
+        'hidden_columns': list([
+        ]),
+        'id': 'uh51',
+        'name': 'All files',
+        'sorts': list([
+          dict({
+            'column_key': '_file_mtime',
+            'sort_type': 'down',
+          }),
+        ]),
+        'table_id': '0001',
+        'type': 'table',
+      }),
+      dict({
+        'basic_filters': list([
+        ]),
+        'filter_conjunction': 'And',
+        'filters': list([
+        ]),
+        'groupbys': list([
+        ]),
+        'hidden_columns': list([
+        ]),
+        'id': '80u7',
+        'name': 'Photos',
+        'sorts': list([
+        ]),
+        'table_id': '0001',
+        'type': 'gallery',
+      }),
+    ]),
+  })
+# ---
+# name: test_endpoints[get_published_wiki_config]
+  dict({
+    'id': 'd33dc18c-151f-4de9-93cf-1fa0f7134450',
+    'name': 'extras-wiki2',
+    'owner': None,
+    'repo_id': 'd33dc18c-151f-4de9-93cf-1fa0f7134450',
+    'updated_at': datetime.datetime(2026, 10, 15, 9, 22, 52, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'wiki_config': dict({
+      'navigation': list([
+        dict({
+          'children': list([
+          ]),
+          'id': 'eqTM',
+          'type': 'page',
+        }),
+      ]),
+      'pages': list([
+        dict({
+          'cover_img_url': None,
+          'doc_uuid': '2f2a9921-a55d-4730-abde-ffb6daf6c9e8',
+          'icon': 'x',
+          'id': 'eqTM',
+          'locked': False,
+          'name': 'extras-renamed',
+          'path': '/wiki-pages/2f2a9921-a55d-4730-abde-ffb6daf6c9e8/extras-page.sdoc',
+        }),
+      ]),
+      'version': 1,
+    }),
+  })
+# ---
+# name: test_endpoints[get_published_wiki_page]
+  dict({
+    'assets_url': '/api/v2.1/seadoc/download-image/2f2a9921-a55d-4730-abde-ffb6daf6c9e8',
+    'last_modified': datetime.datetime(2026, 10, 15, 7, 22, 30, tzinfo=datetime.timezone.utc),
+    'latest_contributor': 'admin',
+    'permission': 'r',
+    'seadoc_access_token': 'test-seadoc-token',
+  })
+# ---
+# name: test_endpoints[get_repo_tags]
+  list([
+    dict({
+      'files_count': 1,
+      'repo_id': '48e244b2-d5df-4846-b460-02548e1e61d6',
+      'repo_tag_id': 1,
+      'tag_color': '#0000FF',
+      'tag_name': 'extras-blue',
+    }),
+    dict({
+      'files_count': 0,
+      'repo_id': '48e244b2-d5df-4846-b460-02548e1e61d6',
+      'repo_tag_id': 2,
+      'tag_color': '#00FF00',
+      'tag_name': 'extras-green',
+    }),
+  ])
+# ---
+# name: test_endpoints[get_tagged_files]
+  list([
+    dict({
+      'file_deleted': False,
+      'file_tag_id': 1,
+      'filename': 'extras.txt',
+      'modified': datetime.datetime(2026, 10, 15, 7, 23, 27, tzinfo=datetime.timezone.utc),
+      'modifier_contact_email': 'admin@example.com',
+      'modifier_email': 'admin@example.com',
+      'modifier_name': 'admin',
+      'parent_path': '/',
+      'size': 0,
+    }),
+  ])
+# ---
+# name: test_endpoints[get_wiki_config]
+  dict({
+    'id': 'd33dc18c-151f-4de9-93cf-1fa0f7134450',
+    'name': 'extras-wiki2',
+    'owner': 'admin@example.com',
+    'repo_id': 'd33dc18c-151f-4de9-93cf-1fa0f7134450',
+    'updated_at': datetime.datetime(2026, 10, 15, 9, 22, 52, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'wiki_config': dict({
+      'navigation': list([
+        dict({
+          'children': list([
+          ]),
+          'id': 'eqTM',
+          'type': 'page',
+        }),
+      ]),
+      'pages': list([
+        dict({
+          'cover_img_url': None,
+          'doc_uuid': '2f2a9921-a55d-4730-abde-ffb6daf6c9e8',
+          'icon': 'x',
+          'id': 'eqTM',
+          'locked': False,
+          'name': 'extras-renamed',
+          'path': '/wiki-pages/2f2a9921-a55d-4730-abde-ffb6daf6c9e8/extras-page.sdoc',
+        }),
+      ]),
+      'version': 1,
+    }),
+  })
+# ---
+# name: test_endpoints[get_wiki_page]
+  dict({
+    'assets_url': '/api/v2.1/seadoc/download-image/2f2a9921-a55d-4730-abde-ffb6daf6c9e8',
+    'last_modified': datetime.datetime(2026, 10, 15, 7, 22, 30, tzinfo=datetime.timezone.utc),
+    'latest_contributor': 'admin',
+    'permission': 'rw',
+    'seadoc_access_token': 'test-seadoc-token',
+  })
+# ---
+# name: test_endpoints[get_wiki_publish_info]
+  dict({
+    'created_at': datetime.datetime(2026, 10, 15, 9, 22, 39),
+    'creator': 'admin@example.com',
+    'enable_server_render': False,
+    'publish_url': 'extras-pub',
+    'visit_count': 0,
+  })
+# ---
+# name: test_endpoints[get_wiki_publish_info_unpublished]
+  dict({
+    'created_at': None,
+    'creator': '',
+    'enable_server_render': False,
+    'publish_url': '',
+    'visit_count': 0,
+  })
+# ---
+# name: test_endpoints[get_wikis]
+  dict({
+    'group_wikis': list([
+    ]),
+    'wikis': list([
+      dict({
+        'color': '#FF0000',
+        'enable_server_render': False,
+        'group_admins': None,
+        'group_id': None,
+        'group_name': None,
+        'icon': '',
+        'id': 'd33dc18c-151f-4de9-93cf-1fa0f7134450',
+        'is_published': False,
+        'name': 'extras-wiki',
+        'owner': 'admin@example.com',
+        'owner_nickname': 'admin',
+        'permission': 'rw',
+        'public_url': '',
+        'public_url_suffix': '',
+        'repo_id': 'd33dc18c-151f-4de9-93cf-1fa0f7134450',
+        'type': 'mine',
+        'updated_at': datetime.datetime(2026, 10, 15, 9, 22, 30, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      }),
+    ]),
+  })
+# ---
+# name: test_endpoints[merge_metadata_tags]
+  None
+# ---
+# name: test_endpoints[move_metadata_view]
+  list([
+    dict({
+      'children': list([
+        dict({
+          'children': list([
+          ]),
+          'id': '80u7',
+          'name': None,
+          'type': 'view',
+        }),
+        dict({
+          'children': list([
+          ]),
+          'id': 'uh51',
+          'name': None,
+          'type': 'view',
+        }),
+      ]),
+      'id': 'FOLDER_abcd',
+      'name': 'Media',
+      'type': 'folder',
+    }),
+  ])
+# ---
+# name: test_endpoints[publish_wiki]
+  dict({
+    'created_at': None,
+    'creator': None,
+    'enable_server_render': False,
+    'publish_url': 'extras-pub',
+    'visit_count': None,
+  })
+# ---
+# name: test_endpoints[restore_wiki_page]
+  None
+# ---
+# name: test_endpoints[search_all_filters]
+  dict({
+    'has_more': False,
+    'results': list([
+      dict({
+        'content_highlight': '',
+        'fullpath': '/testtest/3a',
+        'is_dir': False,
+        'modified': datetime.datetime(2018, 3, 12, 6, 34, 7, tzinfo=datetime.timezone.utc),
+        'name': '3a',
+        'permission': None,
+        'repo_encrypted': False,
+        'repo_id': '2628a63b-cfad-41f5-a748-392ec9287686',
+        'repo_name': 'dev',
+        'repo_owner_contact_email': 'admin@admin.com',
+        'repo_owner_email': 'admin@admin.com',
+        'repo_owner_name': 'admin',
+        'repo_type': '',
+        'size': 0,
+        'thumbnail_url': '',
+      }),
+      dict({
+        'content_highlight': '',
+        'fullpath': '/testtest',
+        'is_dir': True,
+        'modified': datetime.datetime(2018, 3, 12, 6, 34, 22, tzinfo=datetime.timezone.utc),
+        'name': 'testtest',
+        'permission': 'rw',
+        'repo_encrypted': False,
+        'repo_id': '2628a63b-cfad-41f5-a748-392ec9287686',
+        'repo_name': 'dev',
+        'repo_owner_contact_email': 'admin@admin.com',
+        'repo_owner_email': 'admin@admin.com',
+        'repo_owner_name': 'admin',
+        'repo_type': None,
+        'size': 0,
+        'thumbnail_url': None,
+      }),
+    ]),
+    'total': 2,
+  })
+# ---
+# name: test_endpoints[search_extensions]
+  dict({
+    'has_more': False,
+    'results': list([
+      dict({
+        'content_highlight': '',
+        'fullpath': '/testtest/3a',
+        'is_dir': False,
+        'modified': datetime.datetime(2018, 3, 12, 6, 34, 7, tzinfo=datetime.timezone.utc),
+        'name': '3a',
+        'permission': None,
+        'repo_encrypted': False,
+        'repo_id': '2628a63b-cfad-41f5-a748-392ec9287686',
+        'repo_name': 'dev',
+        'repo_owner_contact_email': 'admin@admin.com',
+        'repo_owner_email': 'admin@admin.com',
+        'repo_owner_name': 'admin',
+        'repo_type': '',
+        'size': 0,
+        'thumbnail_url': '',
+      }),
+      dict({
+        'content_highlight': '',
+        'fullpath': '/testtest',
+        'is_dir': True,
+        'modified': datetime.datetime(2018, 3, 12, 6, 34, 22, tzinfo=datetime.timezone.utc),
+        'name': 'testtest',
+        'permission': 'rw',
+        'repo_encrypted': False,
+        'repo_id': '2628a63b-cfad-41f5-a748-392ec9287686',
+        'repo_name': 'dev',
+        'repo_owner_contact_email': 'admin@admin.com',
+        'repo_owner_email': 'admin@admin.com',
+        'repo_owner_name': 'admin',
+        'repo_type': None,
+        'size': 0,
+        'thumbnail_url': None,
+      }),
+    ]),
+    'total': 2,
+  })
+# ---
+# name: test_endpoints[search_file_types]
+  dict({
+    'has_more': False,
+    'results': list([
+      dict({
+        'content_highlight': '',
+        'fullpath': '/testtest/3a',
+        'is_dir': False,
+        'modified': datetime.datetime(2018, 3, 12, 6, 34, 7, tzinfo=datetime.timezone.utc),
+        'name': '3a',
+        'permission': None,
+        'repo_encrypted': False,
+        'repo_id': '2628a63b-cfad-41f5-a748-392ec9287686',
+        'repo_name': 'dev',
+        'repo_owner_contact_email': 'admin@admin.com',
+        'repo_owner_email': 'admin@admin.com',
+        'repo_owner_name': 'admin',
+        'repo_type': '',
+        'size': 0,
+        'thumbnail_url': '',
+      }),
+      dict({
+        'content_highlight': '',
+        'fullpath': '/testtest',
+        'is_dir': True,
+        'modified': datetime.datetime(2018, 3, 12, 6, 34, 22, tzinfo=datetime.timezone.utc),
+        'name': 'testtest',
+        'permission': 'rw',
+        'repo_encrypted': False,
+        'repo_id': '2628a63b-cfad-41f5-a748-392ec9287686',
+        'repo_name': 'dev',
+        'repo_owner_contact_email': 'admin@admin.com',
+        'repo_owner_email': 'admin@admin.com',
+        'repo_owner_name': 'admin',
+        'repo_type': None,
+        'size': 0,
+        'thumbnail_url': None,
+      }),
+    ]),
+    'total': 2,
+  })
+# ---
+# name: test_endpoints[search_library]
+  list([
+    dict({
+      'modified': datetime.datetime(2026, 10, 15, 9, 23, 27, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'path': '/extras-dir',
+      'size': 0,
+      'type': <LibrarySearchItemType.FOLDER: 'folder'>,
+    }),
+    dict({
+      'modified': datetime.datetime(2026, 10, 15, 9, 23, 27, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'path': '/extras.txt',
+      'size': 0,
+      'type': <LibrarySearchItemType.FILE: 'file'>,
+    }),
+  ])
+# ---
+# name: test_endpoints[search_scope]
+  dict({
+    'has_more': False,
+    'results': list([
+      dict({
+        'content_highlight': '',
+        'fullpath': '/testtest/3a',
+        'is_dir': False,
+        'modified': datetime.datetime(2018, 3, 12, 6, 34, 7, tzinfo=datetime.timezone.utc),
+        'name': '3a',
+        'permission': None,
+        'repo_encrypted': False,
+        'repo_id': '2628a63b-cfad-41f5-a748-392ec9287686',
+        'repo_name': 'dev',
+        'repo_owner_contact_email': 'admin@admin.com',
+        'repo_owner_email': 'admin@admin.com',
+        'repo_owner_name': 'admin',
+        'repo_type': '',
+        'size': 0,
+        'thumbnail_url': '',
+      }),
+      dict({
+        'content_highlight': '',
+        'fullpath': '/testtest',
+        'is_dir': True,
+        'modified': datetime.datetime(2018, 3, 12, 6, 34, 22, tzinfo=datetime.timezone.utc),
+        'name': 'testtest',
+        'permission': 'rw',
+        'repo_encrypted': False,
+        'repo_id': '2628a63b-cfad-41f5-a748-392ec9287686',
+        'repo_name': 'dev',
+        'repo_owner_contact_email': 'admin@admin.com',
+        'repo_owner_email': 'admin@admin.com',
+        'repo_owner_name': 'admin',
+        'repo_type': None,
+        'size': 0,
+        'thumbnail_url': None,
+      }),
+    ]),
+    'total': 2,
+  })
+# ---
+# name: test_endpoints[set_metadata_file_tags]
+  None
+# ---
+# name: test_endpoints[set_metadata_tag_links]
+  None
+# ---
+# name: test_endpoints[unpublish_wiki]
+  None
+# ---
+# name: test_endpoints[update_file_comment]
+  dict({
+    'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+    'comment': 'extras-comment',
+    'created_at': datetime.datetime(2026, 10, 15, 9, 23, 1, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'detail': '{"element_id":"a"}',
+    'id': 1,
+    'item_name': 'extras-page.sdoc',
+    'parent_path': '/wiki-pages/2f2a9921-a55d-4730-abde-ffb6daf6c9e8',
+    'replies': list([
+    ]),
+    'repo_id': 'd33dc18c-151f-4de9-93cf-1fa0f7134450',
+    'resolved': True,
+    'updated_at': datetime.datetime(2026, 10, 15, 9, 23, 1, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'user_contact_email': 'admin@example.com',
+    'user_email': 'admin@example.com',
+    'user_name': 'admin',
+  })
+# ---
+# name: test_endpoints[update_file_comment_nothing]
+  dict({
+    'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+    'comment': 'extras-comment',
+    'created_at': datetime.datetime(2026, 10, 15, 9, 23, 1, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'detail': '{"element_id":"a"}',
+    'id': 1,
+    'item_name': 'extras-page.sdoc',
+    'parent_path': '/wiki-pages/2f2a9921-a55d-4730-abde-ffb6daf6c9e8',
+    'replies': list([
+    ]),
+    'repo_id': 'd33dc18c-151f-4de9-93cf-1fa0f7134450',
+    'resolved': True,
+    'updated_at': datetime.datetime(2026, 10, 15, 9, 23, 1, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'user_contact_email': 'admin@example.com',
+    'user_email': 'admin@example.com',
+    'user_name': 'admin',
+  })
+# ---
+# name: test_endpoints[update_file_comment_reply]
+  dict({
+    'author': 'admin@example.com',
+    'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+    'comment_id': 1,
+    'created_at': datetime.datetime(2026, 10, 15, 9, 23, 1, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'doc_uuid': '2f2a9921-a55d-4730-abde-ffb6daf6c9e8',
+    'id': 1,
+    'reply': 'extras-reply2',
+    'type': 'reply',
+    'updated_at': datetime.datetime(2026, 10, 15, 9, 24, 31, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'user_contact_email': 'admin@example.com',
+    'user_email': 'admin@example.com',
+    'user_name': 'admin',
+  })
+# ---
+# name: test_endpoints[update_metadata_column]
+  dict({
+    'data': '',
+    'key': 'afdsxax',
+    'name': 'column_name',
+    'type': 'text',
+  })
+# ---
+# name: test_endpoints[update_metadata_column_nothing]
+  dict({
+    'data': '',
+    'key': 'afdsxax',
+    'name': 'column_name',
+    'type': 'text',
+  })
+# ---
+# name: test_endpoints[update_metadata_record]
+  None
+# ---
+# name: test_endpoints[update_metadata_records]
+  None
+# ---
+# name: test_endpoints[update_metadata_tag]
+  None
+# ---
+# name: test_endpoints[update_metadata_view]
+  None
+# ---
+# name: test_endpoints[update_repo_tag]
+  dict({
+    'files_count': None,
+    'repo_id': '48e244b2-d5df-4846-b460-02548e1e61d6',
+    'repo_tag_id': 1,
+    'tag_color': '#0000FF',
+    'tag_name': 'extras-blue',
+  })
+# ---
+# name: test_endpoints[update_wiki]
+  None
+# ---
+# name: test_endpoints[update_wiki_config]
+  None
+# ---
+# name: test_endpoints[update_wiki_nothing]
+  None
+# ---
+# name: test_endpoints[update_wiki_page]
+  None
+# ---
+# name: test_endpoints[update_wiki_page_nothing]
+  None
+# ---
+# name: test_paginated[get_file_comment_replies]
+  list([
+    dict({
+      'author': 'admin@example.com',
+      'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+      'comment_id': 1,
+      'created_at': datetime.datetime(2026, 10, 15, 9, 23, 1, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'doc_uuid': '2f2a9921-a55d-4730-abde-ffb6daf6c9e8',
+      'id': 1,
+      'reply': 'extras-reply',
+      'type': 'reply',
+      'updated_at': datetime.datetime(2026, 10, 15, 9, 23, 1, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'user_contact_email': 'admin@example.com',
+      'user_email': 'admin@example.com',
+      'user_name': 'admin',
+    }),
+  ])
+# ---
+# name: test_paginated[get_file_comment_replies][requests]
+  list([
+    dict({
+      'page': '1',
+      'per_page': '1',
+    }),
+    dict({
+      'page': '2',
+      'per_page': '1',
+    }),
+  ])
+# ---
+# name: test_paginated[get_file_comments]
+  list([
+    dict({
+      'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+      'comment': 'extras-comment',
+      'created_at': datetime.datetime(2026, 10, 15, 9, 23, 1, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'detail': '{"element_id":"a"}',
+      'id': 1,
+      'item_name': 'extras-page.sdoc',
+      'parent_path': '/wiki-pages/2f2a9921-a55d-4730-abde-ffb6daf6c9e8',
+      'replies': list([
+        dict({
+          'author': 'admin@example.com',
+          'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+          'comment_id': 1,
+          'created_at': datetime.datetime(2026, 10, 15, 9, 23, 1, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+          'doc_uuid': '2f2a9921-a55d-4730-abde-ffb6daf6c9e8',
+          'id': 1,
+          'reply': 'extras-reply',
+          'type': 'reply',
+          'updated_at': datetime.datetime(2026, 10, 15, 9, 23, 1, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+          'user_contact_email': 'admin@example.com',
+          'user_email': 'admin@example.com',
+          'user_name': 'admin',
+        }),
+      ]),
+      'repo_id': 'd33dc18c-151f-4de9-93cf-1fa0f7134450',
+      'resolved': False,
+      'updated_at': datetime.datetime(2026, 10, 15, 9, 23, 1, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'user_contact_email': 'admin@example.com',
+      'user_email': 'admin@example.com',
+      'user_name': 'admin',
+    }),
+  ])
+# ---
+# name: test_paginated[get_file_comments][requests]
+  list([
+    dict({
+      'page': '1',
+      'per_page': '1',
+      'resolved': 'false',
+    }),
+    dict({
+      'page': '2',
+      'per_page': '1',
+      'resolved': 'false',
+    }),
+  ])
+# ---
+# name: test_paginated[get_file_comments_all]
+  list([
+    dict({
+      'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+      'comment': 'extras-comment',
+      'created_at': datetime.datetime(2026, 10, 15, 9, 23, 1, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'detail': '{"element_id":"a"}',
+      'id': 1,
+      'item_name': 'extras-page.sdoc',
+      'parent_path': '/wiki-pages/2f2a9921-a55d-4730-abde-ffb6daf6c9e8',
+      'replies': list([
+        dict({
+          'author': 'admin@example.com',
+          'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+          'comment_id': 1,
+          'created_at': datetime.datetime(2026, 10, 15, 9, 23, 1, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+          'doc_uuid': '2f2a9921-a55d-4730-abde-ffb6daf6c9e8',
+          'id': 1,
+          'reply': 'extras-reply',
+          'type': 'reply',
+          'updated_at': datetime.datetime(2026, 10, 15, 9, 23, 1, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+          'user_contact_email': 'admin@example.com',
+          'user_email': 'admin@example.com',
+          'user_name': 'admin',
+        }),
+      ]),
+      'repo_id': 'd33dc18c-151f-4de9-93cf-1fa0f7134450',
+      'resolved': False,
+      'updated_at': datetime.datetime(2026, 10, 15, 9, 23, 1, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'user_contact_email': 'admin@example.com',
+      'user_email': 'admin@example.com',
+      'user_name': 'admin',
+    }),
+  ])
+# ---
+# name: test_paginated[get_file_comments_all][requests]
+  list([
+    dict({
+      'page': '1',
+      'per_page': '1',
+    }),
+    dict({
+      'page': '2',
+      'per_page': '1',
+    }),
+  ])
+# ---
+# name: test_paginated[get_metadata_tags]
+  list([
+    dict({
+      'color': '#FFFCB5',
+      'created': datetime.datetime(2025, 2, 13, 18, 27, 20, tzinfo=datetime.timezone(datetime.timedelta(seconds=28800))),
+      'creator': 'e40151bbbe184577b11ed818a49f97f3@auth.local',
+      'file_links': list([
+        dict({
+          'display_value': 'al8SjKN0QxGrE6vr0SHDOw',
+          'row_id': 'al8SjKN0QxGrE6vr0SHDOw',
+        }),
+      ]),
+      'id': 'OP6ak-N7Q7i96oX6I3lkFw',
+      'last_modifier': 'e40151bbbe184577b11ed818a49f97f3@auth.local',
+      'modified': datetime.datetime(2025, 2, 13, 18, 27, 20, tzinfo=datetime.timezone(datetime.timedelta(seconds=28800))),
+      'name': 'Holiday',
+      'parent_links': list([
+      ]),
+      'sub_links': list([
+        dict({
+          'display_value': 'dOSid9ECR26rHtgLokPXBw',
+          'row_id': 'dOSid9ECR26rHtgLokPXBw',
+        }),
+      ]),
+    }),
+  ])
+# ---
+# name: test_paginated[get_metadata_tags][requests]
+  list([
+    dict({
+      'limit': '1',
+      'start': '0',
+    }),
+    dict({
+      'limit': '1',
+      'start': '1',
+    }),
+  ])
+# ---
+# name: test_paginated[get_wiki_trash]
+  list([
+    dict({
+      'delete_time': datetime.datetime(2026, 10, 15, 9, 22, 39),
+      'doc_uuid': '75b8026d-ded2-48cf-9f66-e09a8598d07f',
+      'id': 1,
+      'name': 'extras-page2',
+      'page_id': 'wkK7',
+      'parent_page_id': None,
+      'repo_id': 'd33dc18c-151f-4de9-93cf-1fa0f7134450',
+      'size': 0,
+      'subpages': '{"id": "wkK7", "type": "page"}',
+    }),
+  ])
+# ---
+# name: test_paginated[get_wiki_trash][requests]
+  list([
+    dict({
+      'page': '1',
+      'per_page': '1',
+    }),
+    dict({
+      'page': '2',
+      'per_page': '1',
+    }),
+  ])
+# ---

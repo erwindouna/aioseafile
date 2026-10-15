@@ -1,0 +1,13 @@
+{
+    "email": "d4e5f6@auth.local",
+    "name": "Org Member",
+    "contact_email": "member@example.com",
+    "quota_usage": 0,
+    "quota_total": 1073741824,
+    "is_active": true,
+    "id": 12,
+    "ctime": "2026-10-02T10:00:00+02:00",
+    "last_login": null,
+    "self_usage": 0,
+    "quota": 1073741824
+}

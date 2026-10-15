@@ -1,0 +1,20 @@
+{
+    "unseen_count": 1,
+    "notification_list": [
+        {
+            "id": 5,
+            "type": "add_user_to_group",
+            "detail": {
+                "group_id": 2,
+                "group_staff_name": "account-user2",
+                "group_staff_email": "eb403b2423bb46afa92d62586573d7f4@auth.local",
+                "group_staff_contact_email": "account2@example.com",
+                "group_staff_avatar_url": "http://127.0.0.1/media/avatars/default.png",
+                "group_name": "account-group"
+            },
+            "time": "2026-10-15T09:22:06+02:00",
+            "seen": false
+        }
+    ],
+    "count": 1
+}

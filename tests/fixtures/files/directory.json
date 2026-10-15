@@ -1,0 +1,45 @@
+{
+    "user_perm": "rw",
+    "dir_id": "3382eefd61f82d4eb97dc6288804cc2aad0e044d",
+    "dirent_list": [
+        {
+            "type": "file",
+            "id": "b5c37843cadfbf0fefa532bf435254497bb53109",
+            "name": "chunked \u00fc.tar",
+            "mtime": 1792049091,
+            "permission": "rw",
+            "parent_dir": "/backups/ha/",
+            "size": 5300000,
+            "modifier_email": "admin@example.com",
+            "modifier_name": "admin",
+            "modifier_contact_email": "admin@example.com",
+            "starred": false
+        },
+        {
+            "type": "file",
+            "id": "391f58e1d4132f78731caa6964204ca2011768e7",
+            "name": "single (1).tar",
+            "mtime": 1792049091,
+            "permission": "rw",
+            "parent_dir": "/backups/ha/",
+            "size": 1,
+            "modifier_email": "admin@example.com",
+            "modifier_name": "admin",
+            "modifier_contact_email": "admin@example.com",
+            "starred": false
+        },
+        {
+            "type": "file",
+            "id": "b5c37843cadfbf0fefa532bf435254497bb53109",
+            "name": "single.tar",
+            "mtime": 1792049091,
+            "permission": "rw",
+            "parent_dir": "/backups/ha/",
+            "size": 5300000,
+            "modifier_email": "admin@example.com",
+            "modifier_name": "admin",
+            "modifier_contact_email": "admin@example.com",
+            "starred": false
+        }
+    ]
+}

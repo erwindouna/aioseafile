@@ -1,0 +1,19 @@
+{
+    "metrics": [
+        {
+            "name": "go_fileserver_in_flight_request_total",
+            "help": "The number of currently running http requests.",
+            "type": "gauge",
+            "data_points": [
+                {
+                    "labels": {
+                        "component": "go_fileserver",
+                        "node": "default",
+                        "collected_at": "2026-10-15T09:22:51.430732"
+                    },
+                    "value": 0.0
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,586 @@
+# serializer version: 1
+# name: test_reads[get_deleted_libraries]
+  list([
+    dict({
+      'deleted': datetime.datetime(2026, 10, 15, 9, 23, 28, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'encrypted': False,
+      'head_commit_id': 'd9c4b17057fe74cb5a297761d39f1ead87769687',
+      'id': '6465d502-cdab-40bc-9a76-9751bbca8657',
+      'name': 'libraries-web2',
+      'org_id': None,
+      'owner_contact_email': 'libraries@example.com',
+      'owner_email': 'cd5c4b94509142178a6b48f1b8de11b3@auth.local',
+      'owner_name': 'libraries',
+      'size': 0,
+    }),
+  ])
+# ---
+# name: test_reads[get_library_api_tokens]
+  list([
+    dict({
+      'api_token': '0123456789abcdef0123456789abcdef01234567',
+      'app_name': 'libraries-app',
+      'generated_by': 'admin@example.com',
+      'permission': <LibraryApiTokenPermission.READ_WRITE: 'rw'>,
+      'repo_id': '02c7b6ae-5500-4c4a-85c4-4b683447d6c5',
+    }),
+  ])
+# ---
+# name: test_reads[get_library_commit]
+  dict({
+    'diffs': list([
+      dict({
+        'new_path': None,
+        'op_type': <CommitDiffType.REMOVED: 'removed'>,
+        'path': '/a.txt',
+      }),
+    ]),
+    'info': dict({
+      'creator_contact_email': 'admin@example.com',
+      'creator_email': 'admin@example.com',
+      'creator_name': 'admin',
+      'description': 'Deleted "a.txt"',
+      'device_name': None,
+      'time': datetime.datetime(2026, 10, 15, 9, 22, 24, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    }),
+  })
+# ---
+# name: test_reads[get_library_commit_dir]
+  list([
+    dict({
+      'name': 'sub',
+      'obj_id': '0000000000000000000000000000000000000000',
+      'parent_dir': '/',
+      'size': None,
+      'type': <DirentType.DIR: 'dir'>,
+    }),
+    dict({
+      'name': 'b.txt',
+      'obj_id': '4226e5b3d7da1a4575241f9501f9882aee9b5ea9',
+      'parent_dir': '/',
+      'size': 6,
+      'type': <DirentType.FILE: 'file'>,
+    }),
+  ])
+# ---
+# name: test_reads[get_library_history]
+  dict({
+    'commits': list([
+      dict({
+        'client_version': None,
+        'commit_id': 'a3259f9cca6beff77884eb31fab409cf2adb388b',
+        'contact_email': 'admin@example.com',
+        'description': 'Removed directory "sub"',
+        'device_name': None,
+        'email': 'admin@example.com',
+        'name': 'admin',
+        'second_parent_id': None,
+        'tags': list([
+        ]),
+        'time': datetime.datetime(2026, 10, 15, 9, 22, 24, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      }),
+      dict({
+        'client_version': None,
+        'commit_id': '7c8cb6c57ddc4b941efe6ef1eb96f25a0dfd3a0e',
+        'contact_email': 'admin@example.com',
+        'description': 'Deleted "a.txt"',
+        'device_name': None,
+        'email': 'admin@example.com',
+        'name': 'admin',
+        'second_parent_id': None,
+        'tags': list([
+        ]),
+        'time': datetime.datetime(2026, 10, 15, 9, 22, 24, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      }),
+    ]),
+    'more': True,
+  })
+# ---
+# name: test_reads[get_library_info]
+  dict({
+    'enable_onlyoffice': False,
+    'encrypted': False,
+    'file_count': 1,
+    'has_been_shared_out': False,
+    'id': '02c7b6ae-5500-4c4a-85c4-4b683447d6c5',
+    'is_admin': True,
+    'is_virtual': False,
+    'last_modified': datetime.datetime(2026, 10, 15, 9, 22, 24, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'lib_need_decrypt': False,
+    'monitored': False,
+    'name': 'libraries-lib',
+    'no_quota': False,
+    'owner_avatar': 'http://127.0.0.1/media/avatars/default.png',
+    'owner_contact_email': 'admin@example.com',
+    'owner_email': 'admin@example.com',
+    'owner_name': 'admin',
+    'permission': 'rw',
+    'repo_type': None,
+    'size': 6,
+    'status': <LibraryStatus.NORMAL: 'normal'>,
+  })
+# ---
+# name: test_reads[get_library_trash]
+  list([
+    dict({
+      'commit_id': '7c8cb6c57ddc4b941efe6ef1eb96f25a0dfd3a0e',
+      'deleted': datetime.datetime(2026, 10, 15, 9, 22, 24, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'is_dir': True,
+      'name': 'sub',
+      'obj_id': None,
+      'parent_dir': '/',
+      'size': None,
+    }),
+    dict({
+      'commit_id': '4d755706b088a71fe4ce44abcf7740119059537a',
+      'deleted': datetime.datetime(2026, 10, 15, 9, 22, 24, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'is_dir': False,
+      'name': 'a.txt',
+      'obj_id': '4226e5b3d7da1a4575241f9501f9882aee9b5ea9',
+      'parent_dir': '/',
+      'size': 6,
+    }),
+  ])
+# ---
+# name: test_reads[get_library_trash_items]
+  list([
+    dict({
+      'commit_id': '7c8cb6c57ddc4b941efe6ef1eb96f25a0dfd3a0e',
+      'deleted': datetime.datetime(2026, 10, 15, 9, 22, 24, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'is_dir': True,
+      'name': 'sub',
+      'obj_id': None,
+      'parent_dir': '/',
+      'size': None,
+    }),
+    dict({
+      'commit_id': '4d755706b088a71fe4ce44abcf7740119059537a',
+      'deleted': datetime.datetime(2026, 10, 15, 9, 22, 24, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'is_dir': False,
+      'name': 'a.txt',
+      'obj_id': '4226e5b3d7da1a4575241f9501f9882aee9b5ea9',
+      'parent_dir': '/',
+      'size': 6,
+    }),
+  ])
+# ---
+# name: test_reads[search_library_trash]
+  list([
+    dict({
+      'commit_id': '4d755706b088a71fe4ce44abcf7740119059537a',
+      'deleted': datetime.datetime(2026, 10, 15, 7, 22, 24, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'is_dir': False,
+      'name': 'a.txt',
+      'obj_id': '4226e5b3d7da1a4575241f9501f9882aee9b5ea9',
+      'parent_dir': '/',
+      'size': 6,
+    }),
+  ])
+# ---
+# name: test_reads[search_library_trash_all]
+  list([
+    dict({
+      'commit_id': '4d755706b088a71fe4ce44abcf7740119059537a',
+      'deleted': datetime.datetime(2026, 10, 15, 7, 22, 24, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'is_dir': False,
+      'name': 'a.txt',
+      'obj_id': '4226e5b3d7da1a4575241f9501f9882aee9b5ea9',
+      'parent_dir': '/',
+      'size': 6,
+    }),
+  ])
+# ---
+# name: test_restore_library_trash
+  dict({
+    'failed': list([
+    ]),
+    'success': list([
+      dict({
+        'is_dir': True,
+        'path': '/sub',
+      }),
+    ]),
+  })
+# ---
+# name: test_via_repo_token[copy_file]
+  dict({
+    'can_edit': True,
+    'can_preview': True,
+    'doc_uuid': None,
+    'is_locked': False,
+    'mtime': datetime.datetime(2026, 10, 15, 9, 22, 59, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'name': 'renamed.md',
+    'obj_id': '0000000000000000000000000000000000000000',
+    'parent_dir': '/docs2',
+    'repo_id': '02c7b6ae-5500-4c4a-85c4-4b683447d6c5',
+    'size': 0,
+  })
+# ---
+# name: test_via_repo_token[create_file]
+  dict({
+    'can_edit': True,
+    'can_preview': True,
+    'doc_uuid': None,
+    'is_locked': False,
+    'mtime': datetime.datetime(2026, 10, 15, 9, 22, 59, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'name': 'new.md',
+    'obj_id': '0000000000000000000000000000000000000000',
+    'parent_dir': '/docs2',
+    'repo_id': '02c7b6ae-5500-4c4a-85c4-4b683447d6c5',
+    'size': 0,
+  })
+# ---
+# name: test_via_repo_token[dir]
+  list([
+    dict({
+      'id': '0000000000000000000000000000000000000000',
+      'is_locked': None,
+      'lock_owner': None,
+      'modifier_contact_email': None,
+      'modifier_email': None,
+      'modifier_name': None,
+      'mtime': datetime.datetime(2026, 10, 15, 9, 22, 59, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'name': 'docs2',
+      'parent_dir': '/',
+      'permission': 'rw',
+      'size': None,
+      'starred': False,
+      'type': <DirentType.DIR: 'dir'>,
+    }),
+    dict({
+      'id': '0000000000000000000000000000000000000000',
+      'is_locked': None,
+      'lock_owner': None,
+      'modifier_contact_email': None,
+      'modifier_email': None,
+      'modifier_name': None,
+      'mtime': datetime.datetime(2026, 10, 15, 9, 22, 59, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'name': 'other',
+      'parent_dir': '/',
+      'permission': 'rw',
+      'size': None,
+      'starred': False,
+      'type': <DirentType.DIR: 'dir'>,
+    }),
+    dict({
+      'id': '4226e5b3d7da1a4575241f9501f9882aee9b5ea9',
+      'is_locked': None,
+      'lock_owner': None,
+      'modifier_contact_email': 'admin@example.com',
+      'modifier_email': 'admin@example.com',
+      'modifier_name': 'admin',
+      'mtime': datetime.datetime(2026, 10, 15, 9, 22, 24, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'name': 'b.txt',
+      'parent_dir': '/',
+      'permission': 'rw',
+      'size': 6,
+      'starred': False,
+      'type': <DirentType.FILE: 'file'>,
+    }),
+  ])
+# ---
+# name: test_via_repo_token[dir_recursive]
+  list([
+    dict({
+      'id': '0000000000000000000000000000000000000000',
+      'is_locked': None,
+      'lock_owner': None,
+      'modifier_contact_email': None,
+      'modifier_email': None,
+      'modifier_name': None,
+      'mtime': datetime.datetime(2026, 10, 15, 9, 22, 59, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'name': 'docs2',
+      'parent_dir': '/',
+      'permission': None,
+      'size': None,
+      'starred': None,
+      'type': <DirentType.DIR: 'dir'>,
+    }),
+    dict({
+      'id': '0000000000000000000000000000000000000000',
+      'is_locked': None,
+      'lock_owner': None,
+      'modifier_contact_email': None,
+      'modifier_email': None,
+      'modifier_name': None,
+      'mtime': datetime.datetime(2026, 10, 15, 9, 22, 59, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'name': 'other',
+      'parent_dir': '/',
+      'permission': None,
+      'size': None,
+      'starred': None,
+      'type': <DirentType.DIR: 'dir'>,
+    }),
+    dict({
+      'id': '4226e5b3d7da1a4575241f9501f9882aee9b5ea9',
+      'is_locked': None,
+      'lock_owner': None,
+      'modifier_contact_email': '',
+      'modifier_email': None,
+      'modifier_name': '',
+      'mtime': datetime.datetime(2026, 10, 15, 9, 22, 24, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'name': 'b.txt',
+      'parent_dir': '/',
+      'permission': None,
+      'size': 6,
+      'starred': None,
+      'type': <DirentType.FILE: 'file'>,
+    }),
+  ])
+# ---
+# name: test_via_repo_token[file]
+  dict({
+    'can_edit': True,
+    'can_preview': True,
+    'doc_uuid': None,
+    'is_locked': False,
+    'mtime': datetime.datetime(2026, 10, 15, 9, 22, 24, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'name': 'b.txt',
+    'obj_id': '4226e5b3d7da1a4575241f9501f9882aee9b5ea9',
+    'parent_dir': '/',
+    'repo_id': '02c7b6ae-5500-4c4a-85c4-4b683447d6c5',
+    'size': 6,
+  })
+# ---
+# name: test_via_repo_token[lock_file]
+  dict({
+    'can_edit': True,
+    'can_preview': True,
+    'doc_uuid': None,
+    'is_locked': False,
+    'mtime': datetime.datetime(2026, 10, 15, 9, 22, 24, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'name': 'b.txt',
+    'obj_id': '4226e5b3d7da1a4575241f9501f9882aee9b5ea9',
+    'parent_dir': '/',
+    'repo_id': '02c7b6ae-5500-4c4a-85c4-4b683447d6c5',
+    'size': 6,
+  })
+# ---
+# name: test_via_repo_token[mkdir]
+  dict({
+    'mtime': datetime.datetime(2026, 10, 15, 9, 22, 59, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'name': 'docs',
+    'obj_id': '0000000000000000000000000000000000000000',
+    'parent_dir': '/',
+    'repo_id': '02c7b6ae-5500-4c4a-85c4-4b683447d6c5',
+  })
+# ---
+# name: test_via_repo_token[move_file]
+  dict({
+    'can_edit': True,
+    'can_preview': True,
+    'doc_uuid': None,
+    'is_locked': False,
+    'mtime': datetime.datetime(2026, 10, 15, 9, 22, 59, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'name': 'renamed.md',
+    'obj_id': '0000000000000000000000000000000000000000',
+    'parent_dir': '/other',
+    'repo_id': '02c7b6ae-5500-4c4a-85c4-4b683447d6c5',
+    'size': 0,
+  })
+# ---
+# name: test_via_repo_token[recently_deleted]
+  list([
+    dict({
+      'name': 'a.txt',
+      'parent_dir': '/',
+    }),
+    dict({
+      'name': 'new.md',
+      'parent_dir': '/docs2',
+    }),
+    dict({
+      'name': 'renamed.md',
+      'parent_dir': '/docs2',
+    }),
+    dict({
+      'name': 'renamed.md',
+      'parent_dir': '/',
+    }),
+    dict({
+      'name': 'renamed.md',
+      'parent_dir': '/docs2',
+    }),
+    dict({
+      'name': 'renamed.md',
+      'parent_dir': '/docs2/other',
+    }),
+  ])
+# ---
+# name: test_via_repo_token[rename_dir]
+  dict({
+    'mtime': datetime.datetime(2026, 10, 15, 9, 22, 59, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'name': 'docs2',
+    'obj_id': '0000000000000000000000000000000000000000',
+    'parent_dir': '/',
+    'repo_id': '02c7b6ae-5500-4c4a-85c4-4b683447d6c5',
+  })
+# ---
+# name: test_via_repo_token[rename_file]
+  dict({
+    'can_edit': True,
+    'can_preview': True,
+    'doc_uuid': None,
+    'is_locked': False,
+    'mtime': datetime.datetime(2026, 10, 15, 9, 22, 59, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'name': 'renamed.md',
+    'obj_id': '0000000000000000000000000000000000000000',
+    'parent_dir': '/docs2',
+    'repo_id': '02c7b6ae-5500-4c4a-85c4-4b683447d6c5',
+    'size': 0,
+  })
+# ---
+# name: test_via_repo_token[repo_info]
+  dict({
+    'file_count': 1,
+    'id': '02c7b6ae-5500-4c4a-85c4-4b683447d6c5',
+    'last_modified': datetime.datetime(2026, 10, 15, 9, 22, 24, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'name': 'libraries-lib',
+    'size': 6,
+  })
+# ---
+# name: test_via_repo_token[search]
+  list([
+    dict({
+      'mtime': datetime.datetime(2026, 10, 15, 9, 22, 59, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'path': '/docs2/renamed.md',
+      'size': 0,
+      'type': <DirentType.FILE: 'file'>,
+    }),
+    dict({
+      'mtime': datetime.datetime(2026, 10, 15, 9, 22, 59, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'path': '/other/renamed.md',
+      'size': 0,
+      'type': <DirentType.FILE: 'file'>,
+    }),
+  ])
+# ---
+# name: test_via_repo_token[unlock_file]
+  dict({
+    'can_edit': True,
+    'can_preview': True,
+    'doc_uuid': None,
+    'is_locked': False,
+    'mtime': datetime.datetime(2026, 10, 15, 9, 22, 24, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'name': 'b.txt',
+    'obj_id': '4226e5b3d7da1a4575241f9501f9882aee9b5ea9',
+    'parent_dir': '/',
+    'repo_id': '02c7b6ae-5500-4c4a-85c4-4b683447d6c5',
+    'size': 6,
+  })
+# ---
+# name: test_writes[create_library]
+  dict({
+    'description': '',
+    'enc_version': 0,
+    'encrypted': False,
+    'head_commit_id': 'da294a5209508b599a8c185501851577aa336e1e',
+    'id': '6465d502-cdab-40bc-9a76-9751bbca8657',
+    'last_modified': datetime.datetime(2026, 10, 15, 9, 22, 24, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'name': 'libraries-web',
+    'owner': 'admin@example.com',
+    'permission': 'rw',
+    'repo_version': 1,
+    'size': 0,
+  })
+# ---
+# name: test_writes[create_library_api_token]
+  dict({
+    'api_token': '0123456789abcdef0123456789abcdef01234567',
+    'app_name': 'libraries-app',
+    'generated_by': 'admin@example.com',
+    'permission': <LibraryApiTokenPermission.READ_WRITE: 'rw'>,
+    'repo_id': '02c7b6ae-5500-4c4a-85c4-4b683447d6c5',
+  })
+# ---
+# name: test_writes[create_library_encrypted]
+  dict({
+    'description': '',
+    'enc_version': 2,
+    'encrypted': True,
+    'head_commit_id': '1fc8f03a447c74723d8a8c729a4834eb5f299322',
+    'id': 'c192d8fe-480e-4803-a199-e2650f994935',
+    'last_modified': datetime.datetime(2026, 10, 15, 9, 22, 7, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'name': 'libraries-enc',
+    'owner': 'admin@example.com',
+    'permission': 'rw',
+    'repo_version': 1,
+    'size': 0,
+  })
+# ---
+# name: test_writes[create_snapshot_labels]
+  list([
+    dict({
+      'revision': dict({
+        'commit_id': '7c8cb6c57ddc4b941efe6ef1eb96f25a0dfd3a0e',
+        'contact_email': 'admin@example.com',
+        'description': 'Deleted "a.txt"',
+        'email': 'admin@example.com',
+        'link': '/repo/history/view/02c7b6ae-5500-4c4a-85c4-4b683447d6c5/?commit_id=7c8cb6c57ddc4b941efe6ef1eb96f25a0dfd3a0e',
+        'name': 'admin',
+        'repo_id': '02c7b6ae-5500-4c4a-85c4-4b683447d6c5',
+        'time': datetime.datetime(2026, 10, 15, 9, 22, 24, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      }),
+      'tag': 'libraries-v1',
+      'tag_creator': 'admin@example.com',
+    }),
+    dict({
+      'revision': dict({
+        'commit_id': '7c8cb6c57ddc4b941efe6ef1eb96f25a0dfd3a0e',
+        'contact_email': 'admin@example.com',
+        'description': 'Deleted "a.txt"',
+        'email': 'admin@example.com',
+        'link': '/repo/history/view/02c7b6ae-5500-4c4a-85c4-4b683447d6c5/?commit_id=7c8cb6c57ddc4b941efe6ef1eb96f25a0dfd3a0e',
+        'name': 'admin',
+        'repo_id': '02c7b6ae-5500-4c4a-85c4-4b683447d6c5',
+        'time': datetime.datetime(2026, 10, 15, 9, 22, 24, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      }),
+      'tag': 'libraries-v2',
+      'tag_creator': 'admin@example.com',
+    }),
+  ])
+# ---
+# name: test_writes[restore_library_trash_items]
+  dict({
+    'failed': list([
+      dict({
+        'commit_id': None,
+        'error_msg': 'Dirent /missing.txt not found.',
+        'path': '/missing.txt',
+      }),
+    ]),
+    'success': list([
+      dict({
+        'is_dir': False,
+        'path': '/a.txt',
+      }),
+    ]),
+  })
+# ---
+# name: test_writes[set_snapshot_labels]
+  list([
+    dict({
+      'revision': dict({
+        'commit_id': '7c8cb6c57ddc4b941efe6ef1eb96f25a0dfd3a0e',
+        'contact_email': 'admin@example.com',
+        'description': 'Deleted "a.txt"',
+        'email': 'admin@example.com',
+        'link': '/repo/history/view/02c7b6ae-5500-4c4a-85c4-4b683447d6c5/?commit_id=7c8cb6c57ddc4b941efe6ef1eb96f25a0dfd3a0e',
+        'name': 'admin',
+        'repo_id': '02c7b6ae-5500-4c4a-85c4-4b683447d6c5',
+        'time': datetime.datetime(2026, 10, 15, 9, 22, 24, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      }),
+      'tag': 'libraries-v3',
+      'tag_creator': 'admin@example.com',
+    }),
+  ])
+# ---
+# name: test_writes[update_library_api_token]
+  dict({
+    'api_token': '0123456789abcdef0123456789abcdef01234567',
+    'app_name': 'libraries-app',
+    'generated_by': 'admin@example.com',
+    'permission': <LibraryApiTokenPermission.READ: 'r'>,
+    'repo_id': '02c7b6ae-5500-4c4a-85c4-4b683447d6c5',
+  })
+# ---

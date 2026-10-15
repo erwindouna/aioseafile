@@ -1,0 +1,20 @@
+[
+    {
+        "repo_id": "c9a996fa-b1f8-4158-bdfc-5c6badcae9a2",
+        "repo_name": "groups-lib",
+        "mtime": "2026-10-15T09:21:49+02:00",
+        "last_modified": "2026-10-15T09:21:49+02:00",
+        "permission": "rw",
+        "size": 0,
+        "encrypted": false,
+        "is_admin": false,
+        "owner_email": "admin@example.com",
+        "owner_name": "admin",
+        "owner_contact_email": "admin@example.com",
+        "modifier_email": "admin@example.com",
+        "modifier_name": "admin",
+        "modifier_contact_email": "admin@example.com",
+        "starred": false,
+        "monitored": false
+    }
+]

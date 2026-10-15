@@ -1,0 +1,16 @@
+{
+    "space_usage": "0%",
+    "avatar_url": "http://127.0.0.1/media/avatars/default.png",
+    "email": "admin@example.com",
+    "name": "admin",
+    "total": -2,
+    "usage": 300000,
+    "login_id": "",
+    "department": "",
+    "contact_email": "",
+    "institution": "",
+    "is_staff": true,
+    "enable_subscription": false,
+    "file_updates_email_interval": 0,
+    "collaborate_email_interval": 0
+}

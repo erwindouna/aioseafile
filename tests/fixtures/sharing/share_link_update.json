@@ -1,0 +1,27 @@
+{
+    "username": "admin@example.com",
+    "repo_id": "35124f5c-2850-44c6-88dd-f6478f273d0b",
+    "repo_name": "sharing-lib",
+    "path": "/notes.md",
+    "obj_name": "notes.md",
+    "obj_id": "0000000000000000000000000000000000000000",
+    "is_dir": false,
+    "token": "9ea25a8a1e3c44c2a236",
+    "link": "http://127.0.0.1/f/9ea25a8a1e3c44c2a236/",
+    "download_link": "http://127.0.0.1/seafhttp/f/9ea25a8a1e3c44c2a236/",
+    "show_download_link": false,
+    "view_cnt": 0,
+    "ctime": "2026-10-15T09:22:27+02:00",
+    "expire_date": "2026-12-31T12:00:00+01:00",
+    "is_expired": false,
+    "permissions": {
+        "can_edit": false,
+        "can_download": false,
+        "can_upload": false,
+        "can_copy_content": false
+    },
+    "password": "Sharing-pw-123",
+    "user_scope": "all_users",
+    "description": "updated",
+    "can_edit": true
+}

@@ -1,0 +1,17 @@
+{
+    "commit_info": {
+        "creator_email": "admin@example.com",
+        "creator_name": "admin",
+        "creator_contact_email": "admin@example.com",
+        "time": "2026-10-15T09:22:24+02:00",
+        "description": "Deleted \"a.txt\"",
+        "device_name": null
+    },
+    "commit_diffs": [
+        {
+            "op_type": "removed",
+            "path": "/a.txt",
+            "new_path": ""
+        }
+    ]
+}

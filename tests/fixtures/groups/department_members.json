@@ -1,0 +1,20 @@
+{
+    "members": [
+        {
+            "email": "admin@example.com",
+            "name": "admin",
+            "contact_email": "admin@example.com",
+            "avatar_url": "http://127.0.0.1/media/avatars/default.png",
+            "is_admin": false,
+            "role": "Member"
+        },
+        {
+            "email": "4897149ea526449c94491315b118c13e@auth.local",
+            "name": "Groups User",
+            "contact_email": "groups@example.com",
+            "avatar_url": "http://127.0.0.1/media/avatars/default.png",
+            "is_admin": true,
+            "role": "Admin"
+        }
+    ]
+}

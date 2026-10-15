@@ -1,0 +1,39 @@
+{
+    "share_permission_log_list": [
+        {
+            "from_user_email": "admin@example.com",
+            "from_user_name": "admin",
+            "from_user_contact_email": "admin@example.com",
+            "etype": "add-repo-perm",
+            "permission": "rw",
+            "repo_id": "6490a72d-4c26-4020-ad00-1b72fb2c88c9",
+            "repo_name": "Documents",
+            "folder": "/",
+            "date": "2026-10-15T09:12:00+02:00",
+            "share_type": "user",
+            "to_user_email": "238e5377def043ab86bb1df2cfffb13d@auth.local",
+            "to_user_name": "User",
+            "to_user_contact_email": "user@example.com",
+            "to_group_id": "",
+            "to_group_name": ""
+        },
+        {
+            "from_user_email": "admin@example.com",
+            "from_user_name": "admin",
+            "from_user_contact_email": "admin@example.com",
+            "etype": "modify-repo-perm",
+            "permission": "r",
+            "repo_id": "6490a72d-4c26-4020-ad00-1b72fb2c88c9",
+            "repo_name": "Documents",
+            "folder": "backups",
+            "date": "2026-10-15T09:13:00+02:00",
+            "share_type": "group",
+            "to_user_email": "",
+            "to_user_name": "",
+            "to_user_contact_email": "",
+            "to_group_id": 3,
+            "to_group_name": "sharing-group"
+        }
+    ],
+    "has_next_page": false
+}

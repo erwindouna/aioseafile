@@ -1,0 +1,13 @@
+{
+    "notification": {
+        "id": 1,
+        "msg": "account bucket test message",
+        "username": "d6074febe21348149e70779dea1a6ef0@auth.local",
+        "name": "account-user-renamed",
+        "contact_email": "account@example.com",
+        "seen": true,
+        "org_name": "",
+        "created_at": "2026-10-15T09:22:01+02:00",
+        "msg_format": "account bucket test message"
+    }
+}

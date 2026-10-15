@@ -1,0 +1,28 @@
+{
+    "repo_list": [
+        {
+            "owner_email": "a1b2c3@auth.local",
+            "owner_name": "Org Admin",
+            "encrypted": false,
+            "repo_id": "5e8f1c2a-3b4d-4e6f-8a9b-0c1d2e3f4a5b",
+            "repo_name": "org-lib",
+            "is_department_repo": false,
+            "group_id": "",
+            "size": 1048576,
+            "file_count": 3
+        },
+        {
+            "owner_email": "9@seafile_group",
+            "owner_name": "Org Department",
+            "encrypted": true,
+            "repo_id": "6f9a2d3b-4c5e-4f7a-9b0c-1d2e3f4a5b6c",
+            "repo_name": "org-dept-lib",
+            "is_department_repo": true,
+            "group_id": 9,
+            "size": 0,
+            "file_count": 0
+        }
+    ],
+    "page": 1,
+    "page_next": false
+}

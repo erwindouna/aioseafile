@@ -1,0 +1,17 @@
+{
+    "dirent_list": [
+        {
+            "type": "dir",
+            "parent_dir": "/",
+            "obj_id": "0000000000000000000000000000000000000000",
+            "name": "sub"
+        },
+        {
+            "type": "file",
+            "size": 6,
+            "parent_dir": "/",
+            "obj_id": "4226e5b3d7da1a4575241f9501f9882aee9b5ea9",
+            "name": "b.txt"
+        }
+    ]
+}

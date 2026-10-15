@@ -1,0 +1,8 @@
+{
+    "version": "14.0.9",
+    "encrypted_library_version": 2,
+    "features": [
+        "seafile-basic",
+        "wiki"
+    ]
+}

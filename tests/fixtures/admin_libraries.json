@@ -1,0 +1,36 @@
+{
+    "page_info": {
+        "has_next_page": false,
+        "current_page": 1
+    },
+    "repos": [
+        {
+            "id": "6490a72d-4c26-4020-ad00-1b72fb2c88c9",
+            "name": "Documents",
+            "owner": "admin@example.com",
+            "owner_email": "admin@example.com",
+            "owner_contact_email": "admin@example.com",
+            "size": 300000,
+            "size_formatted": "293.0\u00a0KB",
+            "encrypted": false,
+            "file_count": 1,
+            "status": "normal",
+            "last_modified": "2026-10-15T09:07:46+02:00",
+            "owner_name": "admin"
+        },
+        {
+            "id": "f7ca59ed-d5bb-4a64-a968-b4d95b33b527",
+            "name": "Vault",
+            "owner": "admin@example.com",
+            "owner_email": "admin@example.com",
+            "owner_contact_email": "admin@example.com",
+            "size": 0,
+            "size_formatted": "0\u00a0bytes",
+            "encrypted": true,
+            "file_count": 0,
+            "status": "normal",
+            "last_modified": "2026-10-15T09:07:34+02:00",
+            "owner_name": "admin"
+        }
+    ]
+}

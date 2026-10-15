@@ -1,0 +1,82 @@
+{
+    "events": [
+        {
+            "op_type": "move",
+            "repo_id": "02c7b6ae-5500-4c4a-85c4-4b683447d6c5",
+            "repo_name": "libraries-lib",
+            "obj_type": "dir",
+            "commit_id": "105b6884e1561f691042201d4496e4e19460fee1",
+            "path": "/docs2/other",
+            "name": "other",
+            "author_email": "admin@example.com",
+            "author_name": "admin",
+            "author_contact_email": "admin@example.com",
+            "login_id": "",
+            "avatar_url": "http://127.0.0.1/media/avatars/default.png",
+            "time": "2026-10-15T09:22:59+02:00",
+            "details": [
+                {
+                    "size": -1,
+                    "old_path": "/other",
+                    "repo_name": "libraries-lib",
+                    "obj_id": "8cf9160d2728a2fd801e9ef99d0a97ddd1d0140e",
+                    "path": "/docs2/other"
+                }
+            ],
+            "count": 1,
+            "old_path": "/other"
+        },
+        {
+            "op_type": "batch_create",
+            "repo_id": "02c7b6ae-5500-4c4a-85c4-4b683447d6c5",
+            "repo_name": "libraries-lib",
+            "obj_type": "file",
+            "commit_id": "889bce164a31d5c199f7884301b1637b2b88e640",
+            "path": "/docs2/new.md",
+            "name": "new.md",
+            "author_email": "",
+            "author_name": "",
+            "author_contact_email": "",
+            "login_id": "",
+            "avatar_url": "http://127.0.0.1/media/avatars/default.png",
+            "time": "2026-10-15T09:22:59+02:00",
+            "details": [
+                {
+                    "obj_id": "0000000000000000000000000000000000000000",
+                    "size": 0,
+                    "repo_name": "libraries-lib",
+                    "path": "/docs2/new.md"
+                },
+                {
+                    "obj_id": "0000000000000000000000000000000000000000",
+                    "size": 0,
+                    "repo_name": "libraries-lib",
+                    "path": "/docs2/renamed.md"
+                }
+            ],
+            "count": 6
+        },
+        {
+            "op_type": "create",
+            "repo_id": "db645667-ae6d-46d5-99de-21b6c1953fab",
+            "repo_name": "groups-share-lib",
+            "obj_type": "repo",
+            "commit_id": null,
+            "path": "/",
+            "name": "",
+            "author_email": "admin@example.com",
+            "author_name": "admin",
+            "author_contact_email": "admin@example.com",
+            "login_id": "",
+            "avatar_url": "http://127.0.0.1/media/avatars/default.png",
+            "time": "2026-10-15T09:22:41+02:00",
+            "details": [
+                {
+                    "repo_name": "groups-share-lib",
+                    "path": "/"
+                }
+            ],
+            "count": 1
+        }
+    ]
+}

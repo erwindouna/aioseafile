@@ -1,0 +1,18 @@
+{
+    "users_count": 9,
+    "active_users_count": 9,
+    "repos_count": 13,
+    "total_files_count": 10,
+    "groups_count": 3,
+    "org_count": 0,
+    "multi_tenancy_enabled": false,
+    "is_pro": false,
+    "with_license": false,
+    "license_expiration": "",
+    "license_mode": "",
+    "license_maxusers": 0,
+    "license_to": "",
+    "total_storage": 4300279,
+    "total_devices_count": 1,
+    "current_connected_devices_count": 1
+}

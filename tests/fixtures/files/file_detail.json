@@ -1,0 +1,16 @@
+{
+    "type": "file",
+    "id": "b5c37843cadfbf0fefa532bf435254497bb53109",
+    "name": "single.tar",
+    "permission": "rw",
+    "mtime": 1792049091,
+    "last_modified": "2026-10-15T09:24:51+02:00",
+    "last_modifier_email": "admin@example.com",
+    "last_modifier_name": "admin",
+    "last_modifier_contact_email": "admin@example.com",
+    "last_modifier_avatar": "http://127.0.0.1/media/avatars/default.png",
+    "size": 5300000,
+    "starred": false,
+    "comment_total": 0,
+    "can_edit": false
+}

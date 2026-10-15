@@ -1,0 +1,11 @@
+{
+    "auth_list": [
+        {
+            "username": "b3c300a8ff924480ae27938952f9f90a@auth.local",
+            "name": "Sharing",
+            "avatar_url": "http://127.0.0.1/media/avatars/default.png",
+            "link_token": "beeb336ef9b64cfe97ca",
+            "contact_email": "sharing@example.com"
+        }
+    ]
+}

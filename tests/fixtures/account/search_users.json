@@ -1,0 +1,16 @@
+{
+    "users": [
+        {
+            "email": "d6074febe21348149e70779dea1a6ef0@auth.local",
+            "avatar_url": "http://127.0.0.1/media/avatars/default.png",
+            "name": "account-user-renamed",
+            "contact_email": "account@example.com"
+        },
+        {
+            "email": "eb403b2423bb46afa92d62586573d7f4@auth.local",
+            "avatar_url": "http://127.0.0.1/media/avatars/default.png",
+            "name": "account-user2",
+            "contact_email": "account2@example.com"
+        }
+    ]
+}

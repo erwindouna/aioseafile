@@ -1,0 +1,30 @@
+{
+    "page_info": {
+        "has_next_page": false,
+        "current_page": 1
+    },
+    "device_errors": [
+        {
+            "email": "admin@example.com",
+            "name": "admin",
+            "device_ip": "192.168.1.10",
+            "repo_name": "Documents",
+            "repo_id": "6490a72d-4c26-4020-ad00-1b72fb2c88c9",
+            "error_msg": "Permission denied on server",
+            "device_name": "laptop",
+            "client_version": "9.0.10",
+            "error_time": "2026-10-15T08:00:00+02:00"
+        },
+        {
+            "email": "admin@example.com",
+            "name": "admin",
+            "device_ip": "192.168.1.11",
+            "repo_name": "Documents",
+            "repo_id": "6490a72d-4c26-4020-ad00-1b72fb2c88c9",
+            "error_msg": "Quota is full",
+            "device_name": "",
+            "client_version": "",
+            "error_time": ""
+        }
+    ]
+}

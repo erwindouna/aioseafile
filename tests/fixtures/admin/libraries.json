@@ -1,0 +1,50 @@
+{
+    "page_info": {
+        "has_next_page": false,
+        "current_page": 1
+    },
+    "repos": [
+        {
+            "id": "02c7b6ae-5500-4c4a-85c4-4b683447d6c5",
+            "name": "libraries-lib",
+            "owner": "admin@example.com",
+            "owner_email": "admin@example.com",
+            "owner_contact_email": "admin@example.com",
+            "size": 6,
+            "size_formatted": "6 bytes",
+            "encrypted": false,
+            "file_count": 2,
+            "status": "normal",
+            "last_modified": "2026-10-15T09:22:59+02:00",
+            "owner_name": "admin"
+        },
+        {
+            "id": "d33dc18c-151f-4de9-93cf-1fa0f7134450",
+            "name": "extras-wiki2",
+            "owner": "admin@example.com",
+            "owner_email": "admin@example.com",
+            "owner_contact_email": "admin@example.com",
+            "size": 273,
+            "size_formatted": "273 bytes",
+            "encrypted": false,
+            "file_count": 2,
+            "status": "normal",
+            "last_modified": "2026-10-15T09:22:52+02:00",
+            "owner_name": "admin"
+        },
+        {
+            "id": "c192d8fe-480e-4803-a199-e2650f994935",
+            "name": "libraries-enc",
+            "owner": "admin@example.com",
+            "owner_email": "admin@example.com",
+            "owner_contact_email": "admin@example.com",
+            "size": 0,
+            "size_formatted": "0 bytes",
+            "encrypted": true,
+            "file_count": 0,
+            "status": "normal",
+            "last_modified": "2026-10-15T09:22:44+02:00",
+            "owner_name": "admin"
+        }
+    ]
+}

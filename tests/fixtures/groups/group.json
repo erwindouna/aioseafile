@@ -1,0 +1,11 @@
+{
+    "id": 1,
+    "parent_group_id": 0,
+    "name": "groups-team",
+    "owner": "admin@example.com",
+    "created_at": "2026-10-15T09:21:49+02:00",
+    "admins": [
+        "admin@example.com"
+    ],
+    "group_quota_usage": 0
+}

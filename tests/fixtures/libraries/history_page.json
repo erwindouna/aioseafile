@@ -1,0 +1,29 @@
+{
+    "data": [
+        {
+            "email": "admin@example.com",
+            "name": "admin",
+            "contact_email": "admin@example.com",
+            "time": "2026-10-15T09:22:24+02:00",
+            "commit_id": "a3259f9cca6beff77884eb31fab409cf2adb388b",
+            "description": "Removed directory \"sub\"",
+            "client_version": null,
+            "device_name": null,
+            "second_parent_id": null,
+            "tags": []
+        },
+        {
+            "email": "admin@example.com",
+            "name": "admin",
+            "contact_email": "admin@example.com",
+            "time": "2026-10-15T09:22:24+02:00",
+            "commit_id": "7c8cb6c57ddc4b941efe6ef1eb96f25a0dfd3a0e",
+            "description": "Deleted \"a.txt\"",
+            "client_version": null,
+            "device_name": null,
+            "second_parent_id": null,
+            "tags": []
+        }
+    ],
+    "more": true
+}

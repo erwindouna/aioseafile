@@ -1,0 +1,15 @@
+[
+    {
+        "repo_id": "35124f5c-2850-44c6-88dd-f6478f273d0b",
+        "repo_name": "sharing-lib",
+        "path": "/photos",
+        "folder_name": "photos",
+        "share_type": "group",
+        "share_permission": "rw",
+        "share_permission_name": "",
+        "share_from": "admin@example.com",
+        "share_from_user_name": "admin",
+        "group_id": 3,
+        "group_name": "sharing-group"
+    }
+]

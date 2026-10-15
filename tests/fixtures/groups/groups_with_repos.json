@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "parent_group_id": 0,
+        "name": "groups-team",
+        "owner": "admin@example.com",
+        "created_at": "2026-10-15T09:21:49+02:00",
+        "admins": [
+            "4897149ea526449c94491315b118c13e@auth.local",
+            "admin@example.com"
+        ],
+        "group_quota_usage": 0,
+        "repos": [
+            {
+                "id": "c9a996fa-b1f8-4158-bdfc-5c6badcae9a2",
+                "repo_id": "c9a996fa-b1f8-4158-bdfc-5c6badcae9a2",
+                "name": "groups-lib",
+                "repo_name": "groups-lib",
+                "size": 0,
+                "size_formatted": "0\u00a0bytes",
+                "mtime": 1792048909,
+                "mtime_relative": "<time datetime=\"2026-10-15T09:21:49\" is=\"relative-time\" title=\"Thu, 15 Oct 2026 09:21:49 +0200\" >Just now</time>",
+                "last_modified": "2026-10-15T09:21:49+02:00",
+                "encrypted": false,
+                "permission": "rw",
+                "owner": "admin@example.com",
+                "owner_email": "admin@example.com",
+                "owner_name": "admin",
+                "owner_contact_email": "admin@example.com",
+                "is_admin": false,
+                "starred": false,
+                "monitored": false,
+                "status": "normal",
+                "archive_status": null
+            }
+        ]
+    }
+]

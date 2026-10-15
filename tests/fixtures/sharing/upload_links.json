@@ -1,0 +1,34 @@
+[
+    {
+        "repo_id": "35124f5c-2850-44c6-88dd-f6478f273d0b",
+        "repo_name": "sharing-lib",
+        "path": "/",
+        "obj_name": "/",
+        "obj_id": "ece300a8a11d5fd70893212dd96c348087a499a4",
+        "view_cnt": 0,
+        "ctime": "2026-10-15T09:22:54+02:00",
+        "link": "http://127.0.0.1/u/d/2a6a5f74bbd84ddc9b8b/",
+        "token": "2a6a5f74bbd84ddc9b8b",
+        "username": "admin@example.com",
+        "expire_date": "",
+        "is_expired": false,
+        "password": "",
+        "description": ""
+    },
+    {
+        "repo_id": "35124f5c-2850-44c6-88dd-f6478f273d0b",
+        "repo_name": "sharing-lib",
+        "path": "/photos/",
+        "obj_name": "photos",
+        "obj_id": "0000000000000000000000000000000000000000",
+        "view_cnt": 0,
+        "ctime": "2026-10-15T09:22:54+02:00",
+        "link": "http://127.0.0.1/u/d/0fac727091f5427d92dd/",
+        "token": "0fac727091f5427d92dd",
+        "username": "admin@example.com",
+        "expire_date": "2026-10-20T09:22:54+02:00",
+        "is_expired": false,
+        "password": "Upload-pw-123",
+        "description": "drop"
+    }
+]

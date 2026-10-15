@@ -1,0 +1,25 @@
+{
+    "metadata": [
+        {"key": "_id", "name": "_id", "type": "text", "data": null},
+        {"key": "_name", "name": "_name", "type": "text", "data": null},
+        {"key": "_parent_dir", "name": "_parent_dir", "type": "text", "data": null},
+        {"key": "_size", "name": "_size", "type": "number", "data": null},
+        {"key": "_file_mtime", "name": "_file_mtime", "type": "date", "data": null},
+        {
+            "key": "_tags",
+            "name": "_tags",
+            "type": "link",
+            "data": {"display_column_key": "_tag_name", "link_id": "0002", "other_table_id": "wC6x", "table_id": "0001"}
+        }
+    ],
+    "results": [
+        {
+            "_file_mtime": "2025-02-14T11:21:33+08:00",
+            "_id": "al8SjKN0QxGrE6vr0SHDOw",
+            "_name": "file",
+            "_parent_dir": "/",
+            "_size": 3952270,
+            "_tags": [{"row_id": "KvfhV8GpQPWEskVxBtwePA", "display_value": "tag"}]
+        }
+    ]
+}

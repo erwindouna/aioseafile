@@ -1,0 +1,16 @@
+{
+    "repo_id": "35124f5c-2850-44c6-88dd-f6478f273d0b",
+    "repo_name": "sharing-lib",
+    "path": "/photos/",
+    "obj_name": "photos",
+    "obj_id": "0000000000000000000000000000000000000000",
+    "view_cnt": 0,
+    "ctime": "2026-10-15T09:22:54+02:00",
+    "link": "http://127.0.0.1/u/d/0fac727091f5427d92dd/",
+    "token": "0fac727091f5427d92dd",
+    "username": "admin@example.com",
+    "expire_date": "2026-12-31T12:00:00+01:00",
+    "is_expired": false,
+    "password": "Upload-pw-123",
+    "description": "drop"
+}

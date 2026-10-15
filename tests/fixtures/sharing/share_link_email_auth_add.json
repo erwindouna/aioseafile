@@ -1,0 +1,13 @@
+{
+    "failed": [
+        {
+            "email": "bad",
+            "error_msg": "Email bad is invalid."
+        }
+    ],
+    "success": [
+        {
+            "email": "guest@example.com"
+        }
+    ]
+}

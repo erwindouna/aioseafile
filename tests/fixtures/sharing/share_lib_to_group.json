@@ -1,0 +1,15 @@
+{
+    "failed": [],
+    "success": [
+        {
+            "share_type": "group",
+            "group_info": {
+                "id": 3,
+                "name": "sharing-group"
+            },
+            "permission": "rw",
+            "is_admin": false
+        }
+    ],
+    "virtual_repo_id": null
+}

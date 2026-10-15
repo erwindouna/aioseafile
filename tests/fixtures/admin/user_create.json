@@ -1,0 +1,15 @@
+{
+    "email": "77880dad4fce473ebe441ea29f9c01de@auth.local",
+    "name": "Admin Test",
+    "contact_email": "admin-test@example.com",
+    "login_id": "",
+    "is_staff": false,
+    "is_active": true,
+    "quota_usage": 0,
+    "quota_total": 100000000,
+    "create_time": "2026-10-15T09:20:50+02:00",
+    "has_default_device": false,
+    "is_force_2fa": false,
+    "role": "default",
+    "add_user_tip": "Successfully added user admin-test@example.com."
+}

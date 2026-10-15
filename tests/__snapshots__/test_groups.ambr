@@ -1,0 +1,810 @@
+# serializer version: 1
+# name: test_get_group_libraries
+  list([
+    dict({
+      'encrypted': False,
+      'id': 'c9a996fa-b1f8-4158-bdfc-5c6badcae9a2',
+      'is_admin': False,
+      'last_modified': datetime.datetime(2026, 10, 15, 9, 21, 49, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'modifier_contact_email': 'admin@example.com',
+      'modifier_email': 'admin@example.com',
+      'modifier_name': 'admin',
+      'monitored': False,
+      'name': 'groups-lib',
+      'owner_contact_email': 'admin@example.com',
+      'owner_email': 'admin@example.com',
+      'owner_name': 'admin',
+      'permission': 'rw',
+      'size': 0,
+      'starred': False,
+      'status': None,
+    }),
+  ])
+# ---
+# name: test_get_org_users
+  list([
+    dict({
+      'avatar_url': None,
+      'contact_email': 'orgadmin@example.com',
+      'create_time': datetime.datetime(2026, 10, 1, 10, 0, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'email': 'a1b2c3@auth.local',
+      'is_active': True,
+      'is_staff': True,
+      'last_login': datetime.datetime(2026, 10, 15, 9, 0, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'name': 'Org Admin',
+      'quota_total': -2,
+      'quota_usage': 1048576,
+    }),
+    dict({
+      'avatar_url': None,
+      'contact_email': 'member@example.com',
+      'create_time': datetime.datetime(2026, 10, 2, 10, 0, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'email': 'd4e5f6@auth.local',
+      'is_active': False,
+      'is_staff': False,
+      'last_login': None,
+      'name': 'Org Member',
+      'quota_total': 1073741824,
+      'quota_usage': 0,
+    }),
+  ])
+# ---
+# name: test_reads[address_book_departments]
+  list([
+    dict({
+      'created_at': datetime.datetime(2026, 10, 15, 9, 30, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'email': None,
+      'id': 7,
+      'name': 'Engineering',
+      'owner': 'system admin',
+      'parent_group_id': -1,
+      'quota': -2,
+    }),
+    dict({
+      'created_at': datetime.datetime(2026, 10, 15, 9, 31, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'email': None,
+      'id': 8,
+      'name': 'Platform',
+      'owner': 'system admin',
+      'parent_group_id': 7,
+      'quota': 1073741824,
+    }),
+  ])
+# ---
+# name: test_reads[dept_library_group_shares]
+  list([
+    dict({
+      'group_id': 1,
+      'group_name': 'groups-team',
+      'permission': 'r',
+    }),
+  ])
+# ---
+# name: test_reads[dept_library_user_shares]
+  list([
+    dict({
+      'avatar_url': None,
+      'permission': 'r',
+      'user_contact_email': 'user@example.com',
+      'user_email': 'user@example.com',
+      'user_name': 'user',
+    }),
+  ])
+# ---
+# name: test_reads[dept_members]
+  list([
+    dict({
+      'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+      'contact_email': 'admin@example.com',
+      'email': 'admin@example.com',
+      'group_id': None,
+      'is_admin': False,
+      'login_id': None,
+      'name': 'admin',
+      'role': <GroupRole.MEMBER: 'Member'>,
+    }),
+    dict({
+      'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+      'contact_email': 'groups@example.com',
+      'email': '4897149ea526449c94491315b118c13e@auth.local',
+      'group_id': None,
+      'is_admin': True,
+      'login_id': None,
+      'name': 'Groups User',
+      'role': <GroupRole.ADMIN: 'Admin'>,
+    }),
+  ])
+# ---
+# name: test_reads[get_all_groups]
+  list([
+    dict({
+      'admins': list([
+        '4897149ea526449c94491315b118c13e@auth.local',
+        'admin@example.com',
+      ]),
+      'created_at': datetime.datetime(2026, 10, 15, 9, 21, 49, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'group_quota': None,
+      'group_quota_usage': 0,
+      'id': 1,
+      'libraries': None,
+      'name': 'groups-team',
+      'owner': 'admin@example.com',
+      'parent_group_id': 0,
+    }),
+  ])
+# ---
+# name: test_reads[get_departments]
+  list([
+    dict({
+      'created_at': datetime.datetime(2026, 10, 15, 9, 30, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'email': '7@seafile_group',
+      'id': 7,
+      'name': 'Engineering',
+      'owner': 'system admin',
+      'parent_group_id': -1,
+      'quota': None,
+    }),
+    dict({
+      'created_at': datetime.datetime(2026, 10, 15, 9, 31, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'email': '8@seafile_group',
+      'id': 8,
+      'name': 'Platform',
+      'owner': 'system admin',
+      'parent_group_id': 7,
+      'quota': None,
+    }),
+  ])
+# ---
+# name: test_reads[get_departments_admin]
+  list([
+    dict({
+      'created_at': datetime.datetime(2026, 10, 15, 9, 30, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'email': '7@seafile_group',
+      'id': 7,
+      'name': 'Engineering',
+      'owner': 'system admin',
+      'parent_group_id': -1,
+      'quota': None,
+    }),
+    dict({
+      'created_at': datetime.datetime(2026, 10, 15, 9, 31, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'email': '8@seafile_group',
+      'id': 8,
+      'name': 'Platform',
+      'owner': 'system admin',
+      'parent_group_id': 7,
+      'quota': None,
+    }),
+  ])
+# ---
+# name: test_reads[get_group]
+  dict({
+    'admins': list([
+      'admin@example.com',
+    ]),
+    'created_at': datetime.datetime(2026, 10, 15, 9, 21, 49, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'group_quota': None,
+    'group_quota_usage': 0,
+    'id': 1,
+    'libraries': None,
+    'name': 'groups-team',
+    'owner': 'admin@example.com',
+    'parent_group_id': 0,
+  })
+# ---
+# name: test_reads[get_group_member]
+  dict({
+    'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+    'contact_email': 'groups@example.com',
+    'email': '4897149ea526449c94491315b118c13e@auth.local',
+    'group_id': 1,
+    'is_admin': True,
+    'login_id': '',
+    'name': 'Groups User',
+    'role': <GroupRole.ADMIN: 'Admin'>,
+  })
+# ---
+# name: test_reads[get_groups]
+  list([
+    dict({
+      'admins': list([
+        '4897149ea526449c94491315b118c13e@auth.local',
+        'admin@example.com',
+      ]),
+      'created_at': datetime.datetime(2026, 10, 15, 9, 21, 49, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'group_quota': None,
+      'group_quota_usage': 0,
+      'id': 1,
+      'libraries': None,
+      'name': 'groups-team',
+      'owner': 'admin@example.com',
+      'parent_group_id': 0,
+    }),
+  ])
+# ---
+# name: test_reads[get_groups_libraries]
+  list([
+    dict({
+      'admins': list([
+        '4897149ea526449c94491315b118c13e@auth.local',
+        'admin@example.com',
+      ]),
+      'created_at': datetime.datetime(2026, 10, 15, 9, 21, 49, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'group_quota': None,
+      'group_quota_usage': 0,
+      'id': 1,
+      'libraries': list([
+        dict({
+          'encrypted': False,
+          'id': 'c9a996fa-b1f8-4158-bdfc-5c6badcae9a2',
+          'is_admin': False,
+          'last_modified': datetime.datetime(2026, 10, 15, 9, 21, 49, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+          'modifier_contact_email': None,
+          'modifier_email': None,
+          'modifier_name': None,
+          'monitored': False,
+          'name': 'groups-lib',
+          'owner_contact_email': 'admin@example.com',
+          'owner_email': 'admin@example.com',
+          'owner_name': 'admin',
+          'permission': 'rw',
+          'size': 0,
+          'starred': False,
+          'status': 'normal',
+        }),
+      ]),
+      'name': 'groups-team',
+      'owner': 'admin@example.com',
+      'parent_group_id': 0,
+    }),
+  ])
+# ---
+# name: test_reads[get_invite_links]
+  list([
+    dict({
+      'created_at': datetime.datetime(2026, 10, 15, 9, 21, 56, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'created_by': 'admin',
+      'group_id': 1,
+      'id': 1,
+      'link': 'http://127.0.0.1/group-invite/7daf6706/',
+      'token': '7daf6706',
+    }),
+  ])
+# ---
+# name: test_reads[get_org_group]
+  dict({
+    'created_at': datetime.datetime(2026, 10, 3, 10, 0, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'creator_contact_email': 'orgadmin@example.com',
+    'creator_email': 'a1b2c3@auth.local',
+    'creator_name': 'Org Admin',
+    'id': 4,
+    'name': 'Org Team',
+  })
+# ---
+# name: test_reads[get_org_groups]
+  list([
+    dict({
+      'created_at': datetime.datetime(2026, 10, 3, 10, 0, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'creator_contact_email': 'orgadmin@example.com',
+      'creator_email': 'a1b2c3@auth.local',
+      'creator_name': 'Org Admin',
+      'id': 4,
+      'name': 'Org Team',
+    }),
+  ])
+# ---
+# name: test_reads[get_org_info]
+  dict({
+    'active_members': 2,
+    'ai_credit': None,
+    'ai_credit_used': None,
+    'disable_org_encrypted_library': False,
+    'disable_org_user_clean_trash': True,
+    'file_ext_white_list': '',
+    'force_adfs_login': False,
+    'member_quota': 50,
+    'member_usage': 2,
+    'monthly_download_traffic_limit': 0,
+    'org_id': 3,
+    'org_name': 'Example Org',
+    'storage_quota': -2,
+    'storage_usage': 1048576,
+    'traffic_this_month': 52428800,
+    'user_default_quota': -2,
+  })
+# ---
+# name: test_reads[get_org_libraries]
+  list([
+    dict({
+      'encrypted': False,
+      'file_count': 3,
+      'group_id': None,
+      'id': '5e8f1c2a-3b4d-4e6f-8a9b-0c1d2e3f4a5b',
+      'is_department_repo': False,
+      'name': 'org-lib',
+      'owner_email': 'a1b2c3@auth.local',
+      'owner_name': 'Org Admin',
+      'size': 1048576,
+    }),
+    dict({
+      'encrypted': True,
+      'file_count': 0,
+      'group_id': 9,
+      'id': '6f9a2d3b-4c5e-4f7a-9b0c-1d2e3f4a5b6c',
+      'is_department_repo': True,
+      'name': 'org-dept-lib',
+      'owner_email': '9@seafile_group',
+      'owner_name': 'Org Department',
+      'size': 0,
+    }),
+  ])
+# ---
+# name: test_reads[get_org_user]
+  dict({
+    'avatar_url': None,
+    'contact_email': 'member@example.com',
+    'create_time': None,
+    'email': 'd4e5f6@auth.local',
+    'is_active': True,
+    'is_staff': None,
+    'last_login': None,
+    'name': 'Org Member',
+    'quota_total': 1073741824,
+    'quota_usage': 0,
+  })
+# ---
+# name: test_reads[get_shareable_groups]
+  list([
+    dict({
+      'admins': list([
+      ]),
+      'created_at': datetime.datetime(2026, 10, 15, 9, 21, 49, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'group_quota': None,
+      'group_quota_usage': None,
+      'id': 1,
+      'libraries': None,
+      'name': 'groups-team',
+      'owner': 'admin@example.com',
+      'parent_group_id': 0,
+    }),
+  ])
+# ---
+# name: test_reads[search_groups]
+  list([
+    dict({
+      'admins': list([
+      ]),
+      'created_at': datetime.datetime(2026, 10, 15, 9, 21, 49, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'group_quota': None,
+      'group_quota_usage': None,
+      'id': 1,
+      'libraries': None,
+      'name': 'groups-team',
+      'owner': 'admin@example.com',
+      'parent_group_id': 0,
+    }),
+  ])
+# ---
+# name: test_reads[search_members]
+  list([
+    dict({
+      'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+      'contact_email': 'groups2@example.com',
+      'email': '590bfa62d6154025b48466f05f0700fa@auth.local',
+      'group_id': 1,
+      'is_admin': False,
+      'login_id': '',
+      'name': 'Groups Two',
+      'role': <GroupRole.MEMBER: 'Member'>,
+    }),
+    dict({
+      'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+      'contact_email': 'groups@example.com',
+      'email': '4897149ea526449c94491315b118c13e@auth.local',
+      'group_id': 1,
+      'is_admin': True,
+      'login_id': '',
+      'name': 'Groups User',
+      'role': <GroupRole.ADMIN: 'Admin'>,
+    }),
+    dict({
+      'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+      'contact_email': 'admin@example.com',
+      'email': 'admin@example.com',
+      'group_id': 1,
+      'is_admin': True,
+      'login_id': '',
+      'name': 'admin',
+      'role': <GroupRole.OWNER: 'Owner'>,
+    }),
+  ])
+# ---
+# name: test_reads[sub_depts]
+  list([
+    dict({
+      'created_at': datetime.datetime(2026, 10, 15, 9, 31, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+      'email': None,
+      'id': 8,
+      'name': 'Platform',
+      'owner': 'system admin',
+      'parent_group_id': 7,
+      'quota': 1073741824,
+    }),
+  ])
+# ---
+# name: test_writes[add_group_member]
+  dict({
+    'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+    'contact_email': 'groups@example.com',
+    'email': '4897149ea526449c94491315b118c13e@auth.local',
+    'group_id': 1,
+    'is_admin': True,
+    'login_id': '',
+    'name': 'Groups User',
+    'role': <GroupRole.ADMIN: 'Admin'>,
+  })
+# ---
+# name: test_writes[add_group_members]
+  dict({
+    'failed': list([
+      dict({
+        'email': 'nobody@example.com',
+        'email_name': 'nobody',
+        'error_msg': 'User nobody not found.',
+      }),
+    ]),
+    'success': list([
+      dict({
+        'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+        'contact_email': 'groups2@example.com',
+        'email': '590bfa62d6154025b48466f05f0700fa@auth.local',
+        'group_id': 1,
+        'is_admin': False,
+        'login_id': '',
+        'name': 'Groups Two',
+        'role': <GroupRole.MEMBER: 'Member'>,
+      }),
+    ]),
+  })
+# ---
+# name: test_writes[create_department_library]
+  dict({
+    'encrypted': False,
+    'group_name': 'Engineering',
+    'id': '0f3c9a2e-6b1d-4c8e-9a51-2d7e4b6f8c10',
+    'modified': datetime.datetime(2026, 10, 15, 9, 32, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'name': 'engineering-docs',
+    'owner': '7@seafile_group',
+    'permission': 'rw',
+    'size': 0,
+  })
+# ---
+# name: test_writes[create_encrypted_department_library]
+  dict({
+    'encrypted': False,
+    'group_name': 'Engineering',
+    'id': '0f3c9a2e-6b1d-4c8e-9a51-2d7e4b6f8c10',
+    'modified': datetime.datetime(2026, 10, 15, 9, 32, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'name': 'engineering-docs',
+    'owner': '7@seafile_group',
+    'permission': 'rw',
+    'size': 0,
+  })
+# ---
+# name: test_writes[create_encrypted_group_library]
+  dict({
+    'encrypted': False,
+    'id': 'c9a996fa-b1f8-4158-bdfc-5c6badcae9a2',
+    'is_admin': False,
+    'last_modified': datetime.datetime(2026, 10, 15, 9, 21, 49, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'modifier_contact_email': 'admin@example.com',
+    'modifier_email': 'admin@example.com',
+    'modifier_name': 'admin',
+    'monitored': False,
+    'name': 'groups-lib',
+    'owner_contact_email': 'admin@example.com',
+    'owner_email': 'admin@example.com',
+    'owner_name': 'admin',
+    'permission': 'rw',
+    'size': 0,
+    'starred': False,
+    'status': None,
+  })
+# ---
+# name: test_writes[create_group]
+  dict({
+    'admins': list([
+      'admin@example.com',
+    ]),
+    'created_at': datetime.datetime(2026, 10, 15, 9, 21, 49, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'group_quota': None,
+    'group_quota_usage': 0,
+    'id': 1,
+    'libraries': None,
+    'name': 'groups-team',
+    'owner': 'admin@example.com',
+    'parent_group_id': 0,
+  })
+# ---
+# name: test_writes[create_group_library]
+  dict({
+    'encrypted': False,
+    'id': 'c9a996fa-b1f8-4158-bdfc-5c6badcae9a2',
+    'is_admin': False,
+    'last_modified': datetime.datetime(2026, 10, 15, 9, 21, 49, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'modifier_contact_email': 'admin@example.com',
+    'modifier_email': 'admin@example.com',
+    'modifier_name': 'admin',
+    'monitored': False,
+    'name': 'groups-lib',
+    'owner_contact_email': 'admin@example.com',
+    'owner_email': 'admin@example.com',
+    'owner_name': 'admin',
+    'permission': 'rw',
+    'size': 0,
+    'starred': False,
+    'status': None,
+  })
+# ---
+# name: test_writes[create_invite_link]
+  dict({
+    'created_at': datetime.datetime(2026, 10, 15, 9, 21, 56, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'created_by': 'admin',
+    'group_id': 1,
+    'id': 1,
+    'link': 'http://127.0.0.1/group-invite/7daf6706/',
+    'token': '7daf6706',
+  })
+# ---
+# name: test_writes[create_org_user]
+  dict({
+    'avatar_url': None,
+    'contact_email': 'member@example.com',
+    'create_time': None,
+    'email': 'd4e5f6@auth.local',
+    'is_active': True,
+    'is_staff': None,
+    'last_login': None,
+    'name': 'Org Member',
+    'quota_total': 1073741824,
+    'quota_usage': 0,
+  })
+# ---
+# name: test_writes[delete_department_library]
+  None
+# ---
+# name: test_writes[delete_group]
+  None
+# ---
+# name: test_writes[delete_invite]
+  None
+# ---
+# name: test_writes[delete_org_group]
+  None
+# ---
+# name: test_writes[delete_org_library]
+  None
+# ---
+# name: test_writes[delete_org_user]
+  None
+# ---
+# name: test_writes[remove_group_member]
+  None
+# ---
+# name: test_writes[rename_department_library]
+  dict({
+    'encrypted': False,
+    'group_name': 'Engineering',
+    'id': '0f3c9a2e-6b1d-4c8e-9a51-2d7e4b6f8c10',
+    'modified': datetime.datetime(2026, 10, 15, 9, 32, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'name': 'engineering-docs',
+    'owner': '7@seafile_group',
+    'permission': 'rw',
+    'size': 0,
+  })
+# ---
+# name: test_writes[rename_group]
+  dict({
+    'admins': list([
+      'admin@example.com',
+    ]),
+    'created_at': datetime.datetime(2026, 10, 15, 9, 21, 49, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'group_quota': None,
+    'group_quota_usage': 0,
+    'id': 1,
+    'libraries': None,
+    'name': 'groups-team',
+    'owner': 'admin@example.com',
+    'parent_group_id': 0,
+  })
+# ---
+# name: test_writes[set_admin]
+  dict({
+    'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+    'contact_email': 'groups@example.com',
+    'email': '4897149ea526449c94491315b118c13e@auth.local',
+    'group_id': 1,
+    'is_admin': True,
+    'login_id': '',
+    'name': 'Groups User',
+    'role': <GroupRole.ADMIN: 'Admin'>,
+  })
+# ---
+# name: test_writes[share_department_library_to_groups]
+  dict({
+    'failed': list([
+      dict({
+        'email': None,
+        'error_msg': 'Group 99999 not found',
+        'group_id': '99999',
+        'group_name': None,
+        'name': None,
+        'repo_id': None,
+        'token': None,
+        'user_email': None,
+      }),
+    ]),
+    'success': list([
+      dict({
+        'group_id': 1,
+        'group_name': 'groups-team',
+        'permission': 'rw',
+      }),
+    ]),
+  })
+# ---
+# name: test_writes[share_department_library_to_users]
+  dict({
+    'failed': list([
+      dict({
+        'email': 'nobody@example.com',
+        'error_msg': 'User nobody@example.com not found.',
+        'group_id': None,
+        'group_name': None,
+        'name': None,
+        'repo_id': None,
+        'token': None,
+        'user_email': None,
+      }),
+    ]),
+    'success': list([
+      dict({
+        'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+        'permission': 'rw',
+        'user_contact_email': 'user@example.com',
+        'user_email': 'user@example.com',
+        'user_name': 'user',
+      }),
+    ]),
+  })
+# ---
+# name: test_writes[transfer_department_library]
+  None
+# ---
+# name: test_writes[transfer_department_library_reshare]
+  None
+# ---
+# name: test_writes[transfer_group]
+  dict({
+    'admins': list([
+      'admin@example.com',
+    ]),
+    'created_at': datetime.datetime(2026, 10, 15, 9, 21, 49, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200))),
+    'group_quota': None,
+    'group_quota_usage': 0,
+    'id': 1,
+    'libraries': None,
+    'name': 'groups-team',
+    'owner': 'admin@example.com',
+    'parent_group_id': 0,
+  })
+# ---
+# name: test_writes[unset_admin]
+  dict({
+    'avatar_url': 'http://127.0.0.1/media/avatars/default.png',
+    'contact_email': 'groups@example.com',
+    'email': '4897149ea526449c94491315b118c13e@auth.local',
+    'group_id': 1,
+    'is_admin': True,
+    'login_id': '',
+    'name': 'Groups User',
+    'role': <GroupRole.ADMIN: 'Admin'>,
+  })
+# ---
+# name: test_writes[unshare_department_library_from_group]
+  None
+# ---
+# name: test_writes[unshare_department_library_from_user]
+  None
+# ---
+# name: test_writes[unshare_group_library]
+  None
+# ---
+# name: test_writes[update_department_library_group_share]
+  None
+# ---
+# name: test_writes[update_department_library_user_share]
+  None
+# ---
+# name: test_writes[update_org_info]
+  dict({
+    'active_members': 2,
+    'ai_credit': None,
+    'ai_credit_used': None,
+    'disable_org_encrypted_library': False,
+    'disable_org_user_clean_trash': True,
+    'file_ext_white_list': '',
+    'force_adfs_login': False,
+    'member_quota': 50,
+    'member_usage': 2,
+    'monthly_download_traffic_limit': 0,
+    'org_id': 3,
+    'org_name': 'Example Org',
+    'storage_quota': -2,
+    'storage_usage': 1048576,
+    'traffic_this_month': 52428800,
+    'user_default_quota': -2,
+  })
+# ---
+# name: test_writes[update_org_info_nothing]
+  dict({
+    'active_members': 2,
+    'ai_credit': None,
+    'ai_credit_used': None,
+    'disable_org_encrypted_library': False,
+    'disable_org_user_clean_trash': True,
+    'file_ext_white_list': '',
+    'force_adfs_login': False,
+    'member_quota': 50,
+    'member_usage': 2,
+    'monthly_download_traffic_limit': 0,
+    'org_id': 3,
+    'org_name': 'Example Org',
+    'storage_quota': -2,
+    'storage_usage': 1048576,
+    'traffic_this_month': 52428800,
+    'user_default_quota': -2,
+  })
+# ---
+# name: test_writes[update_org_user]
+  dict({
+    'avatar_url': None,
+    'contact_email': 'member@example.com',
+    'create_time': None,
+    'email': 'd4e5f6@auth.local',
+    'is_active': True,
+    'is_staff': None,
+    'last_login': None,
+    'name': 'Org Member',
+    'quota_total': 1073741824,
+    'quota_usage': 0,
+  })
+# ---
+# name: test_writes[update_org_user_flags]
+  dict({
+    'avatar_url': None,
+    'contact_email': 'member@example.com',
+    'create_time': None,
+    'email': 'd4e5f6@auth.local',
+    'is_active': True,
+    'is_staff': None,
+    'last_login': None,
+    'name': 'Org Member',
+    'quota_total': 1073741824,
+    'quota_usage': 0,
+  })
+# ---
+# name: test_writes[update_org_user_name]
+  dict({
+    'avatar_url': None,
+    'contact_email': 'member@example.com',
+    'create_time': None,
+    'email': 'd4e5f6@auth.local',
+    'is_active': True,
+    'is_staff': None,
+    'last_login': None,
+    'name': 'Org Member',
+    'quota_total': 1073741824,
+    'quota_usage': 0,
+  })
+# ---

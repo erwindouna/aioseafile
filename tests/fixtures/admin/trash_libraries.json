@@ -1,0 +1,15 @@
+{
+    "page_info": {
+        "has_next_page": false,
+        "current_page": 1
+    },
+    "repos": [
+        {
+            "name": "admin-lib2",
+            "id": "6ef89a2f-9a67-416f-b34a-eaaa167275f5",
+            "owner": "77880dad4fce473ebe441ea29f9c01de@auth.local",
+            "owner_name": "Admin Test 2",
+            "delete_time": "2026-10-15T09:21:30+02:00"
+        }
+    ]
+}

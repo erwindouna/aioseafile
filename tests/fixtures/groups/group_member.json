@@ -1,0 +1,10 @@
+{
+    "group_id": 1,
+    "name": "Groups User",
+    "email": "4897149ea526449c94491315b118c13e@auth.local",
+    "contact_email": "groups@example.com",
+    "login_id": "",
+    "avatar_url": "http://127.0.0.1/media/avatars/default.png",
+    "is_admin": true,
+    "role": "Admin"
+}

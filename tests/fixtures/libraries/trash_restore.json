@@ -1,0 +1,14 @@
+{
+    "failed": [
+        {
+            "path": "/missing.txt",
+            "error_msg": "Dirent /missing.txt not found."
+        }
+    ],
+    "success": [
+        {
+            "path": "/a.txt",
+            "is_dir": false
+        }
+    ]
+}

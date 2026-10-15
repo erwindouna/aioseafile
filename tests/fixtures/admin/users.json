@@ -1,0 +1,53 @@
+{
+    "data": [
+        {
+            "avatar_url": "http://127.0.0.1/media/avatars/default.png",
+            "email": "admin@example.com",
+            "name": "admin",
+            "contact_email": "admin@example.com",
+            "login_id": "",
+            "is_staff": 1,
+            "is_active": 1,
+            "quota_usage": 4300279,
+            "quota_total": -2,
+            "role": "default",
+            "create_time": "2026-10-15T09:07:20+02:00",
+            "last_login": "",
+            "last_access_time": "2026-10-15T09:11:47+02:00",
+            "social_auth": []
+        },
+        {
+            "avatar_url": "http://127.0.0.1/media/avatars/default.png",
+            "email": "238e5377def043ab86bb1df2cfffb13d@auth.local",
+            "name": "User",
+            "contact_email": "user@example.com",
+            "login_id": "",
+            "is_staff": 0,
+            "is_active": 1,
+            "quota_usage": 0,
+            "quota_total": 100000000,
+            "role": "default",
+            "create_time": "2026-10-15T09:07:46+02:00",
+            "last_login": "",
+            "last_access_time": "",
+            "social_auth": []
+        },
+        {
+            "avatar_url": "http://127.0.0.1/media/avatars/default.png",
+            "email": "77880dad4fce473ebe441ea29f9c01de@auth.local",
+            "name": "Admin Test 2",
+            "contact_email": "admin-test@example.com",
+            "login_id": "",
+            "is_staff": 0,
+            "is_active": 1,
+            "quota_usage": 0,
+            "quota_total": 200000000,
+            "role": "default",
+            "create_time": "2026-10-15T09:20:50+02:00",
+            "last_login": "",
+            "last_access_time": "",
+            "social_auth": []
+        }
+    ],
+    "total_count": 3
+}
