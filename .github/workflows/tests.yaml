@@ -62,6 +62,9 @@ jobs:
           fetch-depth: 0
       - name: ⬇️ Download coverage data
         uses: actions/download-artifact@v8.0.2
+        with:
+          pattern: coverage-*
+          path: coverage-data
       - name: 🏗 Set up Python ${{ env.DEFAULT_PYTHON }}
         id: python
         uses: actions/setup-python@v7
@@ -86,7 +89,7 @@ jobs:
         run: uv sync --all-groups
       - name: 🚀 Process coverage results
         run: |
-          uv run coverage combine coverage*/.coverage*
+          uv run coverage combine $(find coverage-data -name '.coverage*')
           uv run coverage xml -i
       - name: 🚀 Upload coverage report
         uses: codecov/codecov-action@v7.1.1
