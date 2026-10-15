@@ -536,7 +536,9 @@ async def test_upload_file_bytes(aresponses: ResponsesMockServer, seafile_client
     received: list[dict[str, Any]] = []
     aresponses.add(HOST, f"/api2/repos/{LIB}/upload-link/", "GET", _expect(_json(UPLOAD_LINK), query={"p": "/backups"}))
     aresponses.add(HOST, UPLOAD_PATH, "POST", _upload_handler(received))
-    assert await seafile_client.upload_file(LIB, "/backups", "backup.tar", b"data", replace=True) == snapshot
+    progress: list[int] = []
+    assert await seafile_client.upload_file(LIB, "/backups", "backup.tar", b"data", replace=True, on_progress=progress.append) == snapshot
+    assert progress == [4]
     assert received == [
         {"content": b"data", "filename": "backup.tar", "form": {"parent_dir": "/backups", "replace": "1"}, "range": None, "disposition": None}
     ]
@@ -547,8 +549,10 @@ async def test_upload_stream_single_request(aresponses: ResponsesMockServer, sea
     received: list[dict[str, Any]] = []
     aresponses.add(HOST, UPLOAD_PATH, "POST", _upload_handler(received))
     link = URL(f"http://{HOST}{UPLOAD_PATH}")
-    await seafile_client.upload_to_link(link, "/", "b.tar", _stream(b"abcdefgh", 3), size=8)
+    progress: list[int] = []
+    await seafile_client.upload_to_link(link, "/", "b.tar", _stream(b"abcdefgh", 3), size=8, on_progress=progress.append)
     assert [item["content"] for item in received] == [b"abcdefgh"]
+    assert progress == [3, 6, 8]
     assert received[0]["form"] == {"parent_dir": "/"}
 
 
@@ -571,8 +575,10 @@ async def test_upload_chunked(
     aresponses.add(HOST, UPLOAD_PATH, "POST", _upload_handler(received, final=False))
     aresponses.add(HOST, UPLOAD_PATH, "POST", _upload_handler(received))
     link = URL(f"http://{HOST}{UPLOAD_PATH}")
-    result = await seafile_client.upload_to_link(link, "/b", "bäck up.tar", data, size=size, chunk_size=4)
+    progress: list[int] = []
+    result = await seafile_client.upload_to_link(link, "/b", "bäck up.tar", data, size=size, chunk_size=4, on_progress=progress.append)
     assert result.name == "backup.tar"
+    assert progress == [4, 8, 10]
     assert [(item["content"], item["range"]) for item in received] == [
         (b"abcd", "bytes 0-3/10"),
         (b"efgh", "bytes 4-7/10"),
