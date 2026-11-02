@@ -150,7 +150,7 @@ class LibrariesMixin(SeafileClient):  # pylint: disable=too-many-public-methods
         await self._request(f"api/v2.1/repos/{library_id}/send-new-password/", method=METH_POST)
 
     async def get_library_history_limit(self, library_id: str) -> int:
-        """Return how many days of history a library keeps (-1 is all, 0 is none)."""
+        """Return how many days of history a library keeps (-1 is all, 0 is none); see `LibraryHistoryMode.from_keep_days`."""
         result: dict[str, int] = await self._request(f"api2/repos/{library_id}/history-limit/")
         return result["keep_days"]
 

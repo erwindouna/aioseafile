@@ -10,6 +10,29 @@ from mashumaro.mixins.orjson import DataClassORJSONMixin
 from aioseafile.models.common import empty_to_none, from_timestamp, optional_datetime
 from aioseafile.models.files import DirentType
 
+# History limit `keep_days` values: Seafile stores any negative value as -1 (full history) and 0 keeps none.
+# Seafile has no default period, so 30 days is a suggestion for switching to LibraryHistoryMode.LIMITED.
+HISTORY_KEEP_DAYS_ALL = -1
+HISTORY_KEEP_DAYS_NONE = 0
+HISTORY_KEEP_DAYS_DEFAULT = 30
+
+
+class LibraryHistoryMode(StrEnum):
+    """How much history a library keeps, derived from its `keep_days` history limit."""
+
+    KEEP_ALL = "keep_all"
+    KEEP_NONE = "keep_none"
+    LIMITED = "limited"
+
+    @classmethod
+    def from_keep_days(cls, keep_days: int) -> LibraryHistoryMode:
+        """Return the mode for a `keep_days` value: negative keeps all, 0 keeps none, positive keeps that many days."""
+        if keep_days < 0:
+            return cls.KEEP_ALL
+        if keep_days == 0:
+            return cls.KEEP_NONE
+        return cls.LIMITED
+
 
 class LibraryStatus(StrEnum):
     """Status of a library."""
