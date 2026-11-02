@@ -13,7 +13,13 @@ from aresponses import ResponsesMockServer
 from syrupy.assertion import SnapshotAssertion
 from yarl import URL
 
-from aioseafile.models.libraries import LibraryApiTokenPermission
+from aioseafile.models.libraries import (
+    HISTORY_KEEP_DAYS_ALL,
+    HISTORY_KEEP_DAYS_DEFAULT,
+    HISTORY_KEEP_DAYS_NONE,
+    LibraryApiTokenPermission,
+    LibraryHistoryMode,
+)
 from tests import load_fixtures
 
 if TYPE_CHECKING:
@@ -851,3 +857,25 @@ async def test_via_repo_token_links(  # pylint: disable=too-many-arguments
     """Test file server links from a library API token are rebased onto the client URL."""
     aresponses.add(HOST, VIA + path, "GET", _handler(query, [], _fixture(fixture), authorization=f"Token {REPO_TOKEN}"), match_querystring=False)
     assert await getattr(seafile_client, method)(REPO_TOKEN, *args, **kwargs) == URL(expected)
+
+
+@pytest.mark.parametrize(
+    ("keep_days", "expected"),
+    [
+        pytest.param(-2, LibraryHistoryMode.KEEP_ALL, id="negative"),
+        pytest.param(HISTORY_KEEP_DAYS_ALL, LibraryHistoryMode.KEEP_ALL, id="keep_all"),
+        pytest.param(HISTORY_KEEP_DAYS_NONE, LibraryHistoryMode.KEEP_NONE, id="keep_none"),
+        pytest.param(1, LibraryHistoryMode.LIMITED, id="one_day"),
+        pytest.param(45, LibraryHistoryMode.LIMITED, id="limited"),
+        pytest.param(HISTORY_KEEP_DAYS_DEFAULT, LibraryHistoryMode.LIMITED, id="default"),
+    ],
+)
+def test_library_history_mode_from_keep_days(keep_days: int, expected: LibraryHistoryMode) -> None:
+    """Test the history mode is derived from the keep_days history limit."""
+    assert LibraryHistoryMode.from_keep_days(keep_days) is expected
+
+
+def test_library_history_constants() -> None:
+    """Test the keep_days constants match Seafile's history limit semantics."""
+    assert (HISTORY_KEEP_DAYS_ALL, HISTORY_KEEP_DAYS_NONE, HISTORY_KEEP_DAYS_DEFAULT) == (-1, 0, 30)
+    assert [str(mode) for mode in LibraryHistoryMode] == ["keep_all", "keep_none", "limited"]

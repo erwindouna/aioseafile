@@ -127,6 +127,9 @@ from .models.groups import (
     OrgUser,
 )
 from .models.libraries import (
+    HISTORY_KEEP_DAYS_ALL,
+    HISTORY_KEEP_DAYS_DEFAULT,
+    HISTORY_KEEP_DAYS_NONE,
     CommitDiff,
     CommitDiffType,
     CommitInfo,
@@ -139,6 +142,7 @@ from .models.libraries import (
     LibraryCommitDetail,
     LibraryDetail,
     LibraryHistory,
+    LibraryHistoryMode,
     LibraryInfo,
     LibraryStatus,
     RepoTokenDeletedFile,
@@ -187,6 +191,9 @@ from .models.sharing import (
 from .seafile import Seafile
 
 __all__ = [
+    "HISTORY_KEEP_DAYS_ALL",
+    "HISTORY_KEEP_DAYS_DEFAULT",
+    "HISTORY_KEEP_DAYS_NONE",
     "AccountInfo",
     "Activity",
     "ActivityDetail",
@@ -271,6 +278,7 @@ __all__ = [
     "LibraryCommitDetail",
     "LibraryDetail",
     "LibraryHistory",
+    "LibraryHistoryMode",
     "LibraryInfo",
     "LibraryLink",
     "LibrarySearchItem",
